@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Timeline from '../components/Timeline'
 
+import events from '../../data/events'
+
 const TimelinePage = (props) => (
     <Layout>
         <Helmet>
@@ -20,7 +22,7 @@ const TimelinePage = (props) => (
             <section id="one">
                 <div className="inner">
                     <p>I thought it would be fun to make a timeline of my career, so here it is.</p>
-                    <Timeline />
+                    <Timeline events={events}/>
                 </div>
             </section>
         </div>
