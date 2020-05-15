@@ -44,7 +44,7 @@ class HomeIndex extends React.Component {
                                 <p>A selection of projects and technologies <br />
                                 I've used throughout the years</p>
                             </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <Link to="/projects" className="link primary"></Link>
                         </article>
                         <article style={{backgroundImage: `url(${pic03})`}}>
                             <header className="major">

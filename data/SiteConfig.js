@@ -25,7 +25,7 @@ const config = {
       },
       {
         name: 'Projects',
-        link: '/landing/',
+        link: '/projects/',
       },
       {
         name: 'Timeline',
