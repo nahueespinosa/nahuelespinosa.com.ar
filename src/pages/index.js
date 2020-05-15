@@ -65,7 +65,7 @@ class HomeIndex extends React.Component {
                                 <h3>Articles</h3>
                                 <p>Stuff I didn't find on the internet (sort of)</p>
                             </header>
-                            <Link to="/landing" className="link primary"></Link>
+                            <Link to="/articles" className="link primary"></Link>
                         </article>
                     </section>
                     <section id="two">

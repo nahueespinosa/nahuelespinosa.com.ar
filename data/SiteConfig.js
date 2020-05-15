@@ -33,7 +33,7 @@ const config = {
     },
     {
       name: 'Articles',
-      link: '/landing/',
+      link: '/articles/',
     },
   ],
   themeColor: '#3F80FF', // Used for setting manifest and progress theme colors.
