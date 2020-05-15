@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
+import Timeline from '../components/Timeline'
 
 const TimelinePage = (props) => (
     <Layout>
@@ -19,7 +20,7 @@ const TimelinePage = (props) => (
             <section id="one">
                 <div className="inner">
                     <p>I thought it would be fun to make a timeline of my career, so here it is.</p>
-                    <p><i>Or will be...</i></p>
+                    <Timeline />
                 </div>
             </section>
         </div>
