@@ -8,7 +8,7 @@ import pic08 from '../assets/images/pic08.jpg'
 import pic09 from '../assets/images/pic09.jpg'
 import pic10 from '../assets/images/pic10.jpg'
 
-const Articles = (props) => (
+const ArticlesPage = (props) => (
     <Layout>
         <Helmet>
             <title>Nahuel Espinosa | Articles</title>
@@ -30,4 +30,4 @@ const Articles = (props) => (
     </Layout>
 )
 
-export default Articles
+export default ArticlesPage

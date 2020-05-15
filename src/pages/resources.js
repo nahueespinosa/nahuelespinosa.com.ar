@@ -6,7 +6,7 @@ import pic11 from '../assets/images/pic11.jpg'
 
 import resources from '../../data/resources'
 
-const Resources = (props) => (
+const ResourcesPage = (props) => (
     <Layout>
         <Helmet>
             <title>Nahuel Espinosa | Resources</title>
@@ -39,4 +39,4 @@ const Resources = (props) => (
     </Layout>
 )
 
-export default Resources
+export default ResourcesPage

@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
-const Timeline = (props) => (
+const TimelinePage = (props) => (
     <Layout>
         <Helmet>
             <title>Nahuel Espinosa | Timeline</title>
@@ -27,4 +27,4 @@ const Timeline = (props) => (
     </Layout>
 )
 
-export default Timeline
+export default TimelinePage
