@@ -11,15 +11,17 @@ import pic04 from '../assets/images/pic04.jpg'
 import pic05 from '../assets/images/pic05.jpg'
 import pic06 from '../assets/images/pic06.jpg'
 
+import config from '../../data/SiteConfig'
+
 class HomeIndex extends React.Component {
     render() {
 
         return (
             <Layout>
                 <Helmet
-                    title="Gatsby Starter - Forty"
+                    title={config.siteTitle}
                     meta={[
-                        { name: 'description', content: 'Sample' },
+                        { name: 'description', content: config.siteDescription },
                         { name: 'keywords', content: 'sample, something' },
                     ]}
                 >
@@ -31,43 +33,31 @@ class HomeIndex extends React.Component {
                     <section id="one" className="tiles">
                         <article style={{backgroundImage: `url(${pic01})`}}>
                             <header className="major">
-                                <h3>Aliquam</h3>
-                                <p>Ipsum dolor sit amet</p>
+                                <h3>Resources</h3>
+                                <p>Stuff I found on the internet</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
                         <article style={{backgroundImage: `url(${pic02})`}}>
                             <header className="major">
-                                <h3>Tempus</h3>
-                                <p>feugiat amet tempus</p>
+                                <h3>Projects</h3>
+                                <p>A selection of projects and technologies <br />
+                                I've used throughout the years</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
                         <article style={{backgroundImage: `url(${pic03})`}}>
                             <header className="major">
-                                <h3>Magna</h3>
-                                <p>Lorem etiam nullam</p>
+                                <h3>Timeline</h3>
+                                <p>A display of a list of events in chronological order <br />
+                                (according to Wikipedia)</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
                         <article style={{backgroundImage: `url(${pic04})`}}>
                             <header className="major">
-                                <h3>Ipsum</h3>
-                                <p>Nisl sed aliquam</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic05})`}}>
-                            <header className="major">
-                                <h3>Consequat</h3>
-                                <p>Ipsum dolor sit amet</p>
-                            </header>
-                            <Link to="/landing" className="link primary"></Link>
-                        </article>
-                        <article style={{backgroundImage: `url(${pic06})`}}>
-                            <header className="major">
-                                <h3>Etiam</h3>
-                                <p>Feugiat amet tempus</p>
+                                <h3>Articles</h3>
+                                <p>Stuff I didn't find on the internet (sort of)</p>
                             </header>
                             <Link to="/landing" className="link primary"></Link>
                         </article>
