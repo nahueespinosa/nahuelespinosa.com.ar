@@ -6,13 +6,13 @@ import Banner from '../components/Banner'
 const Timeline = (props) => (
     <Layout>
         <Helmet>
-            <title>Nahuel Espinosa | Resources</title>
+            <title>Nahuel Espinosa | Timeline</title>
             <meta name="description" content="Timeline Page" />
         </Helmet>
 
         <Banner title="Timeline" sectionStyle="style3">
             <p>A display of a list of events in chronological order <br />
-            (according to Wikipedia)</p>
+            (according to <a href="https://en.wikipedia.org/wiki/Timeline">Wikipedia</a>)</p>
         </Banner>
 
         <div id="main" className="alt">
