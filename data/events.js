@@ -1,42 +1,42 @@
 export default [
     {
-        title: "Técnico en Electrónica",
+        title: "Electronics Technician",
         date: "2009",
-        text: "Egreso de la carrera de técnico en electrónica en ECEA.",
+        text: "Graduated from ECEA Technical High School.",
     },
     {
-        title: "Ingeniería en Electrónica",
+        title: "Electronics Engineer",
         date: "2010",
-        text: "Ingreso a la carrera de ingeniería en electrónica en la UTN-FRBA.",
+        text: "Entered the electronics engineering career in UTN-FRBA.",
     },
     {
-        title: "Comprador técnico",
+        title: "Technical Buyer",
         date: "2010",
-        text: "Desarrollo, contacto y seguimiento de proveedores. Control de stock y administración de órdenes de compra.",
+        text: "Development, contact and monitoring of suppliers and identification of business opportunities.",
     },
     {
-        title: "Técnico en electrónica",
+        title: "Electronics Technician",
         date: "2013",
-        text: "Diagnóstico y reparación de equipos de audio, amplificadores, placas de sonido, procesadores de efectos e instrumentos musicales electrónicos.",
+        text: "Troubleshooting and repair of audio equipment, amplifiers, sound boards, effects processors and electronic musical instruments.",
     },
     {
-        title: "Profesor de electrónica",
+        title: "Professor",
         date: "2015",
-        text: "Comienzo de mi carrera como profesor de nivel medio."
+        text: "Took the position of professor in ECEA. Subjects: 'Analysis, Testing and Measurements of Analog Electronic Systems', 'Structure and Functions of Computer Systems' and 'Electronics Workshop'."
     },
     {
-        title: "Jefe de laboratorio",
+        title: "Electronics Laboratory Chief",
         date: "2016",
-        text: "Desarrollo e implementación de proyectos educativos. Preparación de actividades prácticas y administración de redes."
+        text: "Development and implementation of educational projects at hardware and firmware level. Printed circuit board design and microcontrolers programming."
     },
     {
-        title: "Ingeniería en Electrónica",
+        title: "Electronics Engineer",
         date: "2017",
-        text: "Egreso de la carrera de ingeniería en electrónica en la UTN-FRBA.",
+        text: "Graduated from the electronics engineering career in UTN-FRBA.",
     },
     {
-        title: "Especialización en Sistemas Embebidos",
+        title: "Embedded Systems Specialization",
         date: "2020",
-        text: "Ingreso a la carrera de especialización en sistemas embebidos en la UBA.",
+        text: "Entered the embedded systems specialization in UBA.",
     },
 ]
