@@ -28,6 +28,18 @@ const Contact = (props) => (
             <section className="split">
                 <section>
                     <div className="contact-method">
+                        <a href={config.linkedin} className="icon alt fa-linkedin"></a>
+                        <h3><a href={config.linkedin}>LinkedIn</a></h3>
+                    </div>
+                </section>
+                <section>
+                    <div className="contact-method">
+                        <a href={config.github} className="icon alt fa-github"></a>
+                        <h3><a href={config.github}>GitHub</a></h3>
+                    </div>
+                </section>
+                <section>
+                    <div className="contact-method">
                         <span className="icon alt fa-envelope"></span>
                         <h3>Email</h3>
                         <a href={"mailto:"+config.email}>{config.email}</a>
