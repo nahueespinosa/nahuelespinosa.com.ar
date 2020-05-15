@@ -14,7 +14,7 @@ const TimelinePage = (props) => (
         </Helmet>
 
         <Banner title="Timeline" sectionStyle="style3">
-            <p>A display of a list of events in chronological order <br />
+            <p>A timeline is a display of a list of events in chronological order <br />
             (according to <a href="https://en.wikipedia.org/wiki/Timeline">Wikipedia</a>)</p>
         </Banner>
 

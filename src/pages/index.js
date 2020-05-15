@@ -55,7 +55,7 @@ class HomeIndex extends React.Component {
                         <article style={{backgroundImage: `url(${pic03})`}}>
                             <header className="major">
                                 <h3>Timeline</h3>
-                                <p>A display of a list of events in chronological order <br />
+                                <p>A timeline is a display of a list of events in chronological order <br />
                                 (according to Wikipedia)</p>
                             </header>
                             <Link to="/timeline" className="link primary"></Link>
