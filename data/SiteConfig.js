@@ -29,7 +29,7 @@ const config = {
     },
     {
       name: 'Timeline',
-      link: '/landing/',
+      link: '/timeline/',
     },
     {
       name: 'Articles',
