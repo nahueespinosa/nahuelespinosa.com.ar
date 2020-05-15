@@ -27,8 +27,14 @@ class HomeIndex extends React.Component {
                 >
                 </Helmet>
 
-                <Banner />
-
+                <Banner title="Hi, there" sectionStyle="major">
+                    <p>I'm an electronics engineer and software developer<br />
+                    passionate about computer science and related topics.</p>
+                    <ul className="actions">
+                        <li><a href="#one" className="button next scrolly">Get Started</a></li>
+                    </ul>
+                </Banner>
+                
                 <div id="main">
                     <section id="one" className="tiles">
                         <article style={{backgroundImage: `url(${pic01})`}}>

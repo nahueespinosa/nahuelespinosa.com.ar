@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import BannerProjects from '../components/BannerProjects'
+import Banner from '../components/Banner'
 
 import pic08 from '../assets/images/pic08.jpg'
 import pic09 from '../assets/images/pic09.jpg'
@@ -15,7 +15,10 @@ const Projects = (props) => (
             <meta name="description" content="Projects Page" />
         </Helmet>
 
-        <BannerProjects />
+        <Banner title="Projects" sectionStyle="style2">
+            <p>This is a selection of projects and technologies <br />
+            I've used throughout the years.</p>
+        </Banner>
 
         <div id="main">
             <section id="one">

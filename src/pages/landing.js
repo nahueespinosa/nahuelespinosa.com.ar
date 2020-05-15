@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import BannerLanding from '../components/BannerLanding'
+import Banner from '../components/Banner'
 
 import pic08 from '../assets/images/pic08.jpg'
 import pic09 from '../assets/images/pic09.jpg'
@@ -15,7 +15,10 @@ const Landing = (props) => (
             <meta name="description" content="Landing Page" />
         </Helmet>
 
-        <BannerLanding />
+        <Banner title="Landing" sectionStyle="style3">
+            <p>Lorem ipsum dolor sit amet nullam consequat<br />
+            sed veroeros. tempus adipiscing nulla.</p>
+        </Banner>
 
         <div id="main">
             <section id="one">
