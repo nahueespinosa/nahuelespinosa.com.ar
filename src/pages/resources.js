@@ -27,7 +27,7 @@ const ResourcesPage = (props) => (
                 <div className="inner">
                     <div className="grid-wrapper">
                         {resources.map(resource => (
-                            <div className="col-4">
+                            <div className="box col-4">
                                 <h3>{resource.title}</h3>
                                 <p><a href={resource.link}>{resource.link}</a></p>
                                 <p>{resource.description}</p>
