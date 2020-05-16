@@ -26,8 +26,8 @@ const ResourcesPage = (props) => (
             <section id="two">
                 <div className="inner">
                     <div className="grid-wrapper">
-                        {resources.map(resource => (
-                            <div className="box col-4">
+                        {resources.map((resource, index) => (
+                            <div className="box col-4" data-sal="zoom-in" data-sal-delay={300*(index%3)} data-sal-easing="ease">
                                 <h3>{resource.title}</h3>
                                 <p><a href={resource.link}>{resource.link}</a></p>
                                 <p>{resource.description}</p>
