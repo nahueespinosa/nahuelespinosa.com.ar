@@ -14,7 +14,7 @@ const config = {
   location: 'Buenos Aires, Argentina',
   linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
   github: 'https://github.com/nahueespinosa',
-  copyright: '&copy;2020, Nahuel Espinosa',
+  copyright: '2020, Nahuel Espinosa',
   menuLinks: [
     {
       name: 'Home',
