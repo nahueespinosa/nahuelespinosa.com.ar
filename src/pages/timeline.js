@@ -21,7 +21,7 @@ const TimelinePage = (props) => (
         <div id="main" className="alt">
             <section id="one">
                 <div className="inner">
-                    <p>I thought it would be fun to make a timeline of my career, so here it is.</p>
+                    <p>I thought it would be nice to have a timeline of my career, so here it is.</p>
                     <Timeline events={events}/>
                 </div>
             </section>
