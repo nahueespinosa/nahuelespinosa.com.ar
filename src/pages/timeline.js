@@ -22,6 +22,10 @@ const TimelinePage = (props) => (
             <section id="one">
                 <div className="inner">
                     <p>I thought it would be nice to have a timeline of my career, so here it is.</p>
+                </div>
+            </section>
+            <section id="two">
+                <div className="inner">
                     <Timeline events={events}/>
                 </div>
             </section>
