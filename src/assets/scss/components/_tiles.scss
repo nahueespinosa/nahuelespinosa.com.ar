@@ -95,14 +95,14 @@
 
     &:hover {
       &:before {
-        opacity: 0;
+        opacity: 0.3;
       }
     }
 
     &.is-transitioning {
       @include vendor('transform', 'scale(0.95)');
       // @include vendor('filter', 'blur(0.5em)');
-      opacity: 0;
+      opacity: 0.3;
     }
 
     &:nth-child(4n - 1),
