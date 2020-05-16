@@ -27,13 +27,14 @@ export default [
         title: "Professor",
         icon: "fa-users",
         date: "2015",
-        text: "Took the position of professor in ECEA. Subjects: 'Analysis, Testing and Measurements of Analog Electronic Systems', 'Structure and Functions of Computer Systems' and 'Electronics Workshop'."
+        text: "Took the position of professor in ECEA Technical High School.",
+        list: ['Analysis, Testing and Measurements of Analog Electronic Systems', 'Structure and Functions of Computer Systems', 'Electronics Workshop']
     },
     {
         title: "Electronics Laboratory Chief",
         icon: "fa-microchip",
         date: "2016",
-        text: "Development and implementation of educational projects. Printed circuit board design and microcontrollers programming."
+        text: "Development and implementation of educational projects. Printed circuit board design and microcontrollers programming.",
     },
     {
         title: "Electronics Engineer",

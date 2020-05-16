@@ -10,6 +10,11 @@ const Timeline = (props) => (
                         <div class="timeline-date">{event.date}</div>
                         <h3><span className={'icon '+event.icon}></span> {event.title}</h3>
                         <p>{event.text}</p>
+                        <ul>
+                            { event.list && event.list.map( item => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div> 
             ))}
