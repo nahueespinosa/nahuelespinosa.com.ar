@@ -84,7 +84,9 @@
     color: _palette(bg-alt);
     display: inline-block;
     width: 100%;
-    font-size: 0.8rem;}
+	font-size: 0.8rem;
+	text-align: right;
+}
 
 @media screen and (max-width: 768px) {
 

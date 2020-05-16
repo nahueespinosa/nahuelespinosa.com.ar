@@ -8,7 +8,7 @@ const Timeline = (props) => (
                     <div class="timeline-img"></div>
                     <div class="timeline-content" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
                         <div class="timeline-date">{event.date}</div>
-                        <h3>{event.title}</h3>
+                        <h3><span className={'icon '+event.icon}></span> {event.title}</h3>
                         <p>{event.text}</p>
                     </div>
                 </div> 
