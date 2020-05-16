@@ -3,8 +3,6 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
-import pic11 from '../assets/images/pic11.jpg'
-
 import resources from '../../data/resources'
 
 const ResourcesPage = (props) => (
