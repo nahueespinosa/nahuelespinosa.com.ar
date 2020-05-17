@@ -114,7 +114,7 @@ const ProjectsPage = (props) => (
                                 <h3>Energy Meter</h3>
                             </header>
                             <p>Design and development of a device capable of measuring electric parameters such as active power, instant voltage and current, power factor and energy.</p>
-                            <p>It has internal storage and an integrated web server to access the information in real time. The main chips used where LPC1769, ESP8266 and ATM90E36A. Connectivity: Ethernet, WiFi, Modbus.</p>
+                            <p>It has internal storage and an integrated web server to access the information in real time. The main chips used were LPC1769, ESP8266 and ATM90E36A. Connectivity: Ethernet, WiFi, Modbus.</p>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>LPCOpen</code></li>
                                 <li><code>FreeRTOS</code></li>
