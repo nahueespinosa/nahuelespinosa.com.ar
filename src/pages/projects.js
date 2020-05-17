@@ -23,7 +23,7 @@ const ProjectsPage = (props) => (
             I've used throughout the years.</p>
         </Banner>
 
-        <div id="main">
+        <div id="main" className="style2">
             <section id="one">
                 <div className="inner">
                     <p>In this selection I tried to include the most significant projects I've participated in or created on my own.</p>
@@ -61,7 +61,7 @@ const ProjectsPage = (props) => (
                                 <h3>Visual Graph Search</h3>
                             </header>
                             <p>This is a game that allows you to visualize concepts and play with search algorithms for graph data structures. The interface is implemented with PyGame, and allows you to draw walls and select the start and end positions.</p>
-                            <p>I started this project after finishing the course "<a href="https://github.com/nahueespinosa/ai50">Introduction to Artificial Intelligence</a>" from <a href="https://cs50.harvard.edu/ai/2020/">CS50</a>.</p>
+                            <p>I started this project after finishing the course <a href="https://github.com/nahueespinosa/ai50">Introduction to Artificial Intelligence</a> from <a href="https://cs50.harvard.edu/ai/2020/">CS50</a>.</p>
                             <ul className="actions">
                                 <li><a href="https://github.com/nahueespinosa/visual_graph_search" className="button">Source Code</a></li>
                             </ul>

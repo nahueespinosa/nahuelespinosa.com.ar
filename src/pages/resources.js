@@ -16,7 +16,7 @@ const ResourcesPage = (props) => (
             <p>Stuff I found on the internet.</p>
         </Banner>
 
-        <div id="main" className="alt">
+        <div id="main" className="alt style1">
             <section id="one">
                 <div className="inner">
                     <p>Here is a list of resources from the internet that I don't think are widely known (some of them may be). I won't spend much time classifying them, there may be articles, entire websites, blogs, forums, tools and basically anything that I think is worth sharing.</p>

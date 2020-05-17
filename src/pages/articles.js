@@ -14,7 +14,7 @@ const ArticlesPage = (props) => (
             <p>Stuff I didn't find on the internet (sort of)</p>
         </Banner>
 
-        <div id="main">
+        <div id="main" className="style4">
             <section id="one">
                 <div className="inner">
                     <p>Some day I'll find the time and energy to write something here. I promise.</p>

@@ -18,7 +18,7 @@ const TimelinePage = (props) => (
             (according to <a href="https://en.wikipedia.org/wiki/Timeline">Wikipedia</a>)</p>
         </Banner>
 
-        <div id="main" className="alt">
+        <div id="main" className="alt style3">
             <section id="one">
                 <div className="inner">
                     <p>I thought it would be nice to have a timeline of my career, so here it is.</p>
