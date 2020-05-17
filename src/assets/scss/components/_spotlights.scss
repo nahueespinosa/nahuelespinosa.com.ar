@@ -16,7 +16,7 @@
 		> section {
 			@include vendor('display', 'flex');
 			@include vendor('flex-direction', 'row');
-			background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
+			background-color: desaturate(lighten(_palette(bg-alt), 1), 1);
 
 			> .image {
 				background-position: center center;
@@ -62,7 +62,7 @@
 
 			&:nth-child(2n) {
 				@include vendor('flex-direction', 'row-reverse');
-				background-color: desaturate(lighten(_palette(bg-alt), 4), 2);
+				background-color: desaturate(lighten(_palette(bg-alt), 2), 2);
 
 				> .content {
 					@include vendor('align-items', 'flex-end');
