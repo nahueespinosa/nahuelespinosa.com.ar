@@ -19,6 +19,13 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    'gatsby-plugin-scroll-reveal'
+    'gatsby-plugin-scroll-reveal',
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {        
+        langKeyDefault: 'en',
+        useLangKeyLayout: false
+      }
+    }
   ],
 }
