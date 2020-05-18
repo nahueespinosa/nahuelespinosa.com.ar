@@ -6,7 +6,7 @@ import Banner from '../components/Banner'
 import resources from '../../data/resources'
 
 const ResourcesPage = (props) => (
-    <Layout>
+    <Layout lang="en">
         <Helmet>
             <title>Nahuel Espinosa | Resources</title>
             <meta name="description" content="Resources Page" />
@@ -30,7 +30,7 @@ const ResourcesPage = (props) => (
                             <div className="box col-4" data-sal="zoom-in" data-sal-delay={300*(index%3)} data-sal-easing="ease">
                                 <h3>{resource.title}</h3>
                                 <p><a href={resource.link}>{resource.link}</a></p>
-                                <p>{resource.description}</p>
+                                <p>{resource.text}</p>
                             </div>
                         ))}
                     </div>

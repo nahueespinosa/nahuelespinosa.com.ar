@@ -12,7 +12,7 @@ import project05 from '../assets/images/project05.gif'
 import project06 from '../assets/images/project06.jpg'
 
 const ProjectsPage = (props) => (
-    <Layout>
+    <Layout lang="en">
         <Helmet>
             <title>Nahuel Espinosa | Projects</title>
             <meta name="description" content="Projects Page" />

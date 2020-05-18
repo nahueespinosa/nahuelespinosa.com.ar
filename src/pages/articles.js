@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
 const ArticlesPage = (props) => (
-    <Layout>
+    <Layout lang="en">
         <Helmet>
             <title>Nahuel Espinosa | Articles</title>
             <meta name="description" content="Articles Page" />

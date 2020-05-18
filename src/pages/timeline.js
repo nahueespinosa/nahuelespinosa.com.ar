@@ -7,7 +7,7 @@ import Timeline from '../components/Timeline'
 import events from '../../data/events'
 
 const TimelinePage = (props) => (
-    <Layout>
+    <Layout lang="en">
         <Helmet>
             <title>Nahuel Espinosa | Timeline</title>
             <meta name="description" content="Timeline Page" />
@@ -15,7 +15,7 @@ const TimelinePage = (props) => (
 
         <Banner title="Timeline" sectionStyle="style3">
             <p>A timeline is a display of a list of events in chronological order <br />
-            (according to <a href="https://en.wikipedia.org/wiki/Timeline">Wikipedia</a>)</p>
+            (according to <a href="https://en.wikipedia.org/wiki/Timeline">Wikipedia</a>).</p>
         </Banner>
 
         <div id="main" className="alt style3">

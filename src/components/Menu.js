@@ -3,17 +3,28 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import config from '../../data/SiteConfig'
+import config_es from '../../data/SiteConfig.es'
+
+function getConfig(lang) {
+    if( lang === 'es' ) {
+        return config_es
+    }
+    else {
+        return config
+    }
+}
 
 const Menu = (props) => (
     <nav id="menu">
         <div className="inner">
             <ul className="links">
-                {config.menuLinks.map(link => (
-                    <li><Link onClick={props.onToggleMenu} to={link.link}>{link.name}</Link></li>
+                {getConfig(props.lang).menuLinks.map(item => (
+                    <li><Link onClick={props.onToggleMenu} to={item.link}>{item.name}</Link></li>
                 ))}
             </ul>
             <ul className="actions vertical">
-                <li><a href="#contact" onClick={props.onToggleMenu} className="button special fit">Contact</a></li>
+                <li><a href="#contact" onClick={props.onToggleMenu} className="button special fit">{props.lang === 'es' ? 'Contacto' : 'Contact'}</a></li>
+                <li><a href={props.lang === 'es' ? '/' : '/es/'} className="button fit">{props.lang === 'es' ? 'English Version' : 'Versión en Español'}</a></li>
             </ul>
         </div>
         <a className="close" onClick={props.onToggleMenu} href="#close">Close</a>

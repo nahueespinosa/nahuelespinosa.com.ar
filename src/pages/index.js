@@ -15,7 +15,7 @@ class HomeIndex extends React.Component {
     render() {
 
         return (
-            <Layout>
+            <Layout lang="en">
                 <Helmet
                     title={config.siteTitle}
                     meta={[
