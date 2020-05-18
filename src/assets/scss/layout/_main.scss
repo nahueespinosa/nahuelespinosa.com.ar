@@ -28,11 +28,11 @@
 			color: _palette(fg-bold);
 		}
 
-		&.style1 { a { color: lighten(saturate(_palette(accent1), 25), 25); } code { background-color: transparentize(saturate(_palette(accent1), 25), 0.5); } }
-		&.style2 { a { color: lighten(saturate(_palette(accent2), 25), 25); } code { background-color: transparentize(saturate(_palette(accent2), 25), 0.5); } }
-		&.style3 { a { color: lighten(saturate(_palette(accent3), 25), 25); } }
-		&.style4 { a { color: lighten(saturate(_palette(accent4), 25), 25); } }
-		&.style5 { a { color: lighten(saturate(_palette(accent5), 25), 25); } }
-		&.style6 { a { color: lighten(saturate(_palette(accent6), 25), 25); } }
+		&.style1 { a { color: saturate(_palette(accent1), 50); } code { background-color: saturate(_palette(accent1), 25); color: white; } }
+		&.style2 { a { color: saturate(_palette(accent2), 50); } code { background-color: saturate(_palette(accent2), 25); color: white; } }
+		&.style3 { a { color: saturate(_palette(accent3), 50); } code { background-color: saturate(_palette(accent3), 25); color: white; } }
+		&.style4 { a { color: saturate(_palette(accent4), 50); } code { background-color: saturate(_palette(accent4), 25); color: white; } }
+		&.style5 { a { color: saturate(_palette(accent5), 50); } code { background-color: saturate(_palette(accent5), 25); color: white; } }
+		&.style6 { a { color: saturate(_palette(accent6), 50); } code { background-color: saturate(_palette(accent6), 25); color: white; } }
 		
 	}

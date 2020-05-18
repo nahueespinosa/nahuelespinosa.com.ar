@@ -28,7 +28,7 @@
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
 			@include vendor('pointer-events', 'none');
-			background-color: _palette(bg);
+			background-color: _palette(bg-banner);
 			content: '';
 			display: block;
 			height: 100%;
@@ -42,6 +42,11 @@
 
 		h1 {
 			font-size: 3.25em;
+			color: _palette(fg-banner);
+		}
+
+		p {
+			color: _palette(fg-banner);
 		}
 
 		> .inner {
@@ -67,6 +72,16 @@
 
 					&:after {
 						max-width: 100%;
+					}
+				}
+
+				&.major {
+		
+					> :first-child {
+		
+						&:after {
+							background-color: _palette(fg-banner);
+						}
 					}
 				}
 			}

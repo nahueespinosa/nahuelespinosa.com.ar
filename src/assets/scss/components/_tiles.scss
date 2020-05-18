@@ -46,16 +46,31 @@
     header {
       position: relative;
       z-index: 3;
+
+      &.major {
+		
+        > :first-child {
+  
+          &:after {
+            background-color: _palette(fg-banner);
+          }
+        }
+      }
     }
 
     h3 {
       font-size: 1.75em;
+      color: _palette(fg-banner);
 
       a {
         &:hover {
           color: inherit !important;
         }
       }
+    }
+
+    p {
+      color: _palette(fg-banner);
     }
 
     .link.primary {
