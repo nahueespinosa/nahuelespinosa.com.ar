@@ -8,8 +8,9 @@ import project01 from '../assets/images/project01.jpg'
 import project02 from '../assets/images/project02.jpg'
 import project03 from '../assets/images/project03.jpg'
 import project04 from '../assets/images/project04.jpg'
-import project05 from '../assets/images/project05.gif'
-import project06 from '../assets/images/project06.jpg'
+import project05 from '../assets/images/project05.jpg'
+import project06 from '../assets/images/project06.gif'
+import project07 from '../assets/images/project07.jpg'
 
 const ProjectsPage = (props) => (
     <Layout lang="es">
@@ -26,12 +27,12 @@ const ProjectsPage = (props) => (
         <div id="main" className="style2">
             <section id="one">
                 <div className="inner">
-                    <p>En esta selección traté de incluir los proyectos más significativos en los que participé o creé por mi cuenta.</p>
+                    <p>En esta sección traté de incluir los proyectos más significativos en los que participé. Están ordenados del más reciente al más antiguo e incluí etiquetas para dar una idea de las tecnologías involucradas.</p>
                 </div>
             </section>
             <section id="two" className="spotlights">
                 <section>
-                    <img className="image" src={project06} alt="" />
+                    <img className="image" src={project07} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
@@ -54,11 +55,11 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project05} alt="" />
+                    <img className="image" src={project06} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Visual Graph Search</h3>
+                                <h3>Visual graph search</h3>
                             </header>
                             <p>Este es un juego que permite visualizar conceptos y jugar con algoritmos de búsqueda para estructuras de datos con grafos. La interfaz está implementada con PyGame, y permite dibujar muros y seleccionar las posiciones iniciales y finales.</p>
                             <p>Comencé este proyecto después de finalizar el curso <a href="https://github.com/nahueespinosa/ai50">Introduction to Artificial Intelligence</a> de <a href="https://cs50.harvard.edu/ai/2020/">CS50</a>.</p>
@@ -73,7 +74,7 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project04} alt="" />
+                    <img className="image" src={project05} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
@@ -86,13 +87,14 @@ const ProjectsPage = (props) => (
                             </ul>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>ST Microcontrollers</code></li>
+                                <li><code>C</code></li>
                                 <li><code>STM32CubeIDE</code></li>
                             </ul>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project03} alt="" />
+                    <img className="image" src={project04} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
@@ -107,16 +109,17 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project02} alt="" />
+                    <img className="image" src={project03} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Energy Meter</h3>
+                                <h3>Medidor de energía</h3>
                             </header>
                             <p>Diseño y desarrollo de un dispositivo capaz de medir parámetros eléctricos como potencia activa, tensión y corriente instantáneas, factor de potencia y energía.</p>
                             <p>Posee almacenamiento interno y un servidor web integrado para acceder a la información en tiempo real. Los principales chips usados fueron LPC1769, ESP8266, ATM90E36A. Conectividad: Ethernet, WiFi, Modbus.</p>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>LPCOpen</code></li>
+                                <li><code>C</code></li>
                                 <li><code>FreeRTOS</code></li>
                                 <li><code>uIP</code></li>
                                 <li><code>Modbus</code></li>
@@ -126,17 +129,37 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
+                    <img className="image" src={project02} alt="" />
+                    <div className="content">
+                        <div className="inner">
+                            <header className="major">
+                                <h3>Sistema de control de asiento de vehículo</h3>
+                            </header>
+                            <p>Implementación de un sistema de control de asiento de un vehículo con sensor de temperatura, calentador y sensor de presencia. Dos asientos conectados a través de un bus LIN, y comunicación CAN con el resto del vehículo.</p>
+                            <p>Para la comunicación LIN se utilizó la UART2 del microcontrolador con un transceiver <a href="http://www.ti.com/lit/ds/symlink/tpic1021.pdf?&ts=1589836790029">TPIC1021DR</a>. Y para el bus CAN se utilizó el transceiver <a href="https://www.ti.com/product/SN65HVD1040">SN65HVD1040</a>.</p>
+                            <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
+                                <li><code>CMSIS</code></li>
+                                <li><code>FreeRTOS</code></li>
+                                <li><code>C</code></li>
+                                <li><code>LIN</code></li>
+                                <li><code>CAN</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
                     <img className="image" src={project01} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Vehicle Tracker</h3>
+                                <h3>Sistema de localización de vehículos</h3>
                             </header>
                             <p>Diseño y desarrollo de un rastreador cuya función principal es localizar y mostrar información de múltiples vehículos. Usamos un módulo <a href="https://www.itead.cc/sim908-gsm-gprs-gps-module.html">SIM908</a> con una interfaz de comandos AT para enviar la posición GPS sobre GPRS a una aplicación backend.</p>
                             <p>La aplicación recibe los datos de varios dispositivos y genera un mapa con geocercas configurables. Se almacena todo en una base de datos SQLite para un posterior análisis.</p>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>FreeRTOS</code></li>
                                 <li><code>GPRS/GPS</code></li>
+                                <li><code>C</code></li>
                                 <li><code>C++</code></li>
                                 <li><code>QtCreator</code></li>
                                 <li><code>SQL</code></li>

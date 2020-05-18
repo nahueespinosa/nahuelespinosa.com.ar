@@ -8,8 +8,9 @@ import project01 from '../assets/images/project01.jpg'
 import project02 from '../assets/images/project02.jpg'
 import project03 from '../assets/images/project03.jpg'
 import project04 from '../assets/images/project04.jpg'
-import project05 from '../assets/images/project05.gif'
-import project06 from '../assets/images/project06.jpg'
+import project05 from '../assets/images/project05.jpg'
+import project06 from '../assets/images/project06.gif'
+import project07 from '../assets/images/project07.jpg'
 
 const ProjectsPage = (props) => (
     <Layout lang="en">
@@ -26,12 +27,12 @@ const ProjectsPage = (props) => (
         <div id="main" className="style2">
             <section id="one">
                 <div className="inner">
-                    <p>In this selection I tried to include the most significant projects I've participated in or created on my own.</p>
+                    <p>In this section I've tried to include the most significant projects I've participated in. They are ordered from newest to oldest and I've included some tags to give an idea of the technology involved.</p>
                 </div>
             </section>
             <section id="two" className="spotlights">
                 <section>
-                    <img className="image" src={project06} alt="" />
+                    <img className="image" src={project07} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
@@ -54,11 +55,11 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project05} alt="" />
+                    <img className="image" src={project06} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Visual Graph Search</h3>
+                                <h3>Visual graph search</h3>
                             </header>
                             <p>This is a game that allows you to visualize concepts and play with search algorithms for graph data structures. The interface is implemented with PyGame, and allows you to draw walls and select the start and end positions.</p>
                             <p>I started this project after finishing the course <a href="https://github.com/nahueespinosa/ai50">Introduction to Artificial Intelligence</a> from <a href="https://cs50.harvard.edu/ai/2020/">CS50</a>.</p>
@@ -73,7 +74,7 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project04} alt="" />
+                    <img className="image" src={project05} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
@@ -86,13 +87,14 @@ const ProjectsPage = (props) => (
                             </ul>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>ST Microcontrollers</code></li>
+                                <li><code>C</code></li>
                                 <li><code>STM32CubeIDE</code></li>
                             </ul>
                         </div>
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project03} alt="" />
+                    <img className="image" src={project04} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
@@ -107,16 +109,17 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
-                    <img className="image" src={project02} alt="" />
+                    <img className="image" src={project03} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Energy Meter</h3>
+                                <h3>Energy meter</h3>
                             </header>
                             <p>Design and development of a device capable of measuring electric parameters such as active power, instant voltage and current, power factor and energy.</p>
                             <p>It has internal storage and an integrated web server to access the information in real time. The main chips used were LPC1769, ESP8266 and ATM90E36A. Connectivity: Ethernet, WiFi, Modbus.</p>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>LPCOpen</code></li>
+                                <li><code>C</code></li>
                                 <li><code>FreeRTOS</code></li>
                                 <li><code>uIP</code></li>
                                 <li><code>Modbus</code></li>
@@ -126,17 +129,37 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
                 <section>
+                    <img className="image" src={project02} alt="" />
+                    <div className="content">
+                        <div className="inner">
+                            <header className="major">
+                                <h3>Vehicle seat control system</h3>
+                            </header>
+                            <p>Implementation of vehicle seat control system with temepature sensor, heater y presence detector. Two seats connected over a LIN bus, and CAN bus available to communicate with the rest of the vehicle.</p>
+                            <p>For the LIN communication we used the UART2 peripheral of the microcontroller with a <a href="http://www.ti.com/lit/ds/symlink/tpic1021.pdf?&ts=1589836790029">TPIC1021DR</a> transceiver. And for the CAN bus we used the <a href="https://www.ti.com/product/SN65HVD1040">SN65HVD1040</a> transceiver.</p>
+                            <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
+                                <li><code>CMSIS</code></li>
+                                <li><code>FreeRTOS</code></li>
+                                <li><code>C</code></li>
+                                <li><code>LIN</code></li>
+                                <li><code>CAN</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
                     <img className="image" src={project01} alt="" />
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Vehicle Tracker</h3>
+                                <h3>Vehicle localization system</h3>
                             </header>
                             <p>Design and development of a tracker whose main function is to locate and display information from multiple vehicles. We used a <a href="https://www.itead.cc/sim908-gsm-gprs-gps-module.html">SIM908</a> module with AT commands interface to send the GPS location over GPRS to a backend application.</p>
                             <p>The application receives the data from various devices and generates a map with configurable geofences. Everything is stored in a SQLite database for further analysis.</p>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>FreeRTOS</code></li>
                                 <li><code>GPRS/GPS</code></li>
+                                <li><code>C</code></li>
                                 <li><code>C++</code></li>
                                 <li><code>QtCreator</code></li>
                                 <li><code>SQL</code></li>
