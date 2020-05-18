@@ -10,7 +10,7 @@ const config = {
     dateFormat: 'MMMM Do, YYYY',
     siteDescription:
       "Nahuel Espinosa is an electronics engineer and software developer passionate about computer science and related topics.",
-    email: 'nahuelespinosa@fecea.edu.ar',
+    email: 'nahue.espinosa@gmail.com',
     location: 'Buenos Aires, Argentina',
     linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
     github: 'https://github.com/nahueespinosa',
