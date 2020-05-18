@@ -29,7 +29,7 @@ class HomeIndex extends React.Component {
                     <p>I'm an electronics engineer and software developer <br />
                     passionate about computer science and related topics.</p>
                     <ul className="actions">
-                        <li><a href="#one" className="button next scrolly">Get Started</a></li>
+                        <li><a href="/es/" className="button next scrolly">Ir a Versión en Español</a></li>
                     </ul>
                 </Banner>
                 
