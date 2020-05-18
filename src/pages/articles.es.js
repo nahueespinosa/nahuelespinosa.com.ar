@@ -20,6 +20,11 @@ const ArticlesPage = (props) => (
                     <p>Algún día voy a encontrar el tiempo y la energía para escribir algo acá. Lo prometo.</p>
                 </div>
             </section>
+            <section id="three">
+                <div className="inner">
+                    <p>This page has an <a href="/articles">english version</a>.</p>
+                </div>
+            </section>
         </div>
 
     </Layout>

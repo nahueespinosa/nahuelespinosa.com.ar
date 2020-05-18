@@ -20,6 +20,11 @@ const ArticlesPage = (props) => (
                     <p>Some day I'll find the time and energy to write something here. I promise.</p>
                 </div>
             </section>
+            <section id="three">
+                <div className="inner">
+                    <p>Esta página tiene una <a href="/es/articles">versión en español</a>.</p>
+                </div>
+            </section>
         </div>
 
     </Layout>

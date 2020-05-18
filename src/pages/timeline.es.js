@@ -29,6 +29,11 @@ const TimelinePage = (props) => (
                     <Timeline events={events}/>
                 </div>
             </section>
+            <section id="three">
+                <div className="inner">
+                    <p>This page has an <a href="/timeline">english version</a>.</p>
+                </div>
+            </section>
         </div>
 
     </Layout>

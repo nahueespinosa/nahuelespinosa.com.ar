@@ -145,6 +145,11 @@ const ProjectsPage = (props) => (
                     </div>
                 </section>
             </section>
+            <section id="three">
+                <div className="inner">
+                    <p>This page has an <a href="/projects">english version</a>.</p>
+                </div>
+            </section>
         </div>
 
     </Layout>

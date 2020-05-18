@@ -36,6 +36,11 @@ const ResourcesPage = (props) => (
                     </div>
                 </div>
             </section>
+            <section id="three">
+                <div className="inner">
+                    <p>This page has an <a href="/resources">english version</a>.</p>
+                </div>
+            </section>
         </div>
 
     </Layout>
