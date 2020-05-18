@@ -40,7 +40,7 @@ const ProjectsPage = (props) => (
                             <p>This webpage was developed with Gatsby framework (React, node.js) using <a href="https://github.com/codebushi/gatsby-starter-forty">this starter</a>. <br/>
                             I adapted the theme to my needs and added/modified various componentes (<Link to="/timeline#two">Timeline</Link>, Banner).</p>
                             <ul className="actions">
-                                <li><a href="https://github.com/nahueespinosa/my-site" className="button">Source Code</a></li>
+                                <li><a href="https://github.com/nahueespinosa/my-site" className="button icon fa-github">Source Code</a></li>
                             </ul>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>Javascript</code></li>
@@ -63,7 +63,7 @@ const ProjectsPage = (props) => (
                             <p>This is a game that allows you to visualize concepts and play with search algorithms for graph data structures. The interface is implemented with PyGame, and allows you to draw walls and select the start and end positions.</p>
                             <p>I started this project after finishing the course <a href="https://github.com/nahueespinosa/ai50">Introduction to Artificial Intelligence</a> from <a href="https://cs50.harvard.edu/ai/2020/">CS50</a>.</p>
                             <ul className="actions">
-                                <li><a href="https://github.com/nahueespinosa/visual_graph_search" className="button">Source Code</a></li>
+                                <li><a href="https://github.com/nahueespinosa/visual_graph_search" className="button icon fa-github">Source Code</a></li>
                             </ul>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>Python</code></li>
@@ -82,7 +82,7 @@ const ProjectsPage = (props) => (
                             <p>Port sAPI library to <a href="https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html">STM32F103C8 Blue Pill board</a>. It works as a HAL (Hardware Abstraction Layer) for microcontrollers used in the <a href="http://www.proyecto-ciaa.com.ar/">project CIAA</a>.</p>
                             <p>It provides a good entry point for high school students to approach the embedded systems world.</p>
                             <ul className="actions">
-                                <li><a href="https://github.com/nahueespinosa/sapi_bluepill" className="button">Source Code</a></li>
+                                <li><a href="https://github.com/nahueespinosa/sapi_bluepill" className="button icon fa-github">Source Code</a></li>
                             </ul>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>ST Microcontrollers</code></li>
