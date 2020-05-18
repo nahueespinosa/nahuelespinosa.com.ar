@@ -132,7 +132,7 @@ const ProjectsPage = (props) => (
                             <header className="major">
                                 <h3>Vehicle Tracker</h3>
                             </header>
-                            <p>Design and development of a tracker whose main function is  to locate and display information from multiple vehicles. We used a <a href="https://www.itead.cc/sim908-gsm-gprs-gps-module.html">SIM908</a> module with AT commands interface to send the GPS location over GPRS to a backend application.</p>
+                            <p>Design and development of a tracker whose main function is to locate and display information from multiple vehicles. We used a <a href="https://www.itead.cc/sim908-gsm-gprs-gps-module.html">SIM908</a> module with AT commands interface to send the GPS location over GPRS to a backend application.</p>
                             <p>The application receives the data from various devices and generates a map with configurable geofences. Everything is stored in a SQLite database for further analysis.</p>
                             <ul className="actions" data-sal="zoom-out" data-sal-delay="300" data-sal-easing="ease">
                                 <li><code>FreeRTOS</code></li>
