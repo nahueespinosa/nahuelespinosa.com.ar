@@ -24,4 +24,14 @@ export default [
         link: "https://elgatoylacaja.com.ar/",
         text: "Este un sitio de divulgación científica excelente. Todo es genial. El diseño, la calidad del contenido, la profundidad de cada tema cubierto... y está hecho en Argentina"
     },
+    {
+        title: "Many But Finite",
+        link: "https://manybutfinite.com/",
+        text: "Traducido desde la descripción de la página: Este es un sitio para gente curiosa interesada en aprender acerca de tecnología y ciencia, pero que quiere material riguroso que sea fiel al código fuente, publicaciones y datos. Sin analogías blandas ni explicaciones al aire, te damos la posta."
+    },
+    {
+        title: "3D Content Central",
+        link: "https://www.3dcontentcentral.com/",
+        text: "Librería de piezas y componentes 3D. Permite exportar en varios formatos."
+    }
 ]

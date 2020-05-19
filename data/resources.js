@@ -24,4 +24,14 @@ export default [
         link: "https://elgatoylacaja.com.ar/",
         text: "This is an awesome scientific divulgation site. Everything about it is great. The design, the content quality, the depth of every topic covered... and it's made in Argentina.",
     },
+    {
+        title: "Many But Finite",
+        link: "https://manybutfinite.com/",
+        text: "From the about page: This is a site for curious people interested in learning about technology and science, but who want rigorous material that stays true to source code, papers, and data. No hand-waving or mushy analogies - we give you the real deal."
+    },
+    {
+        title: "3D Content Central",
+        link: "https://www.3dcontentcentral.com/",
+        text: "3D parts library. It allows to export them in several formats."
+    }
 ]
