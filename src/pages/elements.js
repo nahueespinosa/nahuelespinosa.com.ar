@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 
 import pic03 from '../assets/images/pic03.jpg'
@@ -9,10 +9,7 @@ import pic10 from '../assets/images/pic10.jpg'
 
 const Elements = (props) => (
     <Layout>
-        <Helmet>
-            <title>Elements - Forty by HTML5 UP</title>
-            <meta name="description" content="Elements Page" />
-        </Helmet>
+        <SEO />
 
         <div id="main" className="alt">
 

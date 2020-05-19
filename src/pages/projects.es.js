@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
@@ -14,10 +14,7 @@ import project07 from '../assets/images/project07.jpg'
 
 const ProjectsPage = (props) => (
     <Layout lang="es">
-        <Helmet>
-            <title>Nahuel Espinosa | Proyectos</title>
-            <meta name="description" content="Página de proyectos" />
-        </Helmet>
+        <SEO title="Nahuel Espinosa | Proyectos" lang="es" />
 
         <Banner title="Proyectos" sectionStyle="style2">
             <p>Esta es una selección de proyectos y tecnologías <br />

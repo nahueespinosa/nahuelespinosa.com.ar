@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
@@ -9,25 +9,16 @@ import pic02 from '../assets/images/pic02.jpg'
 import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 
-import config from '../../data/SiteConfig.es'
-
 class HomeIndex extends React.Component {
     render() {
 
         return (
-            <Layout lang="es">
-                <Helmet
-                    title={config.siteTitle}
-                    meta={[
-                        { name: 'description', content: config.siteDescription },
-                        { name: 'keywords', content: 'sample, something' },
-                    ]}
-                >
-                </Helmet>
+            <Layout lang='es'>
+                <SEO lang='es'/>
 
-                <Banner title="Hola" sectionStyle="major">
+                <Banner title="Hola, mi nombre es Nahuel" sectionStyle="major">
                     <p>Soy un ingeniero en electrónica y desarrollador de software <br />
-                    apasionado por la informática y temas relacionados.</p>
+                    interesado en informática y temas relacionados.</p>
                     <ul className="actions">
                         <li><a href="/" className="button banner">Go to English Version</a></li>
                     </ul>

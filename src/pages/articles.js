@@ -1,14 +1,11 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
 const ArticlesPage = (props) => (
     <Layout lang="en">
-        <Helmet>
-            <title>Nahuel Espinosa | Articles</title>
-            <meta name="description" content="Articles Page" />
-        </Helmet>
+        <SEO title="Nahuel Espinosa | Articles" />
 
         <Banner title="Articles" sectionStyle="style4">
             <p>Stuff I didn't find on the internet (sort of)</p>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Timeline from '../components/Timeline'
@@ -8,10 +8,7 @@ import events from '../../data/events.es'
 
 const TimelinePage = (props) => (
     <Layout lang="es">
-        <Helmet>
-            <title>Nahuel Espinosa | Línea de Tiempo</title>
-            <meta name="description" content="Página de Línea de Tiempo" />
-        </Helmet>
+        <SEO title="Nahuel Espinosa | Línea de Tiempo" lang="es" />
 
         <Banner title="Línea de Tiempo" sectionStyle="style3">
             <p>Una línea de tiempo es una lista de eventos en orden cronológico <br />

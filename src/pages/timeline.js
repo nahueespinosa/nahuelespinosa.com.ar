@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Timeline from '../components/Timeline'
@@ -8,10 +8,7 @@ import events from '../../data/events'
 
 const TimelinePage = (props) => (
     <Layout lang="en">
-        <Helmet>
-            <title>Nahuel Espinosa | Timeline</title>
-            <meta name="description" content="Timeline Page" />
-        </Helmet>
+        <SEO title="Nahuel Espinosa | Timeline" />
 
         <Banner title="Timeline" sectionStyle="style3">
             <p>A timeline is a display of a list of events in chronological order <br />

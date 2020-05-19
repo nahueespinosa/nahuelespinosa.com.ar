@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
@@ -7,10 +7,7 @@ import resources from '../../data/resources'
 
 const ResourcesPage = (props) => (
     <Layout lang="en">
-        <Helmet>
-            <title>Nahuel Espinosa | Resources</title>
-            <meta name="description" content="Resources Page" />
-        </Helmet>
+        <SEO title="Nahuel Espinosa | Resources" />
 
         <Banner title="Resources" sectionStyle="style1">
             <p>Stuff I found on the internet.</p>
