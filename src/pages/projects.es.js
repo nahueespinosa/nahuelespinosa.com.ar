@@ -130,7 +130,7 @@ const ProjectsPage = (props) => (
                     <div className="content">
                         <div className="inner">
                             <header className="major">
-                                <h3>Sistema de control de asiento de vehículo</h3>
+                                <h3>Sistema de asiento de vehículo</h3>
                             </header>
                             <p>Implementación de un sistema de control de asiento de un vehículo con sensor de temperatura, calentador y sensor de presencia. Dos asientos conectados a través de un bus LIN, y comunicación CAN con el resto del vehículo.</p>
                             <p>Para la comunicación LIN se utilizó la UART2 del microcontrolador con un transceiver <a href="http://www.ti.com/lit/ds/symlink/tpic1021.pdf?&ts=1589836790029">TPIC1021DR</a>. Y para el bus CAN se utilizó el transceiver <a href="https://www.ti.com/product/SN65HVD1040">SN65HVD1040</a>.</p>
