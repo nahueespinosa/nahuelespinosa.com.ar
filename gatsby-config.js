@@ -8,13 +8,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'nahuel-espinosa-site',
+        short_name: 'nahuel-site',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/assets/images/website-icon.png', // This path is relative to the root of the site.
+        background_color: '#333333',
+        theme_color: '#ffffff',
+        display: 'browser',
+        icon: 'src/assets/images/logo.png',
       },
     },
     'gatsby-plugin-sass',
