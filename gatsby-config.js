@@ -1,20 +1,25 @@
+const config = require('./data/SiteConfig')
+
 module.exports = {
   siteMetadata: {
-    title: "Nahuel Espinosa",
-    author: "Nahuel Espinosa"
+    title: config.siteTitle,
+    siteUrl: config.siteUrl,
+    description: config.siteDescription,
+    author: 'Nahuel Espinosa',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'nahuel-espinosa-site',
-        short_name: 'nahuel-site',
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        description: config.siteDescription,
         start_url: '/',
-        background_color: '#333333',
-        theme_color: '#ffffff',
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: 'browser',
-        icon: 'src/assets/images/logo.png',
+        icon: config.siteLogo,
       },
     },
     'gatsby-plugin-sass',
