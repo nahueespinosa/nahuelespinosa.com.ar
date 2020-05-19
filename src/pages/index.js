@@ -16,7 +16,7 @@ class HomeIndex extends React.Component {
             <Layout lang="en">
                 <SEO />
 
-                <Banner title="Hi, my name is Nahuel" sectionStyle="major">
+                <Banner title="Hi, I'm Nahuel" sectionStyle="major">
                     <p>I'm an electronics engineer and software developer <br />
                     interested in computer science and related topics.</p>
                     <ul className="actions">
