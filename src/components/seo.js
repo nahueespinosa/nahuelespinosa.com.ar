@@ -21,36 +21,44 @@ function SEO({ title, description, lang }) {
         title={title ? title : config.siteTitle}
         meta={[
             {
-            name: `description`,
-            content: metaDescription,
+                name: `description`,
+                content: metaDescription,
             },
             {
-            property: `og:title`,
-            content: metaTitle,
+                property: `og:title`,
+                content: metaTitle,
             },
             {
-            property: `og:description`,
-            content: metaDescription,
+                property: `og:description`,
+                content: metaDescription,
             },
             {
-            property: `og:type`,
-            content: `website`,
+                property: `og:type`,
+                content: `website`,
             },
             {
-            name: `twitter:card`,
-            content: `summary`,
+                property: `og:image`,
+                content: config.siteLogo,
             },
             {
-            name: `twitter:creator`,
-            content: config.siteAuthor,
+                name: `twitter:card`,
+                content: `summary`,
             },
             {
-            name: `twitter:title`,
-            content: metaTitle,
+                name: `twitter:creator`,
+                content: config.siteAuthor,
             },
             {
-            name: `twitter:description`,
-            content: metaDescription,
+                name: `twitter:title`,
+                content: metaTitle,
+            },
+            {
+                name: `twitter:description`,
+                content: metaDescription,
+            },
+            {
+                property: `twitter:image`,
+                content: config.siteLogo,
             },
         ]}
         />
