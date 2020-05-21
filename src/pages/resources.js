@@ -1,11 +1,10 @@
 import React from 'react'
+import { graphql } from "gatsby"
 import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 
-import resources from '../../data/resources'
-
-const ResourcesPage = (props) => (
+const ResourcesPage = ({data}) => (
     <Layout lang="en">
         <SEO title="Nahuel Espinosa | Resources" />
 
@@ -23,7 +22,7 @@ const ResourcesPage = (props) => (
             <section id="two">
                 <div className="inner">
                     <div className="grid-wrapper">
-                        {resources.map((resource, index) => (
+                        {data.allResourcesJson.nodes.map((resource, index) => (
                             <div className="box col-4" data-sal="zoom-in" data-sal-delay={300*(index%3)} data-sal-easing="ease">
                                 <h3>{resource.title}</h3>
                                 <p><a href={resource.link}>{resource.link}</a></p>
@@ -42,5 +41,17 @@ const ResourcesPage = (props) => (
 
     </Layout>
 )
+
+export const query = graphql`
+    query ResourcesQuery {
+        allResourcesJson {
+            nodes {
+                text
+                title
+                link
+            }
+        }
+    }
+`
 
 export default ResourcesPage
