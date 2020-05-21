@@ -38,5 +38,14 @@ module.exports = {
         trackingId: config.googleAnalyticsID,
       },
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: "./data/",
+      },
+    },
+    "gatsby-transformer-json",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
   ],
 }
