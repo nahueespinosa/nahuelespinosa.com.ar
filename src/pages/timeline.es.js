@@ -1,12 +1,11 @@
 import React from 'react'
+import { graphql } from "gatsby"
 import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 import Banner from '../components/Banner'
 import Timeline from '../components/Timeline'
 
-import events from '../../data/events.es'
-
-const TimelinePage = (props) => (
+const TimelinePage = ({data}) => (
     <Layout lang="es">
         <SEO title="Nahuel Espinosa | Línea de Tiempo" lang="es" />
 
@@ -23,7 +22,7 @@ const TimelinePage = (props) => (
             </section>
             <section id="two">
                 <div className="inner">
-                    <Timeline events={events}/>
+                    <Timeline events={data.allEventsEsJson.nodes}/>
                 </div>
             </section>
             <section id="three">
@@ -35,5 +34,19 @@ const TimelinePage = (props) => (
 
     </Layout>
 )
+
+export const query = graphql`
+    query EventsEsQuery {
+        allEventsEsJson {
+            nodes {
+                title
+                icon
+                date
+                text
+                list
+            }
+        }
+    }
+`
 
 export default TimelinePage
