@@ -60,6 +60,10 @@ function SEO({ title, description, lang }) {
                 property: `twitter:image`,
                 content: config.siteLogo,
             },
+            {
+                property: `google-site-verification`,
+                content: config.googleSiteVerification,
+            },
         ]}
         />
     )
