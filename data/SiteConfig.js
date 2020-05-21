@@ -8,7 +8,6 @@ const config = {
   siteAuthor: 'Nahuel Espinosa',
   email: 'nahue.espinosa@gmail.com',
   googleAnalyticsID: 'UA-153304934-3',
-  googleSiteVerification: '2ID9hdjJzLeKfEArbU_nvk0q7S1E2KZeJlNh8LjWWUw',
   location: 'Buenos Aires, Argentina',
   linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
   github: 'https://github.com/nahueespinosa',
