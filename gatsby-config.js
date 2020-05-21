@@ -47,5 +47,6 @@ module.exports = {
     "gatsby-transformer-json",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-sitemap",
   ],
 }
