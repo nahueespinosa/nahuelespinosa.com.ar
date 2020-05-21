@@ -31,6 +31,12 @@ module.exports = {
         langKeyDefault: 'en',
         useLangKeyLayout: false
       }
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.googleAnalyticsID,
+      },
+    },
   ],
 }

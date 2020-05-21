@@ -5,7 +5,9 @@ const config = {
   repo: 'https://github.com/nahueespinosa/my-site',
   siteDescription:
     "Nahuel Espinosa es un ingeniero en electrónica y desarrollador de software interesado en informática y temas relacionados.",
+  siteAuthor: 'Nahuel Espinosa',
   email: 'nahue.espinosa@gmail.com',
+  googleAnalyticsID: 'UA-153304934-3',
   location: 'Buenos Aires, Argentina',
   linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
   github: 'https://github.com/nahueespinosa',

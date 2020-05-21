@@ -7,6 +7,7 @@ const config = {
     "Nahuel Espinosa is an electronics engineer and software developer interested in computer science and related topics.",
   siteAuthor: 'Nahuel Espinosa',
   email: 'nahue.espinosa@gmail.com',
+  googleAnalyticsID: 'UA-153304934-3',
   location: 'Buenos Aires, Argentina',
   linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
   github: 'https://github.com/nahueespinosa',
