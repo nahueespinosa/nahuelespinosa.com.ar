@@ -1,17 +1,24 @@
 [
     {
         "title": "My personal website",
-        "image": "./images/project07.jpg",
+        "image": "./images/project08.jpg",
         "html": "<p>This webpage was developed with Gatsby framework (React, node.js) using <a href='https://github.com/codebushi/gatsby-starter-forty'>this starter</a>. <br/>I adapted the theme to my needs and added/modified various componentes (<a href='/timeline#two'>Timeline</a>, Banner).<p>",
         "source": "https://github.com/nahueespinosa/my-site",
         "tags": ["Javascript", "node.js", "React", "GraphQL", "HTML", "CSS"]
     },
     {
         "title": "Visual graph search",
-        "image": "./images/project06.jpg",
+        "image": "./images/project07.jpg",
         "html": "<p>This is a game that allows you to visualize concepts and play with search algorithms for graph data structures. The interface is implemented with PyGame, and allows you to draw walls and select the start and end positions.</p><p>I started this project after finishing the course <a href='https://github.com/nahueespinosa/ai50'>Introduction to Artificial Intelligence</a> from <a href='https://cs50.harvard.edu/ai/2020/'>CS50</a>.</p>",
         "source": "https://github.com/nahueespinosa/visual_graph_search",
         "tags": ["Python", "PyGame", "OOP", "AI"]
+    },
+    {
+        "title": "Data mercado autos",
+        "image": "./images/project06.jpg",
+        "html": "<p>This is a set of tools to analize used car market information obtained from <a href='https://www.mercadolibre.com.ar/vehiculos/#menu=categories'>Mercado Libre</a>.</p>",
+        "source": "https://github.com/nahueespinosa/data-mercado-autos",
+        "tags": ["Python", "Pandas", "matplotlib", "JSON"]
     },
     {
         "title": "sAPI port for Blue Pill board",
@@ -29,7 +36,7 @@
     {
         "title": "Energy Meter",
         "image": "./images/project03.jpg",
-        "html": "<p>Design and development of a device capable of measuring electric parameters such as active power, instant voltage and current, power factor and energy.</p><p>It has internal storage and an integrated web server to access the information in real time. The main chips used were LPC1769, ESP8266 and ATM90E36A. Connectivity: Ethernet, WiFi, Modbus.</p>",
+        "html": "<p>Design and development of a device capable of measuring electric parameters such as active power, instant voltage and current, power factor and energy.</p><p>It has internal storage and an integrated web server to access the information in real time. The main chips used were LPC1769, ESP8266 and ATM90E36A. Connectivity: Ethernet, WiFi, Modbus.</p><p>It lets you visualize the data in real time, analize historic records and generate user alerts based on configuration parameters.</p>",
         "tags": ["LPCOpen", "C", "FreeRTOS", "uIP", "Modbus", "Altium Designer"]
     },
     {

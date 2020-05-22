@@ -1,17 +1,24 @@
 [
     {
         "title": "Mi sitio web personal",
-        "image": "./images/project07.jpg",
+        "image": "./images/project08.jpg",
         "html": "<p>Esta página fue desarrollada con Gatsby framework (React, node.js) usando <a href='https://github.com/codebushi/gatsby-starter-forty'>este starter</a>. <br/>Adapté el tema a mis necesidades y agregué/modifiqué varios componentes (<a href='/es/timeline#two'>Timeline</a>, Banner).",
         "source": "https://github.com/nahueespinosa/my-site",
         "tags": ["Javascript", "node.js", "React", "GraphQL", "HTML", "CSS"]
     },
     {
         "title": "Visual graph search",
-        "image": "./images/project06.jpg",
+        "image": "./images/project07.jpg",
         "html": "<p>Este es un juego que permite visualizar conceptos y jugar con algoritmos de búsqueda para estructuras de datos con grafos. La interfaz está implementada con PyGame, y permite dibujar muros y seleccionar las posiciones iniciales y finales.</p><p>Comencé este proyecto después de finalizar el curso <a href='https://github.com/nahueespinosa/ai50'>Introduction to Artificial Intelligence</a> de <a href='https://cs50.harvard.edu/ai/2020/'>CS50</a>.</p>",
         "source": "https://github.com/nahueespinosa/visual_graph_search",
         "tags": ["Python", "PyGame", "OOP", "AI"]
+    },
+    {
+        "title": "Data mercado autos",
+        "image": "./images/project06.jpg",
+        "html": "<p>Este es un conjunto de herramientas para analizar información del mercado de autos usados obtenida de <a href='https://www.mercadolibre.com.ar/vehiculos/#menu=categories'>Mercado Libre</a>.</p>",
+        "source": "https://github.com/nahueespinosa/data-mercado-autos",
+        "tags": ["Python", "Pandas", "matplotlib", "JSON"]
     },
     {
         "title": "sAPI port para placa Blue Pill",
@@ -29,7 +36,7 @@
     {
         "title": "Medidor de energía",
         "image": "./images/project03.jpg",
-        "html": " <p>Diseño y desarrollo de un dispositivo capaz de medir parámetros eléctricos como potencia activa, tensión y corriente instantáneas, factor de potencia y energía.</p><p>Posee almacenamiento interno y un servidor web integrado para acceder a la información en tiempo real. Los principales chips usados fueron LPC1769, ESP8266, ATM90E36A. Conectividad: Ethernet, WiFi, Modbus.</p>",
+        "html": " <p>Diseño y desarrollo de un dispositivo capaz de medir parámetros eléctricos como potencia activa, tensión y corriente instantáneas, factor de potencia y energía.</p><p>Posee almacenamiento interno y un servidor web integrado para acceder a la información en tiempo real. Los principales chips usados fueron LPC1769, ESP8266, ATM90E36A. Conectividad: Ethernet, WiFi, Modbus.</p><p>Permite visualizar los datos en tiempo real, analizar registros históricos y generar alertas de usuario basadas en la configuración.</p>",
         "tags": ["LPCOpen", "C", "FreeRTOS", "uIP", "Modbus", "Altium Designer"]
     },
     {
