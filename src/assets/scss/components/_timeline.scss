@@ -4,7 +4,7 @@
 
 	&::before {
         content: '';
-        background: _palette(bg-alt);
+        background: darken(_palette(bg), 5);
 		width: 5px;
 		height: 95%;
 		position: absolute;
