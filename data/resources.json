@@ -33,5 +33,10 @@
         "title": "3D Content Central",
         "link": "https://www.3dcontentcentral.com/",
         "text": "3D parts library. It allows to export them in several formats."
+    },
+    {
+        "title": "Miro Online Whiteboard",
+        "link": "https://miro.com/app/dashboard/",
+        "text": "Really useful online app to make conceptual maps, flowcharts and all kinds of visual representations."
     }
 ]

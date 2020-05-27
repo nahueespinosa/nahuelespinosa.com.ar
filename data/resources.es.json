@@ -17,7 +17,7 @@
     {
         "title": "El Tamiz",
         "link": "https://eltamiz.com/",
-        "text": "Uno de los primeros blogs que encontré, contiene artículos geniales acerca de varios temas de física y química. Lamentablemente, no ha sido actualizado en bastante tiempo pero vale la pena revisar el contenido."
+        "text": "Uno de los primeros blogs que encontré, contiene artículos geniales acerca de varios temas de física y química. Lamentablemente, hace bastante tiempo que no se actualiza pero vale la pena revisar el contenido."
     },
     {
         "title": "El Gato y La Caja",
@@ -33,5 +33,10 @@
         "title": "3D Content Central",
         "link": "https://www.3dcontentcentral.com/",
         "text": "Librería de piezas y componentes 3D. Permite exportar en varios formatos."
+    },
+    {
+        "title": "Miro Online Whiteboard",
+        "link": "https://miro.com/app/dashboard/",
+        "text": "App web realmente útil para hacer mapas conceptuales, diagramas de flujo y todo tipo de representaciones visuales."
     }
 ]
