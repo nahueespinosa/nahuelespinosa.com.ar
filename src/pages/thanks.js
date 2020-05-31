@@ -17,7 +17,7 @@ const ThanksPage = (props) => (
                             <h1>Thanks!</h1>
                         </header>
                         <p>Thank you for your message. I will reply as soon as possible.</p>
-                        <a href="/" className="button">Return to home page</a>.
+                        <a href="/" className="button">Return to home page</a>
                     </div>
                 </section>
             </div>
