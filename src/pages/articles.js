@@ -8,13 +8,18 @@ const ArticlesPage = (props) => (
         <SEO title="Nahuel Espinosa | Articles" />
 
         <Banner title="Articles" sectionStyle="style4">
-            <p>Stuff I didn't find on the internet (sort of)</p>
+            <p>Stuff I didn't find on the internet (more or less)</p>
         </Banner>
 
         <div id="main" className="style4">
             <section id="one">
                 <div className="inner">
-                    <p>Some day I'll find the time and energy to write something here. I promise.</p>
+                    <p>When programming and designing systems with various technologies, many times I find myself with
+                    challenges, curiosities, different methods to solve problems and other series of things that are 
+                    hard to find well documented.</p>
+                    <p>Someday in the future there should be articles on these topics that interest me, hoping they
+                    will be useful to someone else. For now I didn't have the combination of time and energy to 
+                    make them.</p>
                 </div>
             </section>
             <section id="three">
