@@ -9,14 +9,14 @@
     {
         "title": "Visual graph search",
         "image": "./images/project07.jpg",
-        "html": "<p>This is a game that allows you to visualize concepts and play with search algorithms for graph data structures. The interface is implemented with PyGame, and allows you to draw walls and select the start and end positions.</p><p>I started this project after finishing the course <a href='https://github.com/nahueespinosa/ai50'>Introduction to Artificial Intelligence</a> from <a href='https://cs50.harvard.edu/ai/2020/'>CS50</a>.</p>",
+        "html": "<p>This is a game that allows you to visualize concepts and play with search algorithms for graph data structures. The interface is implemented with PyGame, and allows you to draw walls and select the start and end positions.</p><p>I started this project inspired by the course <a href='https://github.com/nahueespinosa/ai50'>Introduction to Artificial Intelligence</a> from <a href='https://cs50.harvard.edu/ai/2020/'>CS50</a>, and the main goal was to evaluate the differences between search algorithms BFS, DFS, greedy-BFS and A* with various cost-functions.</p>",
         "source": "https://github.com/nahueespinosa/visual_graph_search",
         "tags": ["Python", "PyGame", "OOP", "AI"]
     },
     {
         "title": "Data mercado autos",
         "image": "./images/project06.jpg",
-        "html": "<p>This is a set of tools to analize used car market information obtained from <a href='https://www.mercadolibre.com.ar/vehiculos/#menu=categories'>Mercado Libre</a>.</p>",
+        "html": "<p>This is a set of tools to analize used car market information obtained from <a href='https://www.mercadolibre.com.ar/vehiculos/#menu=categories'>Mercado Libre</a> Argentina. It uses the available API to download the publications' data and makes plots by brand, model, year and price to help the user find the best deals.</p><p>Data collection and basic processing are already implemented, and I intend to add a historical analysis of the results in the future.</p>",
         "source": "https://github.com/nahueespinosa/data-mercado-autos",
         "tags": ["Python", "Pandas", "matplotlib", "JSON"]
     },
