@@ -17,7 +17,7 @@ const ProjectsPage = ({data}) => (
         <div id="main" className="alt style2">
             <section id="one">
                 <div className="inner">
-                    <p>In this page I've tried to include significant projects I've participated in. They are ordered from newest to oldest and I've included some tags to give an idea of the technologies involved.</p>
+                    <p>On this page I included some of the projects I've worked on. They are ordered from newest to oldest and I've added some tags to give an idea of the technologies involved.</p>
                 </div>
             </section>
             <section id="two">
