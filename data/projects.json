@@ -14,13 +14,6 @@
         "tags": ["Python", "PyGame", "OOP", "AI"]
     },
     {
-        "title": "Data mercado autos",
-        "image": "./images/project06.jpg",
-        "html": "<p>This is a set of tools to analize used car market information obtained from <a href='https://www.mercadolibre.com.ar/vehiculos/#menu=categories'>Mercado Libre</a> Argentina. It uses the available API to download the publications' data and makes plots by brand, model, year and price to help the user find the best deals.</p><p>Data collection and basic processing are already implemented, and I intend to add a historical analysis of the results in the future.</p>",
-        "source": "https://github.com/nahueespinosa/data-mercado-autos",
-        "tags": ["Python", "Pandas", "matplotlib", "JSON"]
-    },
-    {
         "title": "sAPI port for Blue Pill board",
         "image": "./images/project05.jpg",
         "html": "<p>Port sAPI library to <a href='https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html'>STM32F103C8 Blue Pill board</a>. It works as a HAL (Hardware Abstraction Layer) for microcontrollers used in the <a href='http://www.proyecto-ciaa.com.ar/'>project CIAA</a>.</p><p>It provides a good entry point for high school students to approach the embedded systems world.</p>",
