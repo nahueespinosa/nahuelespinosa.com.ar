@@ -35,7 +35,7 @@
     {
         "title": "Vehicle seat control system",
         "image": "./images/project02.jpg",
-        "html": "<p>Implementation of vehicle seat control system with temepature sensor, heater y presence detector. Two seats connected over a LIN bus, and CAN bus available to communicate with the rest of the vehicle.</p><p>For the LIN communication we used the UART2 peripheral of the microcontroller with a <a href='http://www.ti.com/lit/ds/symlink/tpic1021.pdf?&ts=1589836790029'>TPIC1021DR</a> transceiver. And for the CAN bus we used the <a href='https://www.ti.com/product/SN65HVD1040'>SN65HVD1040</a> transceiver.</p>",
+        "html": "<p>Implementation of a vehicle seat control system with temperature sensor, heater y presence detector. It has two seats connected over a LIN bus, and a CAN bus available to communicate with the rest of the vehicle.</p><p>For the LIN communication we used the UART2 peripheral of the microcontroller with a <a href='http://www.ti.com/lit/ds/symlink/tpic1021.pdf?&ts=1589836790029'>TPIC1021DR</a> transceiver. And for the CAN bus we used the <a href='https://www.ti.com/product/SN65HVD1040'>SN65HVD1040</a> transceiver.</p>",
         "tags": ["CMSIS", "FreeRTOS", "C", "LIN", "CAN"]
     },
     {
