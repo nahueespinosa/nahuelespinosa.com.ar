@@ -2,7 +2,7 @@
     {
         "title": "Mi sitio web personal",
         "image": "./images/project08.jpg",
-        "html": "<p>Esta página fue desarrollada con Gatsby framework (React, node.js) usando <a href='https://github.com/codebushi/gatsby-starter-forty'>este starter</a>. <br/>Adapté el tema a mis necesidades y agregué/modifiqué varios componentes (<a href='/es/timeline#two'>Timeline</a>, Banner).",
+        "html": "<p>Esta página fue desarrollada con Gatsby framework (React, node.js) usando <a href='https://github.com/codebushi/gatsby-starter-forty'>este starter</a>. Adapté el tema a mis necesidades y agregué/modifiqué varios componentes (<a href='/es/timeline#two'>Timeline</a>, Banner).</p><p>Gatsby es un framework front-end basado en React que usa GraphQL para construir su capa de datos. En tiempo de compilación, crea un servidor GraphQL interno partiendo de todos los datos obtenidos de archivos de Markdown, JSON, algún CMS o APIs de terceros.</p>",
         "source": "https://github.com/nahueespinosa/my-site",
         "tags": ["Javascript", "node.js", "React", "GraphQL", "HTML", "CSS"]
     },
