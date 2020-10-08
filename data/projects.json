@@ -1,5 +1,12 @@
 [
     {
+        "title": "Railway safety isolation system",
+        "image": "./images/project09.jpg",
+        "html": "<p>I am currently working on a version of a railway safety isolation system that allows the driver of a railway formation to disable the emergency braking and traction cut-off signals in the event of a failure in one of the safety subsystems. </p><p>It is considered a critical system because, if it fails, it can cause damage negatively affecting people's health, affect the environment and/or generate large material losses.</p><p>The firmware is being developed under the UNE-EN 50128 standard which focuses on the quality of the software aspects of railway systems. This includes the specification of software requirements, architecture specification, verification plan and system validation.</p>",
+        "source": "https://github.com/nahueespinosa/salt",
+        "tags": ["RKH", "C", "TraceCompass", "Yakindu", "UML", "lwIP"]
+    },
+    {
         "title": "My personal website",
         "image": "./images/project08.jpg",
         "html": "<p>This webpage was developed with Gatsby framework (React, node.js) using <a href='https://github.com/codebushi/gatsby-starter-forty'>this starter</a>. I adapted the theme to my needs and added/modified various componentes (<a href='/timeline#two'>Timeline</a>, Banner).</p><p>Gatsby is a React-based front-end framework that uses GraphQL to build it's data layer. At build time, it creates an internal GraphQL server of all the data obtained from Markdown, JSON, some CMS or third party APIs.</p>",

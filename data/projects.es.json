@@ -1,5 +1,12 @@
 [
     {
+        "title": "Sistema de aislamiento limitado/total ferroviario",
+        "image": "./images/project09.jpg",
+        "html": "<p>Actualmente estoy trabajando en una versión de un sistema de aislamiento limitado/total ferroviario que permite al conductor de una formación ferroviaria inhabilitar las señales de corte de tracción y frenado de emergencia en el caso de una falla en uno de los subsistemas de seguridad.</p><p>Se considera un sistema crítico debido a que, en caso de fallar, puede ocasionar daños afectando negativamente la salud de las personas, afectar al medio ambiente y/o generar grandes pérdidas materiales.</p><p>El firmware se está desarrollando bajo la norma UNE-EN 50128 que se centra en la calidad de los aspectos de software de los sistemas de ferrocarriles. Esto incluye la especificación de requisitos de software, especificación de arquitectura, plan de verificación y validación del sistema.</p>",
+        "source": "https://github.com/nahueespinosa/salt",
+        "tags": ["RKH", "C", "TraceCompass", "Yakindu", "UML", "lwIP"]
+    },
+    {
         "title": "Mi sitio web personal",
         "image": "./images/project08.jpg",
         "html": "<p>Esta página fue desarrollada con Gatsby framework (React, node.js) usando <a href='https://github.com/codebushi/gatsby-starter-forty'>este starter</a>. Adapté el tema a mis necesidades y agregué/modifiqué varios componentes (<a href='/es/timeline#two'>Timeline</a>, Banner).</p><p>Gatsby es un framework front-end basado en React que usa GraphQL para construir su capa de datos. En tiempo de compilación, crea un servidor GraphQL interno partiendo de todos los datos obtenidos de archivos de Markdown, JSON, algún CMS o APIs de terceros.</p>",
