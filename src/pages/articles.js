@@ -8,7 +8,7 @@ const ArticlesPage = (props) => (
         <SEO title="Nahuel Espinosa | Articles" />
 
         <Banner title="Articles" sectionStyle="style4">
-            <p>Stuff I didn't find on the internet (more or less)</p>
+            <p>Stuff I didn't find on the internet (to some extent)</p>
         </Banner>
 
         <div id="main" className="style4">
