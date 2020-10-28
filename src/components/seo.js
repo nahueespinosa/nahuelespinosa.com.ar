@@ -59,7 +59,7 @@ function SEO({ title, description, lang }) {
             },
             {
                 property: `twitter:image`,
-                content: config.siteLogo,
+                content: config.siteImage,
             },
         ]}
         />
