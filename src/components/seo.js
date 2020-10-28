@@ -37,8 +37,9 @@ function SEO({ title, description, lang }) {
                 content: `website`,
             },
             {
+                name: `image`,
                 property: `og:image`,
-                content: config.siteLogo,
+                content: config.siteImage,
             },
             {
                 name: `twitter:card`,

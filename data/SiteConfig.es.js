@@ -1,6 +1,7 @@
 const config = {
   siteTitle: 'Nahuel Espinosa',
   siteLogo: 'src/assets/images/logo.png',
+  siteImage: 'data/images/project08.jpg',
   siteUrl: 'https://www.nahuelespinosa.com.ar',
   repo: 'https://github.com/nahueespinosa/my-site',
   siteDescription:
