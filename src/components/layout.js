@@ -1,54 +1,22 @@
 import React from 'react'
-
-import '../assets/scss/main.scss'
-import Header from './Header'
-import Menu from './Menu'
-import Contact from './Contact'
-import Footer from './Footer'
+import SEO from '../components/seo.js'
+import Main from '../components/main.js'
+import Footer from '../components/footer.js'
 
 class Layout extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isMenuVisible: false,
-            loading: 'is-loading'
-        }
-        this.handleToggleMenu = this.handleToggleMenu.bind(this)
-    }
+  render() {
+    const { children } = this.props
 
-    componentDidMount () {
-        this.timeoutId = setTimeout(() => {
-            this.setState({loading: ''});
-        }, 100);
-    }
-
-    componentWillUnmount () {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-        }
-    }
-
-    handleToggleMenu() {
-        this.setState({
-            isMenuVisible: !this.state.isMenuVisible
-        })
-    }
-
-    render() {
-        const { children, lang } = this.props
-
-        return (
-            <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
-                <div id="wrapper">
-                    <Header onToggleMenu={this.handleToggleMenu} lang={lang}/>
-                    {children}
-                    <Contact />
-                    <Footer />
-                </div>
-                <Menu onToggleMenu={this.handleToggleMenu} lang={lang} />
-            </div>
-        )
-    }
+    return (
+      <div id="wrapper">
+        <SEO/>
+        <Main>
+          {children}
+        </Main>
+        <Footer/>
+      </div>
+    )
+  }
 }
 
 export default Layout
