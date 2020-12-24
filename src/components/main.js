@@ -1,13 +1,13 @@
 import React from 'react'
-import style from "./main.module.css"
+import Style from "./main.module.css"
 
 class Main extends React.Component {
   render() {
     const { children } = this.props
 
     return (
-      <div id="main" className={style.main}>
-        <div className={style.container}>
+      <div id="main" className={Style.main}>
+        <div className={Style.container}>
           {children}
         </div>
       </div>

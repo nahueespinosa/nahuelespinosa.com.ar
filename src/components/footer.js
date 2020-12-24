@@ -1,12 +1,21 @@
 import React from 'react'
-import style from "./footer.module.css"
-import config from '../../data/SiteConfig'
+import Style from "./footer.module.css"
+import Config from '../../data/SiteConfig'
+import { FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => (
-  <div id="footer" className={style.footer}>
-    <div className={style.container}>
-      <p>Anyways... Here is my <a href={"mailto:" + config.email}>e-mail</a> if you want to reach out.<br/>
-      Current location: <a href={"https://www.google.com.ar/maps/place/" + config.location}>{config.location}</a>.</p>
+  <div id="footer" className={Style.footer}>
+    <div className={Style.container}>
+      <div className={Style.info}>
+        <p>Anyways... Here is my <a href={"mailto:" + Config.email}>e-mail</a> if you want to reach out.<br/>
+        Current location: <FaMapMarkerAlt/> <a href={"https://www.google.com.ar/maps/place/" + Config.location}>{Config.location}</a>.</p>
+      </div>
+      <div className={Style.links}>
+        <p>
+          <a href={Config.github}><FaGithub className={Style.icon}/></a>
+          <a href={Config.linkedin}><FaLinkedin className={Style.icon}/></a>
+        </p>
+      </div>
     </div>
   </div>
 )
