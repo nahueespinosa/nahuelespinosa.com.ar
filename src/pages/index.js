@@ -8,9 +8,9 @@ const HomeIndex = () => (
     <br/>Not much to do here for now. Feel free to look around though.</p>
     <h2>&lt;/&gt; Website To-Do List</h2>
     <ul>
-      <li><input type="checkbox" checked disabled="disabled"/> Start with a simple design.</li>
-      <li><input type="checkbox" disabled="disabled"/> Add night mode, obviously.</li>
-      <li><input type="checkbox" disabled="disabled"/> Add a stories feature.</li>
+      <li>✅ Start with a simple design.</li>
+      <li>⬜ Add night mode, obviously.</li>
+      <li>⬜ Add a stories feature.</li>
     </ul>
   </Layout>
 )
