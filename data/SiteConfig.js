@@ -5,6 +5,7 @@ const config = {
   siteUrl: 'https://www.nahuelespinosa.com.ar',
   github: 'https://github.com/nahueespinosa/',
   linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
+  twitter: 'https://www.twitter.com/nahueespinosa',
   siteDescription:
     "Nahuel Espinosa is an electronics engineer and software developer interested in computer science and related topics.",
   siteAuthor: 'Nahuel Espinosa',
