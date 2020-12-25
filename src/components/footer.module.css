@@ -25,4 +25,18 @@
 .icon {
   font-size: 2.2em;
   padding: 10px;
+  color: #ccc;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: block;
+  }
+
+  .links,
+  .info {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
