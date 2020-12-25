@@ -1,5 +1,6 @@
 import React from 'react'
 import SEO from '../components/seo.js'
+import Header from '../components/header.js'
 import Main from '../components/main.js'
 import Footer from '../components/footer.js'
 
@@ -10,6 +11,7 @@ class Layout extends React.Component {
     return (
       <div id="wrapper">
         <SEO/>
+        <Header/>
         <Main>
           {children}
         </Main>
