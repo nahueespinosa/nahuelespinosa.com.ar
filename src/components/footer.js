@@ -11,10 +11,8 @@ const Footer = () => (
         Current location: <FaMapMarkerAlt/> <a href={"https://www.google.com.ar/maps/place/" + Config.location}>{Config.location}</a>.</p>
       </div>
       <div className={Style.links}>
-        <p>
-          <a href={Config.github}><FaGithub className={Style.icon}/></a>
-          <a href={Config.linkedin}><FaLinkedin className={Style.icon}/></a>
-        </p>
+        <a href={Config.github}><FaGithub className={Style.icon}/></a>
+        <a href={Config.linkedin}><FaLinkedin className={Style.icon}/></a>
       </div>
     </div>
   </div>

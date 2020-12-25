@@ -1,26 +1,29 @@
 .footer {
   border-top: 1px solid #d8dee9;
   color: #999;
+  background-color: #fff;
+  position: relative;
 }
 
 .container {
+  padding: 1em;
   margin: 0 auto;
   max-width: 50em;
-  padding: 1em 1em;
-}
-
-.icon {
-  float: right;
-  font-size: 2.2em;
-  padding: 0 3px;
+  display: flex;
 }
 
 .info {
-  float: left;
-  width: 50%;
+  width: 70%;
 }
 
 .links {
-  margin-left: 50%;
-  overflow: auto;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon {
+  font-size: 2.2em;
+  padding: 10px;
 }
