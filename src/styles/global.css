@@ -1,17 +1,27 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+:root {
+  --font-color: #555;
+  --heading-color: #333;
+  --background-color: #fff;
+  --link-color: #2c5bb1;
+  --border-color: #d8dee9;
+  --icon-color: #ccc;
+}
+
 body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   line-height: 1.5;
-  color: #555;
-  background-color: #fff;
+  color: var(--font-color);
+  background-color: var(--background-color);
   margin: 0;
 }
 
 h1,
 h2,
+h3,
 strong {
-  color: #333;
+  color: var(--heading-color);
 }
 
 h2 {
@@ -20,7 +30,7 @@ h2 {
 }
 
 a {
-  color: #2c5bb1;
+  color: var(--link-color);
 }
 
 ul {
