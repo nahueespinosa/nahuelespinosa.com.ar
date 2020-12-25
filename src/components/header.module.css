@@ -4,5 +4,9 @@
   width: 100%;
   height: 50px;
   border-bottom: 1px solid #d8dee9;
-  background-color: #fff;
+  background-color: inherit;
+}
+
+div {
+  background-color: inherit;
 }
