@@ -2,8 +2,8 @@ import React from 'react'
 import Style from './toggle.module.css'
 
 export default function Toggle() {
-  const lightText = 'light mode ⚪'
-  const darkText = 'dark mode ⚫'
+  const lightText = 'Light Mode ⚪'
+  const darkText = 'Dark Mode ⚫'
 
   return (
     <button

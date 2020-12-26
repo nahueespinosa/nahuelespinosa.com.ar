@@ -1,5 +1,5 @@
 exports.onInitialClientRender  = () => {
-  const lightText = 'light mode ⚪'
+  const lightText = 'Light Mode ⚪'
   const theme = typeof window !== 'undefined' && localStorage.getItem('theme')
   
   if (typeof window !== 'undefined' && theme === 'dark') {

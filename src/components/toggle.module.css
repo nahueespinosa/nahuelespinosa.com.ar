@@ -6,7 +6,8 @@
   cursor: pointer;
   border-radius: 3rem;
   color: var(--font-color);
-  font-family: "Courier", "Helvetica", "Arial", sans-serif;
+  font-family: "Courier", 'Courier New', monospace;
+  border: 1px solid var(--border-color);
 }
 
 .button:hover {
