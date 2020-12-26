@@ -2,7 +2,15 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: 50px;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--background-color);
+}
+
+.container {
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 50em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

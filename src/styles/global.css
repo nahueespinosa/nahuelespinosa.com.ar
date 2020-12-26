@@ -7,6 +7,8 @@
   --link-color: #2c5bb1;
   --border-color: #d8dee9;
   --icon-color: #ccc;
+  --icon-hover-color: #777;
+  --hover-background-color: rgba(39, 39, 39, 0.1);
 }
 
 body {

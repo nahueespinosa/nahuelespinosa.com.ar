@@ -22,7 +22,6 @@ module.exports = {
         icon: config.siteLogo,
       },
     },
-    'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-google-analytics',

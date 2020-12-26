@@ -1,0 +1,14 @@
+.button {
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 3rem;
+  color: var(--font-color);
+  font-family: "Courier", "Helvetica", "Arial", sans-serif;
+}
+
+.button:hover {
+  background-color: var(--hover-background-color);
+}

@@ -9,7 +9,7 @@ const HomeIndex = () => (
     <h2>&lt;/&gt; Website To-Do List</h2>
     <ul>
       <li><span role="img" aria-labelledby="white-heavy-check">✅</span> Start with a simple design.</li>
-      <li><span role="img" aria-labelledby="white-large-square">⬜</span> Add dark mode, obviously.</li>
+      <li><span role="img" aria-labelledby="white-heavy-check">✅</span> Add dark mode, obviously.</li>
       <li><span role="img" aria-labelledby="white-large-square">⬜</span> Add a stories feature.</li>
     </ul>
   </Layout>
