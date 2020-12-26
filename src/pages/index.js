@@ -1,8 +1,10 @@
 import React from 'react'
+import SEO from '../components/seo.js'
 import Layout from '../components/layout'
 
 const HomeIndex = () => (
   <Layout>
+    <SEO/>
     <h1>Hi there!</h1>
     <p>My name is Nahuel. I'm a semi-senior EE and software developer with some experience in robotics.
     <br/>Not much to do here for now. Feel free to look around though.</p>
