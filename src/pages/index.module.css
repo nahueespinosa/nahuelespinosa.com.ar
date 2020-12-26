@@ -1,0 +1,25 @@
+.techs > tbody > tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.techs > tbody > tr > td > svg {
+  padding: 0 5px;
+  font-size: 1.5em;
+}
+
+.disclaimer {
+  font-size: 0.85em;
+}
+
+@media only screen and (max-width: 600px) {
+  table, tbody, th, td, tr {
+    display: block;
+    text-align: center;
+  }
+
+  .techs > tbody > tr {
+    display: block;
+  }
+}

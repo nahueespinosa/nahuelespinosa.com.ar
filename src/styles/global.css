@@ -42,3 +42,20 @@ a {
 ul {
   list-style: none;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5em 2em;
+}
+
+tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+table > tr:last-child {
+  border: none;
+}
