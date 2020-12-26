@@ -6,7 +6,7 @@ import Config from '../../data/SiteConfig'
 const Header = () => (
   <div id="header" className={Style.header}>
     <div className={Style.container}>
-      <span>{Config.siteTitle}</span>
+      <span className={Style.title}>{Config.siteTitle}</span>
       <Toggle/>
     </div>
   </div>
