@@ -32,5 +32,10 @@
   {
     "Contact": "Acá está mi <1>e-mail</1> si querés ponerte en contacto.",
     "Location": "Ubicación actual"
+  },
+  "Not Found":
+  {
+    "Title": "No encontrado",
+    "Description": "Esta ruta no existe. Lo siento."
   }
 }

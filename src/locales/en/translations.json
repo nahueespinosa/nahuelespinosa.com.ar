@@ -32,5 +32,10 @@
   {
     "Contact": "Here is my <1>e-mail</1> if you want to reach out.",
     "Location": "Current location"
+  },
+  "Not Found":
+  {
+    "Title": "Not Found",
+    "Description": "This route doesn't exist. Sorry."
   }
 }
