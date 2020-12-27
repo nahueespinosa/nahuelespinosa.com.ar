@@ -15,10 +15,13 @@
     "gatsby-source-filesystem": "^2.3.7",
     "gatsby-transformer-json": "^2.4.3",
     "gatsby-transformer-sharp": "^2.5.3",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
+    "react-i18next": "^11.8.4",
     "react-icons": "^4.1.0",
     "react-switch": "^5.0.1"
   },

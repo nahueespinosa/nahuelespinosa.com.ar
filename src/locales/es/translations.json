@@ -1,0 +1,35 @@
+{
+  "Greetings": "¡Hola!",
+  "About":
+  {
+    "Item1": "Mi nombre es Nahuel.",
+    "Item2": "Soy un ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica.",
+    "Item3": "También trabajo como profesor de sistemas informáticos en nivel medio."
+  },
+  "List":
+  {
+    "Title": "Tareas para el sitio",
+    "Item1": "Comenzar con un diseño simple.",
+    "Item2": "Agregar modo oscuro, obviamente.",
+    "Item3": "Agregar historias."
+  },
+  "Techs":
+  {
+    "Title": "Tecnologías",
+    "Description": "Estas son algunas tecnologías con las que trabajé. *",
+    "Item1": "Lenguajes de programación",
+    "Item2": "Frameworks / bibliotecas",
+    "Item3": "Bases de datos",
+    "Item4": "Herramientas",
+    "Disclaimer": "* De ninguna manera soy un experto en cada herramienta/lenguaje/biblioteca listada aquí."
+  },
+  "Header":
+  {
+    "Dark Mode": "Modo Oscuro"
+  },
+  "Footer":
+  {
+    "Contact": "Acá está mi <1>e-mail</1> si querés ponerte en contacto.",
+    "Location": "Ubicación actual"
+  }
+}

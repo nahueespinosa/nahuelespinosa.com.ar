@@ -1,15 +1,17 @@
-import React from 'react'
+import React from "react"
 import Style from "./header.module.css"
-import Toggle from "../components/toggle.js"
-import Config from '../../data/SiteConfig'
+import DarkToggle from "../components/toggle.js"
+import Config from "../../data/SiteConfig"
 
-const Header = () => (
+import { withTranslation } from "react-i18next"
+
+const Header = ({ t }) => (
   <div id="header" className={Style.header}>
     <div className={Style.container}>
       <span className={Style.title}>{Config.siteTitle}</span>
-      <Toggle/>
+      <DarkToggle label={t("Header.Dark Mode")}/>
     </div>
   </div>
 )
 
-export default Header
+export default withTranslation("translations")(Header)

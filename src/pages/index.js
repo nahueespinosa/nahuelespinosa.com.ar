@@ -1,54 +1,51 @@
-import React from 'react'
+import React from "react"
 import Style from "./index.module.css"
-import SEO from '../components/seo.js'
-import Layout from '../components/layout'
-import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUnity, SiJavascript, SiNeovim, SiVisualstudiocode, SiEclipseide, SiDocker, SiSlack, SiMysql, SiPostgresql, SiTensorflow } from 'react-icons/si'
+import SEO from "../components/seo.js"
+import Layout from "../components/layout"
+import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUnity, SiJavascript, SiNeovim, SiVisualstudiocode, SiEclipseide, SiDocker, SiMysql, SiPostgresql, SiTensorflow } from 'react-icons/si'
 
-const HomeIndex = () => (
+import { withTranslation } from 'react-i18next'
+
+const HomeIndex = ({ t }) => (
   <Layout>
     <SEO/>
 
-    <h1>Hi there!</h1>
-    <p>
-      My name is Nahuel.
-      <br/>I'm a semi-senior EE and software developer with experience in embedded systems and robotics.
-      <br/>I'm also a computer science teacher at a local highschool.
-    </p>
+    <h1>{t("Greetings")}</h1>
+    <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
 
-    <h2>Website To-Do List &lt;/&gt;</h2>
+    <h2>{t("List.Title")} &lt;/&gt;</h2>
     <ul>
-      <li><span role="img" aria-labelledby="white-heavy-check">✅</span> Start with a simple design.</li>
-      <li><span role="img" aria-labelledby="white-heavy-check">✅</span> Add dark mode, obviously.</li>
-      <li><span role="img" aria-labelledby="white-large-square">⬜</span> Add a stories feature.</li>
+      <li><span role="img" aria-labelledby="white-heavy-check">✅</span>  {t("List.Item1")}</li>
+      <li><span role="img" aria-labelledby="white-heavy-check">✅</span> {t("List.Item2")}</li>
+      <li><span role="img" aria-labelledby="white-large-square">⬜</span> {t("List.Item3")}</li>
     </ul>
 
-    <h2>Technologies</h2>
-    <p>These are some of the technologies I've worked with.</p>
+    <h2>{t("Techs.Title")}</h2>
+    <p>{t("Techs.Description")}</p>
     <table className={Style.techs}>
       <tbody>
         <tr>
-          <td>Programming Languages</td>
+          <td>{t("Techs.Item1")}</td>
           <td><SiC/><SiCplusplus/><SiPython/><SiCsharp/><SiJavascript/></td>
         </tr>
         <tr>
-          <td>Frameworks / Libraries</td>
+          <td>{t("Techs.Item2")}</td>
           <td><SiGatsby/><SiUnity/><SiTensorflow/>ROS</td>
         </tr>
         <tr>
-          <td>Databases</td>
+          <td>{t("Techs.Item3")}</td>
           <td><SiMysql/><SiPostgresql/></td>
         </tr>
         <tr>
-          <td>Tools</td>
-          <td><SiGit/><SiDocker/><SiGnubash/><SiNeovim/><SiVisualstudiocode/><SiEclipseide/><SiSlack/></td>
+          <td>{t("Techs.Item4")}</td>
+          <td><SiGit/><SiDocker/><SiGnubash/><SiNeovim/><SiVisualstudiocode/><SiEclipseide/></td>
         </tr>
       </tbody>
     </table>
     <p className={Style.disclaimer}>
-      <i>Disclaimer 1: I am by no means an expert in <b>every</b> tool/language/framework listed here.</i>
-      <br/><i>Disclaimer 2: I couldn't find easy-to-include icons for the embedded systems technologies I've used. So I didn't bother. </i><span role="img" aria-labelledby="shrugging">🤷</span>
+      <i>{t("Techs.Disclaimer")}</i>
     </p>
   </Layout>
 )
 
-export default HomeIndex
+export default withTranslation("translations")(HomeIndex)

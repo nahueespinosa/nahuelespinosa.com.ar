@@ -1,0 +1,35 @@
+{
+  "Greetings": "Hi there!",
+  "About":
+  {
+    "Item1": "My name is Nahuel.",
+    "Item2": "I'm a semi-senior EE and software developer with experience in embedded systems and robotics.",
+    "Item3": "I also work as a highschool teacher in computer science."
+  },
+  "List":
+  {
+    "Title": "Website To-Do List",
+    "Item1": "Start with a simple design.",
+    "Item2": "Add dark mode, obviously.",
+    "Item3": "Add a stories feature."
+  },
+  "Techs":
+  {
+    "Title": "Technologies",
+    "Description": "These are some of the technologies I've worked with. *",
+    "Item1": "Programming Languages",
+    "Item2": "Frameworks / Libraries",
+    "Item3": "Databases",
+    "Item4": "Tools",
+    "Disclaimer": "* I am by no means an expert in every tool/language/framework listed here."
+  },
+  "Header":
+  {
+    "Dark Mode": "Dark Mode"
+  },
+  "Footer":
+  {
+    "Contact": "Here is my <1>e-mail</1> if you want to reach out.",
+    "Location": "Current location"
+  }
+}

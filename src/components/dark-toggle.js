@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Switch from 'react-switch'
-import Style from './toggle.module.css'
+import Style from './dark-toggle.module.css'
 
-export default class Toggle extends Component {
+export default class DarkToggle extends React.Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
@@ -45,7 +45,7 @@ export default class Toggle extends Component {
   render() {
     return (
       <div className={Style.toggle}>
-        <span>Dark Mode</span>
+        <span>{this.props.label}</span>
         <Switch 
           onChange={this.handleChange}
           checked={this.state.checked}

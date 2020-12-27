@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react"
 import Style from "./footer.module.css"
-import Config from '../../data/SiteConfig'
-import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import Config from "../../data/SiteConfig"
+import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
-const Footer = () => (
+import { withTranslation, Trans } from "react-i18next"
+
+const Footer = ({ t }) => (
   <div id="footer" className={Style.footer}>
     <div className={Style.container}>
       <div className={Style.info}>
-        <p>Anyways... Here is my <a href={"mailto:" + Config.email}>e-mail</a> if you want to reach out.<br/>
-        Current location: <FaMapMarkerAlt/> <a href={"https://www.google.com.ar/maps/place/" + Config.location}>{Config.location}</a>.</p>
+        <p><Trans t={ t } i18nKey="Footer.Contact">Here is my <a href={"mailto:" + Config.email}>e-mail</a> if you want to reach out.</Trans><br/>
+        {t("Footer.Location")} <FaMapMarkerAlt/> <a href={"https://www.google.com.ar/maps/place/" + Config.location}>{Config.location}</a>.</p>
       </div>
       <div className={Style.links}>
         <a href={Config.twitter} aria-label="Twitter"><FaTwitter className={Style.icon}/></a>
@@ -19,4 +21,4 @@ const Footer = () => (
   </div>
 )
 
-export default Footer
+export default withTranslation("translations")(Footer)
