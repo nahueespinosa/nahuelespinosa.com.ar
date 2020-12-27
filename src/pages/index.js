@@ -2,9 +2,11 @@ import React from "react"
 import Style from "./index.module.css"
 import SEO from "../components/seo.js"
 import Layout from "../components/layout"
-import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUnity, SiJavascript, SiNeovim, SiVisualstudiocode, SiEclipseide, SiDocker, SiMysql, SiPostgresql, SiTensorflow } from 'react-icons/si'
+import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUnity, SiJavascript, SiNeovim, SiVisualstudiocode, SiEclipseide, SiDocker, SiMysql, SiPostgresql, SiTensorflow } from "react-icons/si"
 
-import { withTranslation } from 'react-i18next'
+import { withTranslation } from "react-i18next"
+
+import "../components/i18n"
 
 const HomeIndex = ({ t }) => (
   <Layout>
