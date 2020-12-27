@@ -7,15 +7,57 @@
 }
 
 .container {
-  padding: 1em;
   margin: 0 auto;
   max-width: 50em;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 1em;
 }
 
 .title {
   font-size: 1.2em;
   letter-spacing: 5px;
+  padding: 1em 0;
+  white-space: nowrap;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Courier New', monospace, 'Courier';
+  height: 100%;
+}
+
+.options > button {
+  background: none;
+  border: none;
+  border-radius: 0.4em;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0.8em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.options > button:hover {
+  background-color: var(--hover-background-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 0.5em;
+  }
+  
+  .options {
+    width: 100%;
+  }
+
+  .title {
+    padding: 0.5em;
+  }
 }
