@@ -56,6 +56,6 @@ tr {
   border-bottom: 1px solid var(--border-color);
 }
 
-table > tr:last-child {
+table > tbody > tr:last-child {
   border: none;
 }
