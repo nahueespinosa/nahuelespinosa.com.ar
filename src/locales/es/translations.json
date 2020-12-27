@@ -4,25 +4,26 @@
   "About":
   {
     "Item1": "Mi nombre es Nahuel.",
-    "Item2": "Soy un ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica.",
-    "Item3": "También trabajo como profesor de sistemas informáticos en nivel medio."
+    "Item2": "Soy ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica.",
+    "Item3": "También trabajo como profesor de sistemas informáticos en una escuela de nivel medio."
   },
   "List":
   {
     "Title": "Tareas para el sitio",
     "Item1": "Comenzar con un diseño simple.",
     "Item2": "Agregar modo oscuro, obviamente.",
-    "Item3": "Agregar historias."
+    "Item3": "Agregar soporte multi-idioma.",
+    "Item4": "Agregar historias."
   },
   "Techs":
   {
     "Title": "Tecnologías",
-    "Description": "Estas son algunas tecnologías con las que trabajé. *",
+    "Description": "Estas son algunas tecnologías con las que trabajé (*) en diferentes proyectos.",
     "Item1": "Lenguajes de programación",
-    "Item2": "Frameworks / bibliotecas",
+    "Item2": "Frameworks / Bibliotecas",
     "Item3": "Bases de datos",
     "Item4": "Herramientas",
-    "Disclaimer": "* De ninguna manera soy un experto en cada herramienta/lenguaje/biblioteca listada aquí."
+    "Disclaimer": "(*) De ninguna manera soy un experto en cada herramienta/lenguaje/biblioteca listada aquí."
   },
   "Header":
   {
@@ -30,7 +31,7 @@
   },
   "Footer":
   {
-    "Contact": "Acá está mi <1>e-mail</1> si querés ponerte en contacto.",
+    "Contact": "Este es mi <1>e-mail</1> si querés ponerte en contacto.",
     "Location": "Ubicación actual"
   },
   "Not Found":

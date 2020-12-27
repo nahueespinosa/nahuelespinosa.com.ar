@@ -30,6 +30,10 @@
   height: 100%;
 }
 
+.options > * {
+  padding-left: 2em;
+}
+
 .options > button {
   background: none;
   border: none;

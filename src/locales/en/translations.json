@@ -12,17 +12,18 @@
     "Title": "Website To-Do List",
     "Item1": "Start with a simple design.",
     "Item2": "Add dark mode, obviously.",
-    "Item3": "Add a stories feature."
+    "Item3": "Add multi-language support.",
+    "Item4": "Add a stories feature."
   },
   "Techs":
   {
     "Title": "Technologies",
-    "Description": "These are some of the technologies I've worked with. *",
+    "Description": "These are some of the technologies I've worked with (*) in different projects.",
     "Item1": "Programming Languages",
     "Item2": "Frameworks / Libraries",
     "Item3": "Databases",
     "Item4": "Tools",
-    "Disclaimer": "* I am by no means an expert in every tool/language/framework listed here."
+    "Disclaimer": "(*) I am by no means an expert in every tool/language/framework listed here."
   },
   "Header":
   {
@@ -35,7 +36,7 @@
   },
   "Not Found":
   {
-    "Title": "Not Found",
+    "Title": "Not found",
     "Description": "This route doesn't exist. Sorry."
   }
 }
