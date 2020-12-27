@@ -8,7 +8,15 @@ Setup your development environment following [this tutorial](https://www.gatsbyj
 
 ## Installation
 
-Use the Gatsby CLI to create a new site, specifying this repository.
+Clone this repository and install its modules.
+
+```bash
+git clone https://github.com/nahueespinosa/nahuelespinosa.com.ar nahuel-site
+cd nahuel-site/
+npm install
+```
+
+Or you can use the Gatsby CLI to create a new site, specifying this repository.
 
 ```bash
 gatsby new nahuel-site https://github.com/nahueespinosa/nahuelespinosa.com.ar
