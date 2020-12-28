@@ -10,7 +10,7 @@ const NotFoundPage = ({ t }) => (
     <SEO/>
     <h1>{t("Not Found.Title")}</h1>
     <p>{t("Not Found.Description")}</p>
-    <img src={require("../assets/images/error.png")} width="50%;"/>
+    <img src={require("../assets/images/error.png")} alt="Error 404" width="50%;"/>
   </Layout>
 )
 

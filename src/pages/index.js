@@ -14,7 +14,7 @@ const HomeIndex = ({ t }) => (
     <h1>{t("Greetings")}</h1>
     <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
 
-    <img src={require("../assets/images/pic.jpg")}/>
+    <img src={require("../assets/images/pic.jpg")} alt="Profile" />
 
     <h2>{t("List.Title")}</h2>
     <ol>
