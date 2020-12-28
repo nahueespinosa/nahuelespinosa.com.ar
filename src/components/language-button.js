@@ -1,8 +1,8 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
+import { getI18n } from "react-i18next"
 
 const LanguageButton = (props) => {
-  const { t, i18n } = useTranslation("translations")
+  const i18n = getI18n("translations")
 
   const language = (i18n.language === 'es') ? 'en' : 'es'
 
