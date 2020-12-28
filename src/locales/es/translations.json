@@ -18,12 +18,11 @@
   "Techs":
   {
     "Title": "Tecnologías",
-    "Description": "Estas son algunas tecnologías con las que trabajé (*) en diferentes proyectos.",
+    "Description": "Estas son algunas tecnologías con las que trabajé en diferentes proyectos.",
     "Item1": "Lenguajes de programación",
     "Item2": "Frameworks / Bibliotecas",
     "Item3": "Bases de datos",
-    "Item4": "Herramientas",
-    "Disclaimer": "(*) De ninguna manera soy un experto en cada herramienta/lenguaje/biblioteca listada aquí."
+    "Item4": "Herramientas"
   },
   "Header":
   {

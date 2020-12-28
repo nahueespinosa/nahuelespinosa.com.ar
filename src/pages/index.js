@@ -7,6 +7,7 @@ import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUni
 import { withTranslation } from "react-i18next"
 
 import "../components/i18n"
+import { FaRegQuestionCircle } from "react-icons/fa"
 
 const HomeIndex = ({ t }) => (
   <Layout>
@@ -14,6 +15,8 @@ const HomeIndex = ({ t }) => (
 
     <h1>{t("Greetings")}</h1>
     <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
+
+    <img src={require("../assets/images/pic.jpg")}></img>
 
     <h2>{t("List.Title")}</h2>
     <ol>
@@ -29,25 +32,43 @@ const HomeIndex = ({ t }) => (
       <tbody>
         <tr>
           <td>{t("Techs.Item1")}</td>
-          <td><SiC/><SiCplusplus/><SiPython/><SiCsharp/><SiJavascript/></td>
+          <td>
+            <SiC color='#3747a6'/>
+            <SiCplusplus color='#005697'/>
+            <SiPython color='#f7a000'/>
+            <SiCsharp color='#903ba7'/>
+            <SiJavascript color='#efd81d'/>
+          </td>
         </tr>
         <tr>
           <td>{t("Techs.Item2")}</td>
-          <td><SiGatsby/><SiUnity/><SiTensorflow/>ROS</td>
+          <td>
+            <SiGatsby color='#663399'/>
+            <SiUnity/>
+            <SiTensorflow color='#ff8500'/>
+            ROS
+          </td>
         </tr>
         <tr>
           <td>{t("Techs.Item3")}</td>
-          <td><SiMysql/><SiPostgresql/></td>
+          <td>
+            <SiMysql color='#006488'/>
+            <SiPostgresql color='#31648c'/>
+          </td>
         </tr>
         <tr>
           <td>{t("Techs.Item4")}</td>
-          <td><SiGit/><SiDocker/><SiGnubash/><SiNeovim/><SiVisualstudiocode/><SiEclipseide/></td>
+          <td>
+            <SiGit color='#e84e31'/>
+            <SiDocker color='#2391e6'/>
+            <SiGnubash/>
+            <SiNeovim color='#5a933a'/>
+            <SiVisualstudiocode color='#0072b9'/>
+            <SiEclipseide color='#5b3e90'/>
+          </td>
         </tr>
       </tbody>
     </table>
-    <p className={Style.disclaimer}>
-      <i>{t("Techs.Disclaimer")}</i>
-    </p>
   </Layout>
 )
 

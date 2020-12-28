@@ -9,6 +9,7 @@
   --icon-color: #ccc;
   --icon-hover-color: #777;
   --hover-background-color: rgba(39, 39, 39, 0.1);
+  --high-contrast-color: #000;
 }
 
 body {
@@ -58,4 +59,10 @@ tr {
 
 table > tbody > tr:last-child {
   border: none;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
