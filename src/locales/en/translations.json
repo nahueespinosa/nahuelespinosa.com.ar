@@ -35,7 +35,7 @@
   },
   "Not Found":
   {
-    "Title": "Not found",
+    "Title": "Page not found",
     "Description": "This route doesn't exist. Sorry."
   }
 }

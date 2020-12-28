@@ -3,11 +3,9 @@ import Style from "./index.module.css"
 import SEO from "../components/seo.js"
 import Layout from "../components/layout"
 import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUnity, SiJavascript, SiNeovim, SiVisualstudiocode, SiEclipseide, SiDocker, SiMysql, SiPostgresql, SiTensorflow } from "react-icons/si"
-
 import { withTranslation } from "react-i18next"
 
 import "../components/i18n"
-import { FaRegQuestionCircle } from "react-icons/fa"
 
 const HomeIndex = ({ t }) => (
   <Layout>
@@ -16,7 +14,7 @@ const HomeIndex = ({ t }) => (
     <h1>{t("Greetings")}</h1>
     <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
 
-    <img src={require("../assets/images/pic.jpg")}></img>
+    <img src={require("../assets/images/pic.jpg")}/>
 
     <h2>{t("List.Title")}</h2>
     <ol>
