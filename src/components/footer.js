@@ -1,6 +1,6 @@
 import React from "react"
 import Style from "./footer.module.css"
-import Config from "../../data/SiteConfig"
+import Config from '../utils/config'
 import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 import { withTranslation, Trans } from "react-i18next"

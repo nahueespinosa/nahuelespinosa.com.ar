@@ -1,15 +1,15 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 
-import config from '../../data/SiteConfig'
+import Config from '../utils/config'
 
 function SEO({ title, description }) {
-  let metaTitle = title ? title : config.siteTitle
-  let metaDescription = description ? description : config.siteDescription
+  let metaTitle = title ? title : Config.title
+  let metaDescription = description ? description : Config.description
 
   return (
     <Helmet
-      title={title ? title : config.siteTitle}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
@@ -30,7 +30,7 @@ function SEO({ title, description }) {
         {
           name: `image`,
           property: `og:image`,
-          content: config.siteImage,
+          content: Config.image,
         },
         {
           name: `twitter:card`,
@@ -38,7 +38,7 @@ function SEO({ title, description }) {
         },
         {
           name: `twitter:creator`,
-          content: config.siteAuthor,
+          content: Config.author,
         },
         {
           name: `twitter:title`,
@@ -50,7 +50,7 @@ function SEO({ title, description }) {
         },
         {
           property: `twitter:image`,
-          content: config.siteImage,
+          content: Config.image,
         },
       ]}
     />

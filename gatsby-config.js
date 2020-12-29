@@ -1,43 +1,44 @@
-const config = require('./data/SiteConfig')
+const config = require('./src/utils/config.js')
 
 module.exports = {
   siteMetadata: {
-    title: config.siteTitle,
-    siteUrl: config.siteUrl,
-    description: config.siteDescription,
+    title: config.title,
+    siteUrl: config.url,
+    description: config.description,
     author: config.siteAuthor,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitle,
-        description: config.siteDescription,
+        name: config.title,
+        short_name: config.title,
+        description: config.description,
         start_url: '/',
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        background_color: '#ffffff',
+        theme_color: '#333333',
         display: 'browser',
-        icon: config.siteLogo,
+        icon: 'static/logo.png',
       },
     },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: config.googleAnalyticsID,
+        trackingId: 'UA-153304934-3',
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        path: "./data/",
-      },
+        name: 'assets',
+        path: `${__dirname}/static/`,
+      }
     },
-    "gatsby-transformer-json",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-sitemap",
+    'gatsby-transformer-json',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
   ],
 }
