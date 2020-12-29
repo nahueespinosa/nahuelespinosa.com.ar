@@ -1,13 +1,10 @@
-.techs > tbody > tr {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.profile {
+  float: right;
+  margin: 0 20px;
 }
 
-.techs > tbody > tr > td > svg {
-  padding: 0 5px;
-  font-size: 1.5em;
-  color: var(--high-contrast-color);
+.clearfix {
+  overflow: auto;
 }
 
 .tasks {
@@ -20,7 +17,24 @@
   margin-left: 35px;
 }
 
+.techs > tbody > tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.techs > tbody > tr > td > svg {
+  padding: 0 5px;
+  font-size: 1.5em;
+  color: var(--high-contrast-color);
+}
+
 @media only screen and (max-width: 600px) {
+  .profile {
+    float: none;
+    margin: auto;
+  }
+
   table, tbody, th, td, tr {
     display: block;
     text-align: center;
