@@ -17,7 +17,7 @@ const HomeIndex = ({ t }) => (
     <img src={require("../assets/images/pic.jpg")} alt="Profile" />
 
     <h2>{t("List.Title")}</h2>
-    <ol>
+    <ol className={Style.tasks}>
       <li>{t("List.Item1")} ✓</li>
       <li>{t("List.Item2")} ✓</li>
       <li>{t("List.Item3")} ✓</li>

@@ -25,11 +25,12 @@
 .icon {
   font-size: 2.2em;
   padding: 10px;
-  color: var(--icon-color);
+  color: var(--font-color);
+  opacity: 0.5;
 }
 
 .icon:hover {
-  color: var(--icon-hover-color);
+  opacity: 1.0;
 }
 
 @media only screen and (max-width: 600px) {

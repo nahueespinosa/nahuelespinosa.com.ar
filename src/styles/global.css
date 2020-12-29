@@ -6,10 +6,7 @@
   --background-color: #fff;
   --link-color: #2c5bb1;
   --border-color: #d8dee9;
-  --icon-color: #ccc;
-  --icon-hover-color: #777;
-  --hover-background-color: rgba(39, 39, 39, 0.1);
-  --high-contrast-color: #000;
+  --high-contrast-color: #111;
 }
 
 body {
@@ -38,6 +35,11 @@ h2 {
 
 a {
   color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 ul {
