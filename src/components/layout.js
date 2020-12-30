@@ -1,22 +1,23 @@
 import React from 'react'
-import Header from '../components/header.js'
-import Main from '../components/main.js'
-import Footer from '../components/footer.js'
+import Header from './header'
+import Main from './main'
+import Footer from './footer'
 
-class Layout extends React.Component {
-  render() {
-    const { children } = this.props
+const Layout = ({ children, data }) => {
+  const { title, location, links } = data
 
-    return (
-      <div id="wrapper">
-        <Header/>
-        <Main>
-          {children}
-        </Main>
-        <Footer/>
-      </div>
-    )
-  }
+  return (
+    <div id="wrapper">    
+      <Header title={title}/>
+      <Main>
+        {children}
+      </Main>
+      <Footer
+        links={links}
+        location={location}
+      />
+    </div>
+  )
 }
 
 export default Layout

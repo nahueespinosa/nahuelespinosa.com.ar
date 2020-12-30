@@ -24,6 +24,7 @@
     "react-helmet": "^6.0.0",
     "react-i18next": "^11.8.4",
     "react-icons": "^4.1.0",
+    "react-seo-component": "^2.0.2",
     "react-switch": "^5.0.1"
   },
   "keywords": [
