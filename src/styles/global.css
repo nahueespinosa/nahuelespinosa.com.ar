@@ -28,9 +28,15 @@ strong {
   color: var(--heading-color);
 }
 
+h1 {
+  border-bottom: 4px solid var(--border-color);
+  font-size: 3em;
+}
+
 h2 {
-  margin-top: 1em;
-  padding-top: 1em;
+  border-bottom: 4px dashed var(--border-color);
+  margin-top: 3em;
+  padding: 0.5em 0;
 }
 
 a {

@@ -1,15 +1,10 @@
 .profile {
   float: right;
-  margin: 0 20px;
+  margin-left: 20px;
 }
 
 .clearfix {
   overflow: auto;
-}
-
-.tasks {
-  padding: 20px;
-  border: 1px solid var(--border-color);
 }
 
 .tasks li {
@@ -33,6 +28,7 @@
   .profile {
     float: none;
     margin: auto;
+    padding-bottom: 30px;
   }
 
   table, tbody, th, td, tr {
