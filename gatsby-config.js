@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Nahuel Espinosa',
+    siteTitle: 'Nahuel Espinosa',
     description: 'Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.',
     author: 'Nahuel Espinosa',
     image: '/site.png',
@@ -41,9 +41,32 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'posts',
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         name: 'assets',
         path: `${__dirname}/static/`,
       }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
     },
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',

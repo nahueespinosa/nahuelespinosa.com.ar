@@ -4,6 +4,7 @@
   width: 100%;
   border-bottom: 1px solid var(--border-color);
   background-color: var(--background-color);
+  z-index: 2;
 }
 
 .container {
@@ -20,6 +21,8 @@
   letter-spacing: 5px;
   padding: 1em 0;
   white-space: nowrap;
+  color: var(--font-color);
+  text-decoration: none;
 }
 
 .options {

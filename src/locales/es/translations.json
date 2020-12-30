@@ -16,6 +16,10 @@
     "Item3": "Agregar soporte multi-idioma.",
     "Item4": "Agregar historias."
   },
+  "Articles":
+  {
+    "Title": "Últimos artículos"
+  },
   "Techs":
   {
     "Title": "Tecnologías",

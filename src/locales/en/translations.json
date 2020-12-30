@@ -16,6 +16,10 @@
     "Item3": "Add multi-language support.",
     "Item4": "Add a stories feature."
   },
+  "Articles":
+  {
+    "Title": "Latest Articles"
+  },
   "Techs":
   {
     "Title": "Technologies",

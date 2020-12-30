@@ -8,13 +8,13 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 const NotFoundPage = () => {
   const metadata = useSiteMetadata()
-  const { description, title, image, siteUrl, language, locale, twitterUser } = metadata
+  const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
   const { t } = useTranslation("translations")
 
   return (
     <Layout data={metadata}>
       <SEO
-        title={title}
+        title={siteTitle}
         titleTemplate={t("Not Found.Title")}
         description={description}
         image={`${siteUrl}${image}`}

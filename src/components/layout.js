@@ -4,11 +4,11 @@ import Main from './main'
 import Footer from './footer'
 
 const Layout = ({ children, data }) => {
-  const { title, location, links } = data
+  const { siteTitle, location, links } = data
 
   return (
     <div id="wrapper">    
-      <Header title={title}/>
+      <Header title={siteTitle}/>
       <Main>
         {children}
       </Main>
