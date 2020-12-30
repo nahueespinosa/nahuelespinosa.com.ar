@@ -10,7 +10,7 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export const query = graphql
 `
-query PostsByID($id: String!) {
+query POST_BY_ID_QUERY($id: String!) {
   mdx(
     id: { eq: $id }
   ){
