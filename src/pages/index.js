@@ -4,9 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Style from "./index.module.css"
 import Layout from "../components/layout"
 import * as Icons from "react-icons/si"
-import { useTranslation } from "react-i18next"
 
-import "../components/i18n"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export const query = graphql
@@ -33,7 +31,7 @@ query SITE_INDEX_QUERY {
 export default ({ data }) => {
   const metadata = useSiteMetadata()
   const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
-  const { t } = useTranslation("translations")
+  const t = (text) => { return text }
 
   return (
     <Layout data={metadata}>

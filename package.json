@@ -1,5 +1,5 @@
 {
-  "name": "my-site",
+  "name": "nahuel-site",
   "description": "Personal Website",
   "version": "2.0.0",
   "author": "Nahuel Espinosa",
@@ -10,6 +10,7 @@
     "gatsby-image": "^2.4.5",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-google-analytics": "^2.3.2",
+    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^2.2.38",
     "gatsby-plugin-mdx": "^1.7.1",
     "gatsby-plugin-offline": "^3.0.32",
@@ -20,13 +21,9 @@
     "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-json": "^2.4.3",
     "gatsby-transformer-sharp": "^2.5.3",
-    "i18next": "^19.8.4",
-    "i18next-browser-languagedetector": "^6.0.1",
-    "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "react-i18next": "^11.8.4",
     "react-icons": "^4.1.0",
     "react-seo-component": "^2.0.2",
     "react-switch": "^5.0.1"

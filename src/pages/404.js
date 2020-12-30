@@ -1,15 +1,13 @@
 import React from "react"
 import SEO from "react-seo-component"
 import Layout from "../components/layout"
-import { useTranslation } from "react-i18next"
 
-import "../components/i18n"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 const NotFoundPage = () => {
   const metadata = useSiteMetadata()
   const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
-  const { t } = useTranslation("translations")
+  const t = (text) => { return text }
 
   return (
     <Layout data={metadata}>

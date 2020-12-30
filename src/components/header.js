@@ -4,9 +4,9 @@ import Style from "./header.module.css"
 import LanguageButton from './language-button.js'
 import DarkToggle from "./dark-toggle.js"
 
-import { withTranslation } from "react-i18next"
+const t = (text) => { return text }
 
-const Header = ({ title, t }) => (
+const Header = ({ title }) => (
   <div id="header" className={Style.header}>
     <div className={Style.container}>
       <Link to="/" className={Style.title}>{title}</Link>
@@ -18,4 +18,4 @@ const Header = ({ title, t }) => (
   </div>
 )
 
-export default withTranslation("translations")(Header)
+export default Header

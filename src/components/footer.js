@@ -2,13 +2,13 @@ import React from "react"
 import Style from "./footer.module.css"
 import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
-import { withTranslation, Trans } from "react-i18next"
+const t = (text) => { return text }
 
-const Footer = ({ location, links, t }) => (
+const Footer = ({ location, links }) => (
   <div id="footer" className={Style.footer}>
     <div className={Style.container}>
       <div className={Style.info}>
-        <p><Trans t={ t } i18nKey="Footer.Contact">Here is my <a href={links.email}>e-mail</a> if you want to reach out.</Trans><br/>
+        <p>Here is my <a href={links.email}>e-mail</a> if you want to reach out.<br/>
         {t("Footer.Location")} <FaMapMarkerAlt/> <a href={"https://www.google.com.ar/maps/place/" + location}>{location}</a>.</p>
       </div>
       <div className={Style.links}>
@@ -20,4 +20,4 @@ const Footer = ({ location, links, t }) => (
   </div>
 )
 
-export default withTranslation("translations")(Footer)
+export default Footer
