@@ -9,7 +9,7 @@ import { withTranslation } from "react-i18next"
 const Header = ({ title, t }) => (
   <div id="header" className={Style.header}>
     <div className={Style.container}>
-      <Link to="/" className={Style.title}>{Config.title}</Link>
+      <Link to="/" className={Style.title}>{title}</Link>
       <div className={Style.options}>
         <LanguageButton label={t("Language")} />
         <DarkToggle label={t("Header.Dark Mode")} />

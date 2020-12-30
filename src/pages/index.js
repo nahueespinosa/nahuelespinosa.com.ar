@@ -12,12 +12,6 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 export const query = graphql
 `
 query SITE_INDEX_QUERY {
-  site {
-    siteMetadata {
-      title
-      description
-    }
-  }
   allMdx(
     sort: {fields: [frontmatter___date], order: DESC},
     filter: {frontmatter: {published: {eq: true}}}
@@ -36,15 +30,15 @@ query SITE_INDEX_QUERY {
 }
 `
 
-export default () => {
+export default ({ data }) => {
   const metadata = useSiteMetadata()
-  const { description, title, image, siteUrl, language, locale, twitterUser } = metadata
+  const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
   const { t } = useTranslation("translations")
 
   return (
     <Layout data={metadata}>
       <SEO
-        title={title}
+        title={siteTitle}
         titleTemplate={t('Home')}
         description={description}
         image={`${siteUrl}${image}`}

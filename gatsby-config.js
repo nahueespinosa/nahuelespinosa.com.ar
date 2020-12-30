@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Nahuel Espinosa',
+    siteTitle: 'Nahuel Espinosa',
     description: 'Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.',
     author: 'Nahuel Espinosa',
     image: '/site.png',
