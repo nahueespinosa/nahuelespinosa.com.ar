@@ -65,7 +65,7 @@ export default ({ data }) => {
         </ol>
       </section>
       <section>
-        <h2>{t("Articles.Title")}</h2>
+        { data.allMdx.nodes.length > 0 && <h2>{t("Articles.Title")}</h2> }
         <ul>
           {data.allMdx.nodes.map(({ frontmatter, fields }) => (
             <li>
