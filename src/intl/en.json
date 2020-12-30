@@ -1,6 +1,4 @@
 {
-  "Language": "English (USA)",
-  "Home": "Home",
   "Greetings": "Hi there!",
   "About":
   {
@@ -31,6 +29,7 @@
   },
   "Header":
   {
+    "Language": "English (USA)",
     "Dark Mode": "Dark Mode"
   },
   "Footer":
@@ -38,7 +37,12 @@
     "Contact": "Here is my <a>e-mail</a> if you want to reach out.",
     "Location": "Current location"
   },
-  "Not Found":
+  "HomePage":
+  {
+    "Title": "Home",
+    "Description": "Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics."
+  },
+  "NotFoundPage":
   {
     "Title": "Page not found",
     "Description": "This route doesn't exist. Sorry."

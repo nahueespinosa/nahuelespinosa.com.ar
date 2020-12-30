@@ -34,18 +34,18 @@ const HomeIndex = ({ data }) => {
   const t = (id) => intl.formatMessage({ id })
 
   const metadata = useSiteMetadata()
-  const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
+  const { siteTitle, image, siteUrl, twitterUser } = metadata
   
   return (
     <Layout data={metadata}>
       <SEO
         title={siteTitle}
-        titleTemplate={t('Home')}
-        description={description}
+        titleTemplate={t('HomePage.Title')}
+        description={t('HomePage.Description')}
         image={`${siteUrl}${image}`}
         pathname={siteUrl}
-        siteLanguage={language}
-        siteLocale={locale}
+        siteLanguage={intl.language}
+        siteLocale={intl.locale}
         twitterUsername={twitterUser}
       />
 

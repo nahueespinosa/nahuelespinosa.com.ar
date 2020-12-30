@@ -13,7 +13,7 @@ const Header = ({ title }) => {
       <div className={Style.container}>
         <Link to="/" className={Style.title}>{title}</Link>
         <div className={Style.options}>
-          <LanguageButton label={t("Language")} />
+          <LanguageButton label={t("Header.Language")} />
           <DarkToggle label={t("Header.Dark Mode")} />
         </div>
       </div>
