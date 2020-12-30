@@ -40,8 +40,8 @@ const HomeIndex = ({ data }) => {
     <Layout data={metadata}>
       <SEO
         title={siteTitle}
-        titleTemplate={t('HomePage.Title')}
-        description={t('HomePage.Description')}
+        titleTemplate={t("HomePage.Title")}
+        description={t("HomePage.Description")}
         image={`${siteUrl}${image}`}
         pathname={siteUrl}
         siteLanguage={intl.language}

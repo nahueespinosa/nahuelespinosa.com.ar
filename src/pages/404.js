@@ -10,14 +10,14 @@ const NotFoundPage = () => {
   const t = (id) => intl.formatMessage({ id })
 
   const metadata = useSiteMetadata()
-  const { description, siteTitle, image, siteUrl, twitterUser } = metadata
+  const { siteTitle, image, siteUrl, twitterUser } = metadata
   
   return (
     <Layout data={metadata}>
       <SEO
         title={siteTitle}
         titleTemplate={t("NotFoundPage.Title")}
-        description={description}
+        description={t("HomePage.Description")}
         image={`${siteUrl}${image}`}
         pathname={siteUrl}
         siteLanguage={intl.language}
