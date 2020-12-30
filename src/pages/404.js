@@ -1,14 +1,17 @@
 import React from "react"
 import SEO from "react-seo-component"
 import Layout from "../components/layout"
+import { useIntl } from "gatsby-plugin-intl"
 
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 const NotFoundPage = () => {
+  const intl = useIntl()
+  const t = (id) => intl.formatMessage({ id })
+
   const metadata = useSiteMetadata()
   const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
-  const t = (text) => { return text }
-
+  
   return (
     <Layout data={metadata}>
       <SEO

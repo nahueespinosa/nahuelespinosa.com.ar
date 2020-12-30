@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Style from "./index.module.css"
 import Layout from "../components/layout"
 import * as Icons from "react-icons/si"
+import { useIntl } from "gatsby-plugin-intl"
 
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
@@ -28,11 +29,13 @@ query SITE_INDEX_QUERY {
 }
 `
 
-export default ({ data }) => {
+const HomeIndex = ({ data }) => {
+  const intl = useIntl()
+  const t = (id) => intl.formatMessage({ id })
+
   const metadata = useSiteMetadata()
   const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
-  const t = (text) => { return text }
-
+  
   return (
     <Layout data={metadata}>
       <SEO
@@ -122,3 +125,5 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default HomeIndex

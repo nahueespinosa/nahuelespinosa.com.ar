@@ -73,5 +73,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-dark-mode',
+    {
+      resolve: 'gatsby-plugin-intl',
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: ['en', 'es'],
+        defaultLanguage: 'en',
+      }
+    },
   ],
 }

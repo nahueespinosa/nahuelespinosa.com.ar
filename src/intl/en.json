@@ -35,7 +35,7 @@
   },
   "Footer":
   {
-    "Contact": "Here is my <1>e-mail</1> if you want to reach out.",
+    "Contact": "Here is my <a>e-mail</a> if you want to reach out.",
     "Location": "Current location"
   },
   "Not Found":

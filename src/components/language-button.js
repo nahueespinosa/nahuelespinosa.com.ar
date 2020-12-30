@@ -1,12 +1,16 @@
 import React from "react"
+import { changeLocale, useIntl } from "gatsby-plugin-intl"
 
-const LanguageButton = (props) => {
-  // const i18n = getI18n("translations")
-
-  // const language = (i18n.language === 'es') ? 'en' : 'es'
+const LanguageButton = ({ label }) => {
+  const intl = useIntl()
 
   return(
-    <button onClick={() => {} /*() => i18n.changeLanguage(language)*/}>{props.label}</button>
+    <button onClick={() => {
+      let language = (intl.locale === 'en') ? 'es' : 'en'
+      changeLocale(language)
+    }}>
+      {label}
+    </button>
   )
 }
 
