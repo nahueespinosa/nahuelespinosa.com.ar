@@ -10,7 +10,7 @@ export const useSiteMetadata = () => {
             description
             author
             image
-            url
+            siteUrl
             language
             locale
             location

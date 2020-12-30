@@ -4,7 +4,7 @@ module.exports = {
     description: 'Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.',
     author: 'Nahuel Espinosa',
     image: '/site.png',
-    url: 'https://www.nahuelespinosa.com.ar',
+    siteUrl: 'https://www.nahuelespinosa.com.ar',
     language: 'en',
     locale: 'en_US',
     location: 'Buenos Aires, Argentina',

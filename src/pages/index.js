@@ -10,7 +10,7 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export default () => {
   const metadata = useSiteMetadata()
-  const { description, title, image, url, language, locale, twitterUser } = metadata
+  const { description, title, image, siteUrl, language, locale, twitterUser } = metadata
   const { t } = useTranslation("translations")
 
   return (
@@ -19,8 +19,8 @@ export default () => {
         title={title}
         titleTemplate={t('Home')}
         description={description}
-        image={`${url}${image}`}
-        pathname={url}
+        image={`${siteUrl}${image}`}
+        pathname={siteUrl}
         siteLanguage={language}
         siteLocale={locale}
         twitterUsername={twitterUser}
