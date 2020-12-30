@@ -1,5 +1,6 @@
 import React from "react"
 import SEO from "react-seo-component"
+import { graphql, Link } from 'gatsby'
 import Style from "./index.module.css"
 import Layout from "../components/layout"
 import { SiC, SiCplusplus, SiPython, SiGit, SiGnubash, SiCsharp, SiGatsby, SiUnity, SiJavascript, SiNeovim, SiVisualstudiocode, SiEclipseide, SiDocker, SiMysql, SiPostgresql, SiTensorflow } from "react-icons/si"
@@ -7,6 +8,33 @@ import { useTranslation } from "react-i18next"
 
 import "../components/i18n"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+
+export const query = graphql
+`
+query SITE_INDEX_QUERY {
+  site {
+    siteMetadata {
+      title
+      description
+    }
+  }
+  allMdx(
+    sort: {fields: [frontmatter___date], order: DESC},
+    filter: {frontmatter: {published: {eq: true}}}
+  ){
+    nodes {
+      id
+      frontmatter {
+        title
+        date(formatString: "YYYY-MM-DD")
+      }
+      fields {
+        slug
+      }
+    }
+  }
+}
+`
 
 export default () => {
   const metadata = useSiteMetadata()
@@ -41,6 +69,17 @@ export default () => {
           <li>{t("List.Item3")} ✓</li>
           <li>{t("List.Item4")}</li>
         </ol>
+      </section>
+      <section>
+        <h2>{t("Articles.Title")}</h2>
+        <ul>
+          {data.allMdx.nodes.map(({ excerpt, frontmatter, fields }) => (
+            <li>
+              <span className={Style.dateTag}>{frontmatter.date}</span>
+              <Link to={fields.slug}>{frontmatter.title}</Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section>

@@ -20,6 +20,8 @@
   letter-spacing: 5px;
   padding: 1em 0;
   white-space: nowrap;
+  color: var(--font-color);
+  text-decoration: none;
 }
 
 .options {
