@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import SEO from "react-seo-component"
+import { FormattedDate, useIntl } from "gatsby-plugin-intl"
 
 import Layout from "../components/layout"
 import Style from "./post.module.css"
@@ -17,7 +18,8 @@ query POST_BY_ID_QUERY($id: String!) {
     body
     frontmatter {
       title
-      date(formatString: "MMMM Do, YYYY")
+      description
+      date
     }
     fields {
       slug
@@ -27,21 +29,23 @@ query POST_BY_ID_QUERY($id: String!) {
 `
 
 export default ({ data }) => {
+  const intl = useIntl()
+
   const { frontmatter, body, fields } = data.mdx
 
   const metadata = useSiteMetadata()
-  const { description, image, siteTitle, siteUrl, language, locale, twitterUser, author } = metadata
+  const { image, siteTitle, siteUrl, twitterUser, author } = metadata
 
   return (
     <Layout data={metadata}>
       <SEO
         title={siteTitle}
         titleTemplate={frontmatter.title}
-        description={description}
+        description={frontmatter.description}
         image={`${siteUrl}${image}`}
-        pathname={`${siteUrl}${fields.slug}`}
-        siteLanguage={language}
-        siteLocale={locale}
+        pathname={`${siteUrl}/${intl.locale}${fields.slug}`}
+        siteLanguage={intl.language}
+        siteLocale={intl.locale}
         twitterUsername={twitterUser}
         author={author}
         article={true}
@@ -49,7 +53,14 @@ export default ({ data }) => {
         dateModified={frontmatter.date}
       />
       
-      <span className={Style.date}>{frontmatter.date}</span>
+      <span className={Style.date}>
+        <FormattedDate
+          value={frontmatter.date}
+          year="numeric"
+          month="long"
+          day="numeric"
+        />
+      </span>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   )

@@ -1,10 +1,10 @@
 import React from "react"
 import SEO from "react-seo-component"
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Style from "./index.module.css"
 import Layout from "../components/layout"
 import * as Icons from "react-icons/si"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, Link } from "gatsby-plugin-intl"
 
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
