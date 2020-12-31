@@ -3,10 +3,6 @@
   margin-left: 20px;
 }
 
-.clearfix {
-  overflow: auto;
-}
-
 .tasks li {
   padding: 5px 25px;
   margin-left: 35px;
