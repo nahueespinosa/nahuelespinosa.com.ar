@@ -11,18 +11,22 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export const query = graphql
 `
-query POST_BY_ID_QUERY($id: String!) {
-  mdx(
-    id: { eq: $id }
+query POST_BY_ID_QUERY($ids: [String!]) {
+  allMdx(
+    filter: {id: {in: $ids}}
   ){
-    body
-    frontmatter {
-      title
-      description
-      date
-    }
-    fields {
-      slug
+    nodes {
+      id
+      body
+      frontmatter {
+        title
+        description
+        date
+      }
+      fields {
+        lang
+        slug
+      }
     }
   }
 }
@@ -30,10 +34,15 @@ query POST_BY_ID_QUERY($id: String!) {
 
 export default ({ data }) => {
   const intl = useIntl()
-
-  const { frontmatter, body, fields } = data.mdx
-
   const metadata = useSiteMetadata()
+
+  let node = data.allMdx.nodes.find(obj => {
+    return obj.fields.lang === intl.locale
+  })
+  
+  if (node === undefined) node = data.allMdx.nodes[0]
+
+  const { body, frontmatter, fields } = node
   const { image, siteTitle, siteUrl, twitterUser, author } = metadata
 
   return (

@@ -13,16 +13,16 @@ export const query = graphql
 query SITE_INDEX_QUERY {
   allMdx(
     sort: {fields: [frontmatter___date], order: DESC},
-    filter: {frontmatter: {published: {eq: true}}}
+    filter: {frontmatter: {published: {eq: true}}, fields: {isDefault: {eq: true}}}
   ){
     nodes {
-      id
-      frontmatter {
-        title
-        date(formatString: "YYYY-MM-DD")
-      }
       fields {
         slug
+        versions {
+          lang
+          title
+          date(formatString: "YYYY-MM-DD")
+        }
       }
     }
   }
@@ -66,14 +66,22 @@ const HomeIndex = ({ data }) => {
         </ol>
       </section>
       <section>
-        { data.allMdx.nodes.length > 0 && <h2>{t("Articles.Title")}</h2> }
+        {data.allMdx.nodes.length > 0 && <h2>{t("Articles.Title")}</h2>}
         <ul>
-          {data.allMdx.nodes.map(({ frontmatter, fields }) => (
-            <li>
-              <span className={Style.dateTag}>{frontmatter.date}</span>
-              <Link to={fields.slug}>{frontmatter.title}</Link>
-            </li>
-          ))}
+          {data.allMdx.nodes.map(({ fields }) => {
+            let version = fields.versions.find(obj => {
+              return obj.lang === intl.locale
+            })
+
+            if (version === undefined) version = fields.versions[0]
+            
+            return (
+              <li>
+                <span className={Style.dateTag}>{version.date}</span>
+                <Link to={fields.slug}>{version.title}</Link>
+              </li>
+            )
+          })}
         </ul>
       </section>
 
