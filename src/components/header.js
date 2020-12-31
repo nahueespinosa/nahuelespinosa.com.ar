@@ -1,8 +1,9 @@
 import React from "react"
-import Style from "./header.module.css"
-import LanguageButton from './language-button.js'
-import DarkToggle from "./dark-toggle.js"
 import { useIntl, Link } from "gatsby-plugin-intl"
+import LanguageButton from "./language-button"
+import DarkToggle from "./dark-toggle"
+
+import Style from "./header.module.css"
 
 const Header = ({ title }) => {
   const intl = useIntl()

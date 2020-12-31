@@ -1,8 +1,8 @@
 import React from "react"
 import SEO from "react-seo-component"
-import Layout from "../components/layout"
 import { useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+import Layout from "../components/layout"
 
 import Style from "./404.module.css"
 

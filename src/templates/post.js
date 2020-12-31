@@ -3,8 +3,8 @@ import SEO from "react-seo-component"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FormattedDate, useIntl } from "gatsby-plugin-intl"
-import Layout from "../components/layout"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+import Layout from "../components/layout"
 
 import Style from "./post.module.css"
 
@@ -61,15 +61,19 @@ export default ({ data }) => {
         dateModified={frontmatter.date}
       />
       
-      <span className={Style.date}>
-        <FormattedDate
-          value={frontmatter.date}
-          year="numeric"
-          month="long"
-          day="numeric"
-        />
-      </span>
-      <MDXRenderer>{body}</MDXRenderer>
+      <section>
+        <span className={Style.date}>
+          <FormattedDate
+            value={frontmatter.date}
+            year="numeric"
+            month="long"
+            day="numeric"
+          />
+        </span>
+        <MDXRenderer>
+          {body}
+        </MDXRenderer>
+      </section>
     </Layout>
   )
 }

@@ -1,7 +1,8 @@
 import React from "react"
-import Style from "./footer.module.css"
-import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+
+import Style from "./footer.module.css"
 
 const Footer = ({ location, links }) => {
   const intl = useIntl()

@@ -37,21 +37,6 @@
   margin-left: 2em;
 }
 
-.options > button {
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.options > button:hover {
-  color: var(--link-color);
-  text-decoration: underline;
-}
-
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column-reverse;

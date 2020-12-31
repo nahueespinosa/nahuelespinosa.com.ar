@@ -41,7 +41,7 @@ const ArticlesList = () => {
   }
 
   return (
-    <section>
+    <>
       <h2>{t("Articles.Title")}</h2>
       <ul>
         {latest.map(({ fields }) => {
@@ -59,7 +59,7 @@ const ArticlesList = () => {
           )
         })}
       </ul>
-    </section>
+    </>
   )
 }
 

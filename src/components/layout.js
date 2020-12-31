@@ -7,8 +7,10 @@ const Layout = ({ children, data }) => {
   const { siteTitle, location, links } = data
 
   return (
-    <div id="wrapper">    
-      <Header title={siteTitle}/>
+    <>    
+      <Header
+        title={siteTitle}
+      />
       <Main>
         {children}
       </Main>
@@ -16,7 +18,7 @@ const Layout = ({ children, data }) => {
         links={links}
         location={location}
       />
-    </div>
+    </>
   )
 }
 

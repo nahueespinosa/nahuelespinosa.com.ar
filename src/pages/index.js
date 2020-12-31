@@ -1,12 +1,12 @@
 import React from "react"
 import SEO from "react-seo-component"
-import Style from "./index.module.css"
-import Layout from "../components/layout"
-import ArticlesList from "../components/articles-list"
 import * as Icons from "react-icons/si"
 import { useIntl } from "gatsby-plugin-intl"
-
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+import ArticlesList from "../components/articles-list"
+import Layout from "../components/layout"
+
+import Style from "./index.module.css"
 
 const HomeIndex = ({ data }) => {
   const intl = useIntl()
@@ -28,7 +28,7 @@ const HomeIndex = ({ data }) => {
         twitterUsername={twitterUser}
       />
 
-      <section className={"clearfix"}>
+      <section>
         <h1>{t("Greetings")}</h1>
         <img src={require("../images/profile.jpg")} alt="Profile" className={Style.profile}/>
         <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
@@ -45,7 +45,9 @@ const HomeIndex = ({ data }) => {
         </ol>
       </section>
       
-      <ArticlesList/>
+      <section>
+        <ArticlesList/>
+      </section>
 
       <section>
         <h2>{t("Techs.Title")}</h2>

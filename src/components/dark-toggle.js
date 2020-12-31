@@ -1,6 +1,7 @@
 import React from 'react'
 import Switch from 'react-switch'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
 import Style from './dark-toggle.module.css'
 
 const DarkToggle = ({ label }) => {

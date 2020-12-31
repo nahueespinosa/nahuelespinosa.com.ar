@@ -1,0 +1,14 @@
+.button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
