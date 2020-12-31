@@ -30,7 +30,7 @@ const HomeIndex = ({ data }) => {
 
       <section className={Style.clearfix}>
         <h1>{t("Greetings")}</h1>
-        <img src={require("../assets/images/pic.jpg")} alt="Profile" className={Style.profile}/>
+        <img src={require("../images/profile.jpg")} alt="Profile" className={Style.profile}/>
         <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
       </section>
 

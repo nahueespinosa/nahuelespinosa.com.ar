@@ -2,8 +2,9 @@ import React from "react"
 import SEO from "react-seo-component"
 import Layout from "../components/layout"
 import { useIntl } from "gatsby-plugin-intl"
-
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+
+import Style from "./404.module.css"
 
 const NotFoundPage = () => {
   const intl = useIntl()
@@ -27,7 +28,7 @@ const NotFoundPage = () => {
 
       <h1>{t("NotFoundPage.Title")}</h1>
       <p>{t("NotFoundPage.Description")}</p>
-      <img src={require("../assets/images/error.png")} alt="Error 404" width="50%;"/>
+      <img className={Style.image} src={require("../images/error.png")} alt="Error 404"/>
     </Layout>
   )
 }

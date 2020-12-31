@@ -53,7 +53,7 @@ exports.onCreateNode = ({ node, actions, getNode, getNodes }) => {
       })
     }
       
-    createNodeField({ node, name: `slug`, value: `/posts${path}` })
+    createNodeField({ node, name: `slug`, value: path })
     createNodeField({ node, name: `isDefault`, value: isDefault })
     createNodeField({ node, name: `lang`, value: lang })
     createNodeField({ node, name: `versions`, value: versions })
