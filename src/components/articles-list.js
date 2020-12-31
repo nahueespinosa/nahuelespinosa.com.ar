@@ -43,7 +43,7 @@ const ArticlesList = () => {
   return (
     <>
       <h2>{t("Articles.Title")}</h2>
-      <ul>
+      <ul className={Style.list}>
         {latest.map(({ fields }) => {
           let version = fields.versions.find(node => {
             return node.lang === intl.locale
