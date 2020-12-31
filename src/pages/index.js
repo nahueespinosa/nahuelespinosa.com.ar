@@ -1,33 +1,12 @@
 import React from "react"
 import SEO from "react-seo-component"
-import { graphql } from 'gatsby'
 import Style from "./index.module.css"
 import Layout from "../components/layout"
+import ArticlesList from "../components/articles-list"
 import * as Icons from "react-icons/si"
-import { useIntl, Link } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-
-export const query = graphql
-`
-query SITE_INDEX_QUERY {
-  allMdx(
-    sort: {fields: [frontmatter___date], order: DESC},
-    filter: {frontmatter: {published: {eq: true}}, fields: {isDefault: {eq: true}}}
-  ){
-    nodes {
-      fields {
-        slug
-        versions {
-          lang
-          title
-          date(formatString: "YYYY-MM-DD")
-        }
-      }
-    }
-  }
-}
-`
 
 const HomeIndex = ({ data }) => {
   const intl = useIntl()
@@ -65,25 +44,8 @@ const HomeIndex = ({ data }) => {
           <li>{t("List.Item4")}</li>
         </ol>
       </section>
-      <section>
-        {data.allMdx.nodes.length > 0 && <h2>{t("Articles.Title")}</h2>}
-        <ul>
-          {data.allMdx.nodes.map(({ fields }) => {
-            let version = fields.versions.find(obj => {
-              return obj.lang === intl.locale
-            })
-
-            if (version === undefined) version = fields.versions[0]
-            
-            return (
-              <li>
-                <span className={Style.dateTag}>{version.date}</span>
-                <Link to={fields.slug}>{version.title}</Link>
-              </li>
-            )
-          })}
-        </ul>
-      </section>
+      
+      <ArticlesList/>
 
       <section>
         <h2>{t("Techs.Title")}</h2>
