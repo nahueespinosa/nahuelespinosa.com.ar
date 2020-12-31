@@ -6,6 +6,7 @@ body {
   --background-color: #fff;
   --link-color: #2c5bb1;
   --border-color: #d8dee9;
+  --low-contrast-color: #f9f9f9;
   --high-contrast-color: #111;
 
   --main-font: "Roboto", "Helvetica", "Arial", sans-serif; 
@@ -28,6 +29,7 @@ body.dark {
   --background-color: #0d1117;
   --link-color: #ebe995;
   --border-color: #2e3135;
+  --low-contrast-color: #131a24;
   --high-contrast-color: #eee;
 
   -webkit-font-smoothing: antialiased;
@@ -84,6 +86,31 @@ img {
 }
 
 section {
-  overflow: auto;
+  overflow: hidden;
   margin: 2em 0;
+}
+
+blockquote {
+  background: var(--low-contrast-color);
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 1.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+code {
+  font-size: 1.2em;
 }
