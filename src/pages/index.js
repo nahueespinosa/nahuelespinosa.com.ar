@@ -1,12 +1,11 @@
 import React from "react"
 import SEO from "react-seo-component"
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Style from "./index.module.css"
 import Layout from "../components/layout"
 import * as Icons from "react-icons/si"
-import { useTranslation } from "react-i18next"
+import { useIntl, Link } from "gatsby-plugin-intl"
 
-import "../components/i18n"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 export const query = graphql
@@ -14,37 +13,39 @@ export const query = graphql
 query SITE_INDEX_QUERY {
   allMdx(
     sort: {fields: [frontmatter___date], order: DESC},
-    filter: {frontmatter: {published: {eq: true}}}
+    filter: {frontmatter: {published: {eq: true}}, fields: {isDefault: {eq: true}}}
   ){
     nodes {
-      id
-      frontmatter {
-        title
-        date(formatString: "YYYY-MM-DD")
-      }
       fields {
         slug
+        versions {
+          lang
+          title
+          date(formatString: "YYYY-MM-DD")
+        }
       }
     }
   }
 }
 `
 
-export default ({ data }) => {
-  const metadata = useSiteMetadata()
-  const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
-  const { t } = useTranslation("translations")
+const HomeIndex = ({ data }) => {
+  const intl = useIntl()
+  const t = (id) => intl.formatMessage({ id })
 
+  const metadata = useSiteMetadata()
+  const { siteTitle, image, siteUrl, twitterUser } = metadata
+  
   return (
     <Layout data={metadata}>
       <SEO
         title={siteTitle}
-        titleTemplate={t('Home')}
-        description={description}
+        titleTemplate={t("HomePage.Title")}
+        description={t("HomePage.Description")}
         image={`${siteUrl}${image}`}
         pathname={siteUrl}
-        siteLanguage={language}
-        siteLocale={locale}
+        siteLanguage={intl.language}
+        siteLocale={intl.locale}
         twitterUsername={twitterUser}
       />
 
@@ -65,14 +66,22 @@ export default ({ data }) => {
         </ol>
       </section>
       <section>
-        { data.allMdx.nodes.length > 0 && <h2>{t("Articles.Title")}</h2> }
+        {data.allMdx.nodes.length > 0 && <h2>{t("Articles.Title")}</h2>}
         <ul>
-          {data.allMdx.nodes.map(({ frontmatter, fields }) => (
-            <li>
-              <span className={Style.dateTag}>{frontmatter.date}</span>
-              <Link to={fields.slug}>{frontmatter.title}</Link>
-            </li>
-          ))}
+          {data.allMdx.nodes.map(({ fields }) => {
+            let version = fields.versions.find(obj => {
+              return obj.lang === intl.locale
+            })
+
+            if (version === undefined) version = fields.versions[0]
+            
+            return (
+              <li>
+                <span className={Style.dateTag}>{version.date}</span>
+                <Link to={fields.slug}>{version.title}</Link>
+              </li>
+            )
+          })}
         </ul>
       </section>
 
@@ -124,3 +133,5 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export default HomeIndex

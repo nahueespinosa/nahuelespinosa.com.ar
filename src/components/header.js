@@ -1,21 +1,24 @@
 import React from "react"
-import { Link } from 'gatsby'
 import Style from "./header.module.css"
 import LanguageButton from './language-button.js'
 import DarkToggle from "./dark-toggle.js"
+import { useIntl, Link } from "gatsby-plugin-intl"
 
-import { withTranslation } from "react-i18next"
+const Header = ({ title }) => {
+  const intl = useIntl()
+  const t = (id) => intl.formatMessage({ id })
 
-const Header = ({ title, t }) => (
-  <div id="header" className={Style.header}>
-    <div className={Style.container}>
-      <Link to="/" className={Style.title}>{title}</Link>
-      <div className={Style.options}>
-        <LanguageButton label={t("Language")} />
-        <DarkToggle label={t("Header.Dark Mode")} />
+  return (
+    <header className={Style.header}>
+      <div className={Style.container}>
+        <Link to="/" className={Style.title}>{title}</Link>
+        <div className={Style.options}>
+          <LanguageButton label={t("Header.Language")} />
+          <DarkToggle label={t("Header.Dark Mode")} />
+        </div>
       </div>
-    </div>
-  </div>
-)
+    </header>
+  )
+}
 
-export default withTranslation("translations")(Header)
+export default Header

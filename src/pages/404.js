@@ -1,31 +1,32 @@
 import React from "react"
 import SEO from "react-seo-component"
 import Layout from "../components/layout"
-import { useTranslation } from "react-i18next"
+import { useIntl } from "gatsby-plugin-intl"
 
-import "../components/i18n"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 
 const NotFoundPage = () => {
-  const metadata = useSiteMetadata()
-  const { description, siteTitle, image, siteUrl, language, locale, twitterUser } = metadata
-  const { t } = useTranslation("translations")
+  const intl = useIntl()
+  const t = (id) => intl.formatMessage({ id })
 
+  const metadata = useSiteMetadata()
+  const { siteTitle, image, siteUrl, twitterUser } = metadata
+  
   return (
     <Layout data={metadata}>
       <SEO
         title={siteTitle}
-        titleTemplate={t("Not Found.Title")}
-        description={description}
+        titleTemplate={t("NotFoundPage.Title")}
+        description={t("HomePage.Description")}
         image={`${siteUrl}${image}`}
         pathname={siteUrl}
-        siteLanguage={language}
-        siteLocale={locale}
+        siteLanguage={intl.language}
+        siteLocale={intl.locale}
         twitterUsername={twitterUser}
       />
 
-      <h1>{t("Not Found.Title")}</h1>
-      <p>{t("Not Found.Description")}</p>
+      <h1>{t("NotFoundPage.Title")}</h1>
+      <p>{t("NotFoundPage.Description")}</p>
       <img src={require("../assets/images/error.png")} alt="Error 404" width="50%;"/>
     </Layout>
   )

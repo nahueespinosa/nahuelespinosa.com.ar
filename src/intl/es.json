@@ -1,6 +1,4 @@
 {
-  "Language": "Español (Argentina)",
-  "Home": "Inicio",
   "Greetings": "¡Hola!",
   "About":
   {
@@ -31,14 +29,20 @@
   },
   "Header":
   {
+    "Language": "Español (Argentina)",
     "Dark Mode": "Modo Oscuro"
   },
   "Footer":
   {
-    "Contact": "Este es mi <1>e-mail</1> si querés ponerte en contacto.",
+    "Contact": "Este es mi <a>e-mail</a> si querés ponerte en contacto.",
     "Location": "Ubicación actual"
   },
-  "Not Found":
+  "HomePage":
+  {
+    "Title": "Inicio",
+    "Description": "Nahuel Espinosa es un ingeniero en electrónica y desarrollador de software interesado en informática y temas relacionados."
+  },
+  "NotFoundPage":
   {
     "Title": "Página no encontrada",
     "Description": "Esta ruta no existe. Lo siento."

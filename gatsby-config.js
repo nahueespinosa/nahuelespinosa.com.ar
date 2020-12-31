@@ -1,12 +1,9 @@
 module.exports = {
   siteMetadata: {
     siteTitle: 'Nahuel Espinosa',
-    description: 'Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.',
+    siteUrl: 'https://www.nahuelespinosa.com.ar',
     author: 'Nahuel Espinosa',
     image: '/site.png',
-    siteUrl: 'https://www.nahuelespinosa.com.ar',
-    language: 'en',
-    locale: 'en_US',
     location: 'Buenos Aires, Argentina',
     twitterUser: '@nahueespinosa',
     links: {
@@ -73,5 +70,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-dark-mode',
+    {
+      resolve: 'gatsby-plugin-intl',
+      options: {
+        path: `${__dirname}/src/intl`,
+        languages: ['en', 'es'],
+        defaultLanguage: 'en',
+      }
+    },
   ],
 }
