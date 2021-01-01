@@ -1,12 +1,27 @@
 import React from "react"
+import styled from "styled-components"
 import SEO from "react-seo-component"
-import * as Icons from "react-icons/si"
 import { useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import ArticlesList from "../components/articles-list"
+import Articles from "../components/articles"
+import Techs from "../components/techs"
 import Layout from "../components/layout"
 
-import Style from "./index.module.css"
+const Img = styled.img`
+  float: right;
+  margin-left: 20px;
+
+  @media only screen and (max-width: 600px) {
+    float: none;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+`
+
+const Li = styled.li`
+  padding: 5px 25px;
+  margin-left: 35px;
+`
 
 const HomeIndex = ({ data }) => {
   const intl = useIntl()
@@ -30,69 +45,26 @@ const HomeIndex = ({ data }) => {
 
       <section>
         <h1>{t("Greetings")}</h1>
-        <img src={require("../images/profile.jpg")} alt="Profile" className={Style.profile}/>
+        <Img src={require("../images/profile.jpg")} alt="Profile"/>
         <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
       </section>
 
       <section>
         <h2>{t("List.Title")}</h2>
-        <p></p>
-        <ol className={Style.tasks}>
-          <li>{t("List.Item1")} ✓</li>
-          <li>{t("List.Item2")} ✓</li>
-          <li>{t("List.Item3")} ✓</li>
-          <li>{t("List.Item4")}</li>
+        <ol>
+          <Li>{t("List.Item1")} ✓</Li>
+          <Li>{t("List.Item2")} ✓</Li>
+          <Li>{t("List.Item3")} ✓</Li>
+          <Li>{t("List.Item4")}</Li>
         </ol>
       </section>
       
       <section>
-        <ArticlesList/>
+        <Articles/>
       </section>
 
       <section>
-        <h2>{t("Techs.Title")}</h2>
-        <p>{t("Techs.Description")}</p>
-        <table className={Style.techs}>
-          <tbody>
-            <tr>
-              <td>{t("Techs.Item1")}</td>
-              <td>
-                <Icons.SiC color='#3747a6'/>
-                <Icons.SiCplusplus color='#005697'/>
-                <Icons.SiPython color='#f7a000'/>
-                <Icons.SiCsharp color='#903ba7'/>
-                <Icons.SiJavascript color='#efd81d'/>
-              </td>
-            </tr>
-            <tr>
-              <td>{t("Techs.Item2")}</td>
-              <td>
-                <Icons.SiGatsby color='#663399'/>
-                <Icons.SiUnity/>
-                <Icons.SiTensorflow color='#ff8500'/>
-                ROS
-              </td>
-            </tr>
-            <tr>
-              <td>{t("Techs.Item3")}</td>
-              <td>
-                <Icons.SiMysql color='#006488'/>
-                <Icons.SiPostgresql color='#31648c'/>
-              </td>
-            </tr>
-            <tr>
-              <td>{t("Techs.Item4")}</td>
-              <td>
-                <Icons.SiGit color='#e84e31'/>
-                <Icons.SiDocker color='#2391e6'/>
-                <Icons.SiGnubash/>
-                <Icons.SiNeovim color='#5a933a'/>
-                <Icons.SiVisualstudiocode color='#0072b9'/>
-                <Icons.SiEclipseide color='#5b3e90'/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <Techs/>
       </section>
     </Layout>
   )

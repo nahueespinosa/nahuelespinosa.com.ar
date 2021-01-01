@@ -1,9 +1,0 @@
-.toggle {
-  display: flex;
-  align-items: center;
-}
-
-.toggle > span {
-  padding: 0 10px;
-  white-space: nowrap;
-}

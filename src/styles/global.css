@@ -7,10 +7,14 @@ body {
   --link-color: #2c5bb1;
   --border-color: #d8dee9;
   --low-contrast-color: #f6f8fa;
+  --mid-contrast-color: #ccc;
   --high-contrast-color: #111;
+  --background-code-color: #17202b;
 
   --main-font: "Roboto", "Helvetica", "Arial", sans-serif; 
   --code-font: "Courier New", monospace, "Courier";
+
+  --theme-animation-time: 0.2s;
 
   font-family: var(--main-font);
   line-height: 1.5;
@@ -30,9 +34,20 @@ body.dark {
   --link-color: #ebe995;
   --border-color: #2e3135;
   --low-contrast-color: #131a24;
+  --mid-contrast-color: #2f435c;
   --high-contrast-color: #eee;
 
   -webkit-font-smoothing: antialiased;
+}
+
+body,
+header,
+footer,
+h1,
+h2,
+h3,
+a {
+  transition-delay: var(--theme-animation-time);
 }
 
 h1,
@@ -92,14 +107,14 @@ section {
 
 blockquote {
   background: var(--low-contrast-color);
-  border-left: 10px solid #ccc;
+  border-left: 10px solid var(--mid-contrast-color);
   padding: 1.5em 1em;
   margin: 0;
   quotes: "\201C""\201D""\2018""\2019";
 }
 
 blockquote:before {
-  color: #ccc;
+  color: var(--mid-contrast-color);
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -116,5 +131,5 @@ code {
 }
 
 pre {
-  background-color: #131a24 !important;
+  background-color: var(--background-code-color) !important;
 }
