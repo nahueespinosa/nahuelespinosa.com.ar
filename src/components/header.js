@@ -47,6 +47,7 @@ const Options = styled.div`
   justify-content: space-between;
   font-family: var(--code-font);
   height: 100%;
+  color: var(--font-color);
 
   & > * {
     margin-left: 2em;
