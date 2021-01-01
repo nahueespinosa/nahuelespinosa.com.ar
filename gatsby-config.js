@@ -65,6 +65,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-remark-reading-time',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

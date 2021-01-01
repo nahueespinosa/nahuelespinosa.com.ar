@@ -1,5 +1,7 @@
 import React from "react"
+import styled from "styled-components"
 import SEO from "react-seo-component"
+import { FaClock } from "react-icons/fa"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
@@ -8,8 +10,23 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/layout"
 import Code from "../components/code"
 
-/* TODO(nahue): Change to styled component */
-import Style from "./post.module.css"
+const Date = styled.span`
+  float: right;
+  margin-top: 1em;
+  font-size: 0.9em;
+`
+
+const Title = styled.h1`
+  margin-bottom: 10px;
+`
+
+const Time = styled.span`
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: var(--mid-contrast-color);
+`
 
 export const query = graphql
 `
@@ -28,6 +45,9 @@ query POST_BY_ID_QUERY($ids: [String!]) {
       fields {
         lang
         slug
+        readingTime {
+          minutes
+        }
       }
     }
   }
@@ -64,14 +84,17 @@ export default ({ data }) => {
       />
       
       <section>
-        <span className={Style.date}>
+        <Date>
           <FormattedDate
             value={frontmatter.date}
             year="numeric"
             month="long"
             day="numeric"
           />
-        </span>        
+        </Date>
+
+        <Title>{frontmatter.title}</Title>
+        <Time>{Math.ceil(fields.readingTime.minutes)} min &nbsp; <FaClock/></Time>
 
         <MDXProvider components={{pre: Code}}>
           <MDXRenderer>
