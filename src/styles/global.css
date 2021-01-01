@@ -9,7 +9,6 @@ body {
   --low-contrast-color: #f6f8fa;
   --mid-contrast-color: #ccc;
   --high-contrast-color: #111;
-  --background-code-color: #17202b;
 
   --main-font: "Roboto", "Helvetica", "Arial", sans-serif; 
   --code-font: "Courier New", monospace, "Courier";
@@ -119,5 +118,5 @@ code {
 }
 
 pre {
-  background-color: var(--background-code-color) !important;
+  background-color: var(--low-contrast-color) !important;
 }

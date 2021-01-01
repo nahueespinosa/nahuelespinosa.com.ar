@@ -27,13 +27,10 @@
     "Item3": "Bases de datos",
     "Item4": "Herramientas"
   },
-  "Header":
+  "Layout":
   {
     "Language": "Español (Argentina)",
-    "DarkMode": "Modo Oscuro"
-  },
-  "Footer":
-  {
+    "DarkMode": "Modo Oscuro",
     "Contact": "Este es mi <a>e-mail</a> si querés ponerte en contacto.",
     "Location": "Ubicación actual"
   },

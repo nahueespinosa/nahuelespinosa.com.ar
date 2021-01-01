@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
-import { FaMapMarkerAlt, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -55,24 +54,12 @@ const SocialLink = styled.a`
   }
 `
 
-const Footer = ({ location, links }) => {
-  const intl = useIntl()
-  const t = (id) => intl.formatMessage({ id })
-
+const Footer = ({ message, links }) => {
   return (
     <StyledFooter>
       <Container>
         <Info>
-          <p>
-            <FormattedMessage
-              id="Footer.Contact"
-              values={{
-                a: chunks => (<a href={links.email}>{chunks}</a>)
-              }}
-            />
-            <br/>
-            {t("Footer.Location")} <FaMapMarkerAlt/> <a href={"https://www.google.com.ar/maps/place/" + location}>{location}</a>.
-          </p>
+          {message}
         </Info>
         <Social>
           <SocialLink href={links.twitter} aria-label="Twitter"><FaTwitter/></SocialLink>

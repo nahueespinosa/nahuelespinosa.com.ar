@@ -8,6 +8,7 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/layout"
 import Code from "../components/code"
 
+/* TODO(nahue): Change to styled component */
 import Style from "./post.module.css"
 
 export const query = graphql
@@ -35,7 +36,7 @@ query POST_BY_ID_QUERY($ids: [String!]) {
 
 export default ({ data }) => {
   const intl = useIntl()
-  const metadata = useSiteMetadata()
+  const { image, siteTitle, siteUrl, twitterUser, author } = useSiteMetadata()
 
   let node = data.allMdx.nodes.find(obj => {
     return obj.fields.lang === intl.locale
@@ -44,10 +45,9 @@ export default ({ data }) => {
   if (node === undefined) node = data.allMdx.nodes[0]
 
   const { body, frontmatter, fields } = node
-  const { image, siteTitle, siteUrl, twitterUser, author } = metadata
-
+  
   return (
-    <Layout data={metadata}>
+    <Layout>
       <SEO
         title={siteTitle}
         titleTemplate={frontmatter.title}
@@ -71,7 +71,8 @@ export default ({ data }) => {
             month="long"
             day="numeric"
           />
-        </span>
+        </span>        
+
         <MDXProvider components={{pre: Code}}>
           <MDXRenderer>
             {body}

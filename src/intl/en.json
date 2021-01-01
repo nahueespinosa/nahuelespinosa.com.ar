@@ -27,13 +27,10 @@
     "Item3": "Databases",
     "Item4": "Tools"
   },
-  "Header":
+  "Layout":
   {
     "Language": "English (USA)",
-    "DarkMode": "Dark Mode"
-  },
-  "Footer":
-  {
+    "DarkMode": "Dark Mode",
     "Contact": "Here is my <a>e-mail</a> if you want to reach out.",
     "Location": "Current location"
   },
