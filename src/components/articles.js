@@ -36,7 +36,6 @@ const Ul = styled.ul`
 const Span = styled.span`
   font-size: 0.8em;
   padding: 1em;
-  opacity: 0.7;
 `
 
 const Articles = () => {
