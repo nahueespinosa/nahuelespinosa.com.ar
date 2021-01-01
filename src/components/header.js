@@ -9,6 +9,10 @@ const StyledHeader = styled.header`
   border-bottom: 1px solid var(--border-color);
   background-color: var(--background-color);
   z-index: 2;
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+  }
 `
 
 const Container = styled.div`
@@ -20,9 +24,9 @@ const Container = styled.div`
   padding: 0 1em;
 
   @media only screen and (max-width: 600px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
-    padding-bottom: 1em;
+    padding-top: 1em;
   }
 `
 
@@ -33,10 +37,6 @@ const Title = styled(Link)`
   white-space: nowrap;
   color: var(--font-color);
   text-decoration: none;
-
-  @media only screen and (max-width: 600px) {
-    padding: 1em;
-  }
 `
 
 const Options = styled.div`

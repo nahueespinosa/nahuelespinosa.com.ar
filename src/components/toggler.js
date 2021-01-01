@@ -1,35 +1,53 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import Switch from "react-switch"
+import { ImSun } from "react-icons/im"
+import { FaRegMoon } from "react-icons/fa"
 
 const Div = styled.div`
-  display: flex;
+  & > div:first-child {
+    display: ${({ state }) => state ? 'none' : 'flex' }
+  }
+
+  & > div:last-child {
+    display: ${({ state }) => !state ? 'none' : 'flex' }
+  }
+
+  &:hover {
+    & > div {
+      color: var(--link-color);
+    }
+
+    /* TODO(nahue): Check if this is the desired behaviour */
+    & > div:first-child {
+      display: ${({ state }) => !state ? 'none' : 'flex' }
+    }
+  
+    & > div:last-child {
+      display: ${({ state }) => state ? 'none' : 'flex' }
+    }
+  }
+`
+
+const Icon = styled.div`
+  font-size: 1.5em;
+  cursor: pointer;
   align-items: center;
+  display: flex;
 `
 
-const Span = styled.span`
-  padding: 0 10px;
-  white-space: nowrap;
-`
+const Toggler = ({ onChange, checked }) => {
+  const [activated, setActivated] = useState(checked);
 
-const Toggler = ({ label, onChange, checked }) => {
   return (
-    <Div>
-      <Span>{label}</Span>
-      <Switch 
-        onChange={onChange}
-        checked={checked}
-        height={20}
-        width={40}
-        handleDiameter={25}
-        uncheckedIcon={false}
-        checkedIcon={false}
-        boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-        activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-        onColor="#86d3ff"
-        onHandleColor="#2693e6"
-        aria-label="Dark Mode"
-      />
+    <Div
+      state={activated}
+      onClick={() => {
+        onChange(activated)
+        setActivated(!activated)
+      }}
+    >
+      <Icon><ImSun/></Icon>
+      <Icon><FaRegMoon/></Icon>
     </Div>
   )
 }
