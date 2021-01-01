@@ -20,11 +20,12 @@ const Title = styled.h1`
   margin-bottom: 10px;
 `
 
-const Time = styled.span`
+const Time = styled.div`
+  width: 100%;
   font-size: 0.9em;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: flex-end;
   color: var(--mid-contrast-color);
 `
 
@@ -94,7 +95,7 @@ export default ({ data }) => {
         </Date>
 
         <Title>{frontmatter.title}</Title>
-        <Time>{Math.ceil(fields.readingTime.minutes)} min &nbsp; <FaClock/></Time>
+        <Time><span>{Math.ceil(fields.readingTime.minutes)} min &nbsp;</span><FaClock/></Time>
 
         <MDXProvider components={{pre: Code}}>
           <MDXRenderer>
