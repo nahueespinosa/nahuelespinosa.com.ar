@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby-plugin-intl"
 
 const StyledHeader = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   border-bottom: 1px solid var(--border-color);
@@ -20,9 +20,9 @@ const Container = styled.div`
   padding: 0 1em;
 
   @media only screen and (max-width: 600px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
-    padding: 0.5em;
+    padding-bottom: 1em;
   }
 `
 
@@ -35,7 +35,7 @@ const Title = styled(Link)`
   text-decoration: none;
 
   @media only screen and (max-width: 600px) {
-    padding: 0.5em;
+    padding: 1em;
   }
 `
 

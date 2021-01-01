@@ -29,7 +29,7 @@ body.dark {
   --heading-color: #fff;
   --background-color: #0d1117;
   --link-color: #ebe995;
-  --border-color: #2e3135;
+  --border-color: #242f3b;
   --low-contrast-color: #131a24;
   --mid-contrast-color: #2f435c;
   --high-contrast-color: #eee;
@@ -89,7 +89,7 @@ img {
 
 section {
   overflow: hidden;
-  margin: 2em 0;
+  margin-bottom: 2em;
 }
 
 blockquote {

@@ -45,12 +45,11 @@ const Social = styled.div`
 const SocialLink = styled.a`
   font-size: 2.2em;
   padding: 10px;
-  color: var(--font-color);
-  opacity: 0.5;
+  color: var(--border-color);
   
   &:hover {
-    opacity: 1.0;
-    color: var(--font-color);
+    opacity: 0.5;
+    color: var(--border-color);
   }
 `
 

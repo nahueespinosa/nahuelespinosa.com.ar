@@ -8,7 +8,7 @@ const StyledMain = styled.main`
 const Container = styled.div`
   margin: 0 auto;
   max-width: 50em;
-  padding: 3em 1em;
+  padding: 1em;
 `
 
 const Main = ({ children }) => {
