@@ -13,7 +13,7 @@ const Span = styled.span`
   white-space: nowrap;
 `
 
-const DarkToggle = ({ label }) => {
+const DarkToggler = ({ label }) => {
   return (
     <ThemeToggler>
       {({ theme, toggleTheme }) => {
@@ -49,4 +49,4 @@ const DarkToggle = ({ label }) => {
   )
 }
 
-export default DarkToggle
+export default DarkToggler

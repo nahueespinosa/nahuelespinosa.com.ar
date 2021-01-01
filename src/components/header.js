@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useIntl, Link } from "gatsby-plugin-intl"
 import LanguageButton from "./language-button"
-import DarkToggle from "./dark-toggle"
+import DarkToggler from "./dark-toggler"
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -71,7 +71,7 @@ const Header = ({ title }) => {
         <Title to="/">{title}</Title>
         <Options>
           <LanguageButton label={t("Header.Language")} />
-          <DarkToggle label={t("Header.DarkMode")} />
+          <DarkToggler label={t("Header.DarkMode")} />
         </Options>
       </Container>
     </StyledHeader>
