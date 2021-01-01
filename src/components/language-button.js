@@ -22,10 +22,7 @@ const LanguageButton = ({ label }) => {
   const intl = useIntl()
 
   return(
-    <Button onClick={() => {
-      const language = (intl.locale === 'en') ? 'es' : 'en'
-      changeLocale(language)
-    }}>
+    <Button onClick={() => {changeLocale(intl.locale === 'en' ? 'es' : 'en')}}>
       {label}
     </Button>
   )

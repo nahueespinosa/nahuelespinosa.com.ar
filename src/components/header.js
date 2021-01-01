@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useIntl, Link } from "gatsby-plugin-intl"
-import LanguageButton from "./language-button"
-import DarkToggler from "./dark-toggler"
+import { Link } from "gatsby-plugin-intl"
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -62,18 +60,12 @@ const Options = styled.div`
   }
 `
 
-const Header = ({ title }) => {
-  const intl = useIntl()
-  const t = (id) => intl.formatMessage({ id })
-
+const Header = ({ title, children }) => {
   return (
     <StyledHeader>
       <Container>
         <Title to="/">{title}</Title>
-        <Options>
-          <LanguageButton label={t("Header.Language")} />
-          <DarkToggler label={t("Header.DarkMode")} />
-        </Options>
+        <Options>{children}</Options>
       </Container>
     </StyledHeader>
   )
