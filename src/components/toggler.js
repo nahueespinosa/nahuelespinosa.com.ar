@@ -12,18 +12,20 @@ const Div = styled.div`
     display: ${({ state }) => !state ? 'none' : 'flex' }
   }
 
-  &:hover {
-    & > div {
-      color: var(--link-color);
-    }
+  @media (hover: hover) {
+    &:hover {
+      & > div {
+        color: var(--link-color);
+      }
 
-    /* TODO(nahue): Check if this is the desired behaviour */
-    & > div:first-child {
-      display: ${({ state }) => !state ? 'none' : 'flex' }
-    }
-  
-    & > div:last-child {
-      display: ${({ state }) => state ? 'none' : 'flex' }
+      /* TODO(nahue): Check if this is the desired behaviour */
+      & > div:first-child {
+        display: ${({ state }) => !state ? 'none' : 'flex' }
+      }
+    
+      & > div:last-child {
+        display: ${({ state }) => state ? 'none' : 'flex' }
+      }
     }
   }
 `
