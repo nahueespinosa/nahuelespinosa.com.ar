@@ -1,11 +1,77 @@
 ---
-title: "Dummy Post"
+title: "Prueba de Markdown"
 date: 2020-12-31 03:00
 description: ""
 ---
 
 import LanguageButton from "../../../../components/language-button"
 
-Lo siento. Este post no tiene una traducción todavía.
+Este es un post para probar los estilos aplicados a las páginas generadas a partir de _markdown_.  
+Además tiene que haber por lo menos un post en el sitio para que las consultas por `grapqhl` no den errores.  
 
-<LanguageButton label={"Volver al post original"}/>.
+# Este es un encabezado h1
+## Este es un encabezado h2 
+###### Este es un encabezado h6
+
+## Énfasis
+
+*Este texto estará en itálica.*  
+_Este también estará en itálica._
+
+**Este texto estará en negrita.**  
+__Este también estará en negrita.__
+
+_**Podés** combinarlos._
+
+## Listas
+
+### Desordenadas
+
+* Item 1
+* Item 2
+    * Item 2a
+    * Item 2b
+
+### Ordenadas
+
+1. Item 1
+1. Item 2
+1. Item 3
+    1. Item 3a
+    1. Item 3b
+
+## Checkboxes
+
+- [ ] No tildada
+- [x] Tildada
+
+## Imágenes
+
+![Este es un texto alternativo.](/image/sample.png "Esta es una imágen de muestra.")
+
+## Links
+
+Ya que llegaste hasta acá, no pierdas la oportunidad de leer [este artículo](https://elgatoylacaja.com/vot-no).
+
+## Citas
+
+> Markdown es un lenguaje de marcado liviano con sintaxis de formato de texto plano, creado en 2004 por John Gruber y Aaron Swartz.
+
+## Tablas
+
+| Columnas a la izquierda  | Columnas al centro |
+| ------------------------ |:------------------:|
+| izquierda foo            | centro foo         |
+| izquierda bar            | centro bar         |
+| izquierda baz            | centro baz         |
+
+## Bloques de código
+
+```js
+let mensaje = '¡Hola mundo!';
+alert(mensaje);
+```
+
+## Código en línea
+
+La mejor de un dato `booleano` es que incluso si te equivocas, es sólo por un _bit_ (poquito).

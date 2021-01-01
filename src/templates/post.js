@@ -95,7 +95,7 @@ export default ({ data }) => {
         </Date>
 
         <Title>{frontmatter.title}</Title>
-        <Time><span>{Math.ceil(fields.readingTime.minutes)} min &nbsp;</span><FaClock/></Time>
+        <Time><span>{Math.ceil(fields.readingTime.minutes)} min — &nbsp;</span><FaClock/></Time>
 
         <MDXProvider components={{pre: Code}}>
           <MDXRenderer>
