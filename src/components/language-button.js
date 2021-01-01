@@ -1,18 +1,33 @@
 import React from "react"
+import styled from "styled-components"
 import { changeLocale, useIntl } from "gatsby-plugin-intl"
 
-import Style from "./language-button.module.css"
+const Button = styled.button`
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0;
+
+  &:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+`
 
 const LanguageButton = ({ label }) => {
   const intl = useIntl()
 
   return(
-    <button className={Style.button} onClick={() => {
+    <Button onClick={() => {
       const language = (intl.locale === 'en') ? 'es' : 'en'
       changeLocale(language)
     }}>
       {label}
-    </button>
+    </Button>
   )
 }
 

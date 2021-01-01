@@ -1,8 +1,17 @@
-import React from 'react'
-import Switch from 'react-switch'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import React from "react"
+import styled from "styled-components"
+import Switch from "react-switch"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
-import Style from './dark-toggle.module.css'
+const Div = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Span = styled.span`
+  padding: 0 10px;
+  white-space: nowrap;
+`
 
 const DarkToggle = ({ label }) => {
   return (
@@ -15,12 +24,12 @@ const DarkToggle = ({ label }) => {
             return null
           }
           return (
-            <div className={Style.toggle}>
-              <span>{label}</span>
+            <Div>
+              <Span>{label}</Span>
               <Switch 
-                onChange={() =>
+                onChange={() => {
                   toggleTheme(theme === 'dark' ? 'light' : 'dark' )
-                }
+                }}
                 checked={theme === 'dark'}
                 height={20}
                 width={40}
@@ -33,7 +42,7 @@ const DarkToggle = ({ label }) => {
                 onHandleColor="#2693e6"
                 aria-label="Dark Mode"
               />
-            </div>
+            </Div>
           )
       }}
     </ThemeToggler>
