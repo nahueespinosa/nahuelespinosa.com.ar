@@ -29,7 +29,7 @@ const Container = styled.div`
 const Title = styled(Link)`
   font-size: 1.2em;
   letter-spacing: 5px;
-  padding: 1em 0;
+  margin: 1em 0;
   white-space: nowrap;
   color: var(--font-color);
   text-decoration: none;
@@ -49,6 +49,7 @@ const Options = styled.div`
 
   & > * {
     margin-left: 2em;
+    color: var(--font-color);
   }
 
   @media only screen and (max-width: 600px) {

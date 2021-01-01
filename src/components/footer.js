@@ -44,12 +44,16 @@ const Social = styled.div`
 
 const SocialLink = styled.a`
   font-size: 2.2em;
-  padding: 10px;
+  margin: 10px;
   color: var(--border-color);
   
   &:hover {
     opacity: 0.5;
     color: var(--border-color);
+  }
+
+  &:hover::before {
+    visibility: hidden;
   }
 `
 

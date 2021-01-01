@@ -2,20 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { changeLocale, useIntl } from "gatsby-plugin-intl"
 
-const Button = styled.button`
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
+const Button = styled.a`
   cursor: pointer;
-  white-space: nowrap;
-  padding: 0;
-
-  &:hover {
-    color: var(--link-color);
-    text-decoration: underline;
-  }
 `
 
 const LanguageButton = ({ label }) => {
