@@ -8,7 +8,6 @@ import Main from './main'
 import Footer from './footer'
 import LanguageButton from "./language-button"
 import Toggler from "./toggler"
-import ContextConsumer, { ContextProviderComponent } from "./context"
 
 const Layout = ({ children }) => {
   const intl = useIntl()
@@ -27,28 +26,16 @@ const Layout = ({ children }) => {
         }
 
         return (
-          <ContextProviderComponent>
+          <>
             <Header title={siteTitle}>
               <LanguageButton label={t("Layout.Language")} />
-
-              {/* TODO:(nahue): 
-                Fix bug, changing language does not load correct theme
-                if the theme has changed in the same session.
-                Possibly need to reload on every language update.
-              */}
-              <ContextConsumer>
-                {({ set }) => (
-                  <Toggler 
-                    label={t("Layout.DarkMode")}
-                    onChange={() => {
-                      const toTheme = theme === 'dark' ? 'light' : 'dark'
-                      set({ theme: toTheme })
-                      toggleTheme( toTheme )
-                    }}
-                    checked={theme === 'dark'}
-                  />
-                )}
-              </ContextConsumer>
+              <Toggler 
+                label={t("Layout.DarkMode")}
+                onChange={() => {
+                  toggleTheme(theme === 'dark' ? 'light' : 'dark')
+                }}
+                checked={theme === 'dark'}
+              />
             </Header>
 
             <Main>
@@ -69,7 +56,7 @@ const Layout = ({ children }) => {
                 </p>
               }
             />
-          </ContextProviderComponent>
+          </>
         )
       }}
     </ThemeToggler>

@@ -7,8 +7,9 @@ body {
   --link-color: #2c5bb1;
   --border-color: #d8dee9;
   --low-contrast-color: #f6f8fa;
-  --mid-contrast-color: #ccc;
+  --mid-contrast-color: rgb(99, 122, 148);
   --high-contrast-color: #111;
+  --code-background-color: #131a24;
 
   --main-font: "Roboto", "Helvetica", "Arial", sans-serif; 
   --code-font: "Courier New", monospace, "Courier";
@@ -136,5 +137,6 @@ code {
 }
 
 pre {
-  background-color: var(--low-contrast-color) !important;
+  background-color: var(--code-background-color) !important;
+  border-left: 10px solid var(--mid-contrast-color) !important;
 }
