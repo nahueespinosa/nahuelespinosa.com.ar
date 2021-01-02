@@ -71,8 +71,6 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "profile.png" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
         fixed(width: 128, height: 128) {
           ...GatsbyImageSharpFixed
         }
