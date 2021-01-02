@@ -4,6 +4,7 @@ import styled from "styled-components"
 const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column-reverse;
@@ -25,6 +26,9 @@ const Title = styled.h1`
 const ImgWrapper = styled.div`
   flex-grow: 1;
   margin: 3em;
+  
+  display: flex;
+  justify-content: flex-end;
 
   @media only screen and (max-width: 600px) {
     margin: 2em 0 0 0;

@@ -14,9 +14,8 @@ const StyledImg = styled(Img)`
   border-radius: 50%;
 `
 
-const Li = styled.li`
-  padding: 5px 25px;
-  margin-left: 35px;
+const ListItem = styled.li`
+  padding: 0 1em;
 `
 
 const HomeIndex = ({ data }) => {
@@ -25,7 +24,7 @@ const HomeIndex = ({ data }) => {
 
   const metadata = useSiteMetadata()
   const { siteTitle, image, siteUrl, twitterUser } = metadata
-  
+
   return (
     <Layout data={metadata}>
       <SEO
@@ -50,13 +49,13 @@ const HomeIndex = ({ data }) => {
       <section>
         <h2>{t("List.Title")}</h2>
         <ol>
-          <Li>{t("List.Item1")} ✓</Li>
-          <Li>{t("List.Item2")} ✓</Li>
-          <Li>{t("List.Item3")} ✓</Li>
-          <Li>{t("List.Item4")}</Li>
+          <ListItem>{t("List.Item1")} ✓</ListItem>
+          <ListItem>{t("List.Item2")} ✓</ListItem>
+          <ListItem>{t("List.Item3")} ✓</ListItem>
+          <ListItem>{t("List.Item4")}</ListItem>
         </ol>
       </section>
-      
+
       <section>
         <Articles/>
       </section>

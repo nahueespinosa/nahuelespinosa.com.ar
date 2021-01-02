@@ -29,12 +29,11 @@ export const useMdxLatest = () => {
   return allMdx.nodes
 }
 
-const Ul = styled.ul`
+const List = styled.ul`
   list-style: none;
 `
 
-const Span = styled.span`
-  font-size: 0.8em;
+const Small = styled.small`
   padding: 1em;
 `
 
@@ -51,7 +50,7 @@ const Articles = () => {
   return (
     <>
       <h2>{t("Articles.Title")}</h2>
-      <Ul>
+      <List>
         {latest.map(({ fields }) => {
           let version = fields.versions.find(node => {
             return node.lang === intl.locale
@@ -61,12 +60,12 @@ const Articles = () => {
           
           return (
             <li>
-              <Span>{version.date}</Span>
+              <Small>{version.date}</Small>
               <Link to={fields.slug}>{version.title}</Link>
             </li>
           )
         })}
-      </Ul>
+      </List>
     </>
   )
 }
