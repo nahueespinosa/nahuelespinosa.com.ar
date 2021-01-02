@@ -5,7 +5,7 @@ const Bar = styled.div`
   position: sticky;
   top: 0;
 
-  height: ${({value}) => value === 0 ? '0' : '5px'};
+  height: ${({value}) => value < 1 ? '0' : '3px'};
   background-color: var(--low-contrast-color);
 
   /* Expand div to 100% of screen */
