@@ -1,21 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 import SEO from "react-seo-component"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
+import Layout from "../components/layout"
+import Greetings from "../components/greetings"
 import Articles from "../components/articles"
 import Techs from "../components/techs"
-import Layout from "../components/layout"
 
-const Img = styled.img`
-  float: right;
-  margin-left: 20px;
-
-  @media only screen and (max-width: 600px) {
-    float: none;
-    margin: auto;
-    padding-bottom: 30px;
-  }
+const StyledImg = styled(Img)`
+  border-radius: 50%;
 `
 
 const Li = styled.li`
@@ -44,9 +40,11 @@ const HomeIndex = ({ data }) => {
       />
 
       <section>
-        <h1>{t("Greetings")}</h1>
-        <Img src={require("../images/profile.jpg")} alt="Profile"/>
-        <p>{t("About.Item1")}<br/>{t("About.Item2")}<br/>{t("About.Item3")}</p>
+        <Greetings
+          title={t("Greetings")}
+          text={t("About")}
+          image={<StyledImg fixed={data.file.childImageSharp.fixed}/>}
+        />
       </section>
 
       <section>
@@ -69,5 +67,19 @@ const HomeIndex = ({ data }) => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "profile.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 128, height: 128) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 export default HomeIndex

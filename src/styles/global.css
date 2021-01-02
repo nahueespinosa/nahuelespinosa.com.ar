@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Zilla+Slab:wght@300;400&display=swap';
 
 body {
   --font-color: #555;
@@ -11,11 +11,13 @@ body {
   --high-contrast-color: #111;
   --code-background-color: #131a24;
 
-  --main-font: "Roboto", "Helvetica", "Arial", sans-serif; 
-  --code-font: "Courier New", monospace, "Courier";
+  --header-font: 'Zilla Slab',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
+  --main-font: 'Open Sans',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
+  --code-font: 'Courier New', monospace, 'Courier';
 
   font-family: var(--main-font);
-  line-height: 1.5;
+  font-size: 1.1em;
+  line-height: 1.8;
   margin: 0;
   color: var(--font-color);
   background-color: var(--background-color);
@@ -26,13 +28,14 @@ body {
 }
 
 body.dark {
+  --label-color: #aaa;
   --font-color: #ccc;
   --heading-color: #fff;
   --background-color: #0d1117;
   --link-color: #ebe995;
   --border-color: #242f3b;
   --low-contrast-color: #131a24;
-  --mid-contrast-color: #2f435c;
+  --mid-contrast-color: #5a7694;
   --high-contrast-color: #eee;
 
   -webkit-font-smoothing: antialiased;
@@ -43,15 +46,17 @@ h2,
 h3,
 strong {
   color: var(--heading-color);
+  font-family: var(--header-font);
 }
 
 h1 {
-  border-bottom: 4px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin: 0.4em 0;
   font-size: 3em;
 }
 
 h2 {
-  border-bottom: 4px dashed var(--border-color);
+  border-bottom: 1px dashed var(--border-color);
   padding: 0.5em 0;
 }
 
@@ -69,7 +74,7 @@ a::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1px;
   bottom: -2px;
   left: 0;
   background-color: var(--link-color);

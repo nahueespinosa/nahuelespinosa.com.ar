@@ -1,11 +1,6 @@
 {
   "Greetings": "Hi there!",
-  "About":
-  {
-    "Item1": "My name is Nahuel.",
-    "Item2": "I'm a semi-senior EE and software developer with experience in embedded systems and robotics.",
-    "Item3": "I also work as a highschool teacher in computer science."
-  },
+  "About": "My name is Nahuel. I'm an electronics engineer and software developer with experience in embedded systems and robotics. I also work as a highschool teacher in computer science.",
   "List":
   {
     "Title": "Website To-Do List",
@@ -30,7 +25,6 @@
   "Layout":
   {
     "Language": "English (USA)",
-    "DarkMode": "Dark Mode",
     "Contact": "Here is my <a>e-mail</a> if you want to reach out.",
     "Location": "Current location"
   },

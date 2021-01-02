@@ -6,12 +6,13 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   width: 100%;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px dotted var(--border-color);
   background-color: var(--background-color);
   z-index: 2;
 
   @media only screen and (max-width: 600px) {
     position: relative;
+    background-color: transparent;
   }
 `
 
@@ -32,7 +33,7 @@ const Container = styled.div`
 
 const Title = styled(Link)`
   font-size: 1.2em;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
   margin: 1em 0;
   white-space: nowrap;
   color: var(--font-color);
@@ -43,7 +44,6 @@ const Options = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: var(--code-font);
   height: 100%;
   color: var(--font-color);
 

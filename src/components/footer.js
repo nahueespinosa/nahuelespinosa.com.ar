@@ -3,9 +3,7 @@ import styled from "styled-components"
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 
 const StyledFooter = styled.footer`
-  position: relative;
-  border-top: 1px solid var(--border-color);
-  background-color: var(--background-color);
+  border-top: 1px dotted var(--border-color);
 `
 
 const Container = styled.div`
@@ -13,30 +11,29 @@ const Container = styled.div`
   margin: 0 auto;
   max-width: 50em;
   display: flex;
+  justify-content: space-between;
 
   @media only screen and (max-width: 600px) {
     display: block;
   }
 `
 
-const Info = styled.div`
-  width: 70%;
+const Info = styled.small`
+  flex-grow: 3;
 
   @media only screen and (max-width: 600px) {
-    width: 100%;
     justify-content: center;
     text-align: center;
   }
 `
 
 const Social = styled.div`
-  width: 30%;
+  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
   @media only screen and (max-width: 600px) {
-    width: 100%;
     justify-content: center;
     text-align: center;
   }

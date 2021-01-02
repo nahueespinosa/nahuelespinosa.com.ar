@@ -10,52 +10,22 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/layout"
 import Code from "../components/code"
 
-const Date = styled.span`
-  float: right;
+const Small = styled.small`
   margin-top: 1em;
-  font-size: 0.9em;
-`
-
-const Title = styled.h1`
-  margin-bottom: 10px;
-`
-
-const Time = styled.div`
-  width: 100%;
-  font-size: 0.9em;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  color: var(--mid-contrast-color);
-`
 
-export const query = graphql
-`
-query POST_BY_ID_QUERY($ids: [String!]) {
-  allMdx(
-    filter: {id: {in: $ids}}
-  ){
-    nodes {
-      id
-      body
-      frontmatter {
-        title
-        description
-        date
-      }
-      fields {
-        lang
-        slug
-        readingTime {
-          minutes
-        }
-      }
-    }
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
   }
-}
 `
 
-export default ({ data }) => {
+const Title = styled.h1`
+  margin-top: 0;
+`
+
+const PostPage = ({ data }) => {
   const intl = useIntl()
   const { image, siteTitle, siteUrl, twitterUser, author } = useSiteMetadata()
 
@@ -85,17 +55,19 @@ export default ({ data }) => {
       />
       
       <section>
-        <Date>
+        <Small>
           <FormattedDate
             value={frontmatter.date}
             year="numeric"
             month="long"
             day="numeric"
           />
-        </Date>
+          <span>&nbsp; • &nbsp;</span>
+          <span>{Math.ceil(fields.readingTime.minutes)} min &nbsp;</span>
+          <FaClock/>
+        </Small>
 
         <Title>{frontmatter.title}</Title>
-        <Time><span>{Math.ceil(fields.readingTime.minutes)} min — &nbsp;</span><FaClock/></Time>
 
         <MDXProvider components={{pre: Code}}>
           <MDXRenderer>
@@ -106,3 +78,30 @@ export default ({ data }) => {
     </Layout>
   )
 }
+
+export const query = graphql`
+query POST_BY_ID_QUERY($ids: [String!]) {
+  allMdx(
+    filter: {id: {in: $ids}}
+  ){
+    nodes {
+      id
+      body
+      frontmatter {
+        title
+        description
+        date
+      }
+      fields {
+        lang
+        slug
+        readingTime {
+          minutes
+        }
+      }
+    }
+  }
+}
+`
+
+export default PostPage

@@ -1,3 +1,5 @@
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     siteTitle: 'Nahuel Espinosa',
@@ -39,15 +41,22 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
-        path: `${__dirname}/src/content/`,
+        path: path.join(__dirname, 'src', 'content')
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: `${__dirname}/static/`,
+        path: path.join(__dirname, 'static'),
       }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: path.join(__dirname, 'src', 'images'),
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
@@ -74,7 +83,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-intl',
       options: {
-        path: `${__dirname}/src/intl`,
+        path: path.join(__dirname, 'src', 'intl'),
         languages: ['en', 'es'],
         defaultLanguage: 'en',
       }

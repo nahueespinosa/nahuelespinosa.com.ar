@@ -1,11 +1,6 @@
 {
   "Greetings": "¡Hola!",
-  "About":
-  {
-    "Item1": "Mi nombre es Nahuel.",
-    "Item2": "Soy ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica.",
-    "Item3": "También trabajo como profesor de sistemas informáticos en una escuela de nivel medio."
-  },
+  "About": "Mi nombre es Nahuel. Soy ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica. También trabajo como profesor de sistemas informáticos.",
   "List":
   {
     "Title": "Tareas para el sitio",
@@ -30,7 +25,6 @@
   "Layout":
   {
     "Language": "Español (Argentina)",
-    "DarkMode": "Modo Oscuro",
     "Contact": "Este es mi <a>e-mail</a> si querés ponerte en contacto.",
     "Location": "Ubicación actual"
   },

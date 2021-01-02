@@ -31,7 +31,6 @@ const Div = styled.div`
 `
 
 const Icon = styled.div`
-  font-size: 1.5em;
   cursor: pointer;
   align-items: center;
   display: flex;
