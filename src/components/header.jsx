@@ -36,7 +36,7 @@ const Title = styled(Link)`
   letter-spacing: 7px;
   margin: 1em 0;
   white-space: nowrap;
-  color: var(--font-color);
+  color: var(--heading-color);
   text-decoration: none;
 `
 
@@ -45,11 +45,11 @@ const Options = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  color: var(--font-color);
+  color: var(--heading-color);
 
   & > * {
     margin-left: 2em;
-    color: var(--font-color);
+    color: var(--heading-color);
   }
 
   @media only screen and (max-width: 600px) {

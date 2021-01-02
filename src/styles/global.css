@@ -1,8 +1,8 @@
 @import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Zilla+Slab:wght@300;400&display=swap';
 
 body {
-  --font-color: #555;
-  --heading-color: #333;
+  --font-color: #333;
+  --heading-color: #252525;
   --background-color: #fff;
   --link-color: #2c5bb1;
   --border-color: #d8dee9;
@@ -11,7 +11,7 @@ body {
   --high-contrast-color: #111;
   --code-background-color: #131a24;
 
-  --header-font: 'Zilla Slab',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
+  --heading-font: 'Zilla Slab',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
   --main-font: 'Open Sans',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
   --code-font: 'Courier New', monospace, 'Courier';
 
@@ -46,7 +46,7 @@ h2,
 h3,
 strong {
   color: var(--heading-color);
-  font-family: var(--header-font);
+  font-family: var(--heading-font);
 }
 
 h1 {
