@@ -36,17 +36,17 @@ const ImgWrapper = styled.div`
 `
 
 const Greetings = ({ title, text, image }) => {
-    return (
-      <Container>
-        <TextWrapper>
-          <Title>{title}</Title>
-          <p>{text}</p>
-        </TextWrapper>
-        <ImgWrapper>
-          {image}
-        </ImgWrapper>
-      </Container>
-    )
-  }
-  
-  export default Greetings
+  return (
+    <Container>
+      <TextWrapper>
+        <Title>{title}</Title>
+        <p>{text}</p>
+      </TextWrapper>
+      <ImgWrapper>
+        {image}
+      </ImgWrapper>
+    </Container>
+  )
+}
+
+export default Greetings
