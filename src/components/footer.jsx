@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
 `
 
 const Container = styled.div`
-  padding: 1em;
+  padding: 0 1em;
   margin: 0 auto;
   max-width: 50em;
   display: flex;

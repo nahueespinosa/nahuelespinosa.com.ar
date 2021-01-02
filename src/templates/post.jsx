@@ -9,6 +9,7 @@ import { FormattedDate, useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/layout"
 import Code from "../components/code"
+import ProgressBar from "../components/progress-bar"
 
 const Small = styled.small`
   margin-top: 1em;
@@ -33,10 +34,13 @@ const PostPage = ({ data }) => {
     return obj.fields.lang === intl.locale
   })
   
+  /* If there is no node for this locale, use default */
   if (node === undefined) node = data.allMdx.nodes[0]
 
   const { body, frontmatter, fields } = node
   
+  const progressRef = React.createRef()
+
   return (
     <Layout>
       <SEO
@@ -53,8 +57,10 @@ const PostPage = ({ data }) => {
         datePublished={frontmatter.date}
         dateModified={frontmatter.date}
       />
+
+      <ProgressBar target={progressRef} />
       
-      <section>
+      <section ref={progressRef}>
         <Small>
           <FormattedDate
             value={frontmatter.date}

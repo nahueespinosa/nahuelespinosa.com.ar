@@ -56,6 +56,7 @@ const Articles = () => {
             return node.lang === intl.locale
           })
 
+          /* If there is no node for this locale, use default */
           if (version === undefined) version = fields.versions[0]
           
           return (

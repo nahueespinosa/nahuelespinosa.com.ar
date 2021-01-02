@@ -3,17 +3,8 @@ import styled from "styled-components"
 import { Link } from "gatsby-plugin-intl"
 
 const StyledHeader = styled.header`
-  position: sticky;
-  top: 0;
   width: 100%;
   border-bottom: 1px dotted var(--border-color);
-  background-color: var(--background-color);
-  z-index: 2;
-
-  @media only screen and (max-width: 600px) {
-    position: relative;
-    background-color: transparent;
-  }
 `
 
 const Container = styled.div`
