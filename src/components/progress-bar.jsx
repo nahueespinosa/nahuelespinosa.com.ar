@@ -18,6 +18,7 @@ const Progress = styled.div`
   background-color: var(--link-color);
   width: ${({value}) => value}%;
   height: 100%;
+  border-radius: 2px;
 `
 
 const ProgressBar = ({ target }) => {
