@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { ImSun } from "react-icons/im"
-import { FaRegMoon } from "react-icons/fa"
 
 const Div = styled.div`
   & > div:first-child {
@@ -36,7 +34,7 @@ const Icon = styled.div`
   display: flex;
 `
 
-const Toggler = ({ onChange, checked }) => {
+const Toggler = ({ onChange, checked, iconChecked, iconUnchecked }) => {
   const [activated, setActivated] = useState(checked);
 
   return (
@@ -47,8 +45,8 @@ const Toggler = ({ onChange, checked }) => {
         setActivated(!activated)
       }}
     >
-      <Icon><ImSun/></Icon>
-      <Icon><FaRegMoon/></Icon>
+      <Icon>{iconUnchecked}</Icon>
+      <Icon>{iconChecked}</Icon>
     </Div>
   )
 }

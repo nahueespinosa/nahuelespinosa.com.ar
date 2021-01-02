@@ -1,7 +1,8 @@
 import React from 'react'
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { FaMapMarkerAlt } from "react-icons/fa"
+import { FaMapMarkerAlt, FaRegMoon } from "react-icons/fa"
+import { ImSun } from "react-icons/im"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Header from './header'
 import Main from './main'
@@ -29,8 +30,9 @@ const Layout = ({ children }) => {
           <>
             <Header title={siteTitle}>
               <LanguageButton label={t("Layout.Language")} />
-              <Toggler 
-                label={t("Layout.DarkMode")}
+              <Toggler
+                iconChecked={<FaRegMoon/>}
+                iconUnchecked={<ImSun/>}
                 onChange={() => {
                   toggleTheme(theme === 'dark' ? 'light' : 'dark')
                 }}
