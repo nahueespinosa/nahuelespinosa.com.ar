@@ -47,6 +47,7 @@ const PostPage = ({ data }) => {
         description={frontmatter.description}
         url={`${siteUrl}/${intl.locale}${fields.slug}`}
         article={true}
+        date={frontmatter.date.split(" ")[0]}
       />
 
       <ProgressBar target={progressRef} />

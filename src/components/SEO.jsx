@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { useIntl } from "gatsby-plugin-intl"
 
-const SEO = ({ title, description, article, url }) => {
+const SEO = ({ title, description, article, url, date }) => {
   const data = useSiteMetadata()
 
   const intl = useIntl()
@@ -20,9 +20,11 @@ const SEO = ({ title, description, article, url }) => {
 
       <meta name="description" content={description} />
       <meta name="image" content={data.image} />
-      <meta name='author' content={data.author}></meta>
+      <meta name='author' content={data.author} />
 
-      {article && <meta property="og:type" content="article" />}
+      <meta property="og:type" content={article ? "article" : "website"} />
+      {article && date && <meta property="article:published_time" content={date} />}
+      
       <meta property="og:url" content={metaUrl} />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />
