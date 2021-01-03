@@ -9,7 +9,6 @@ body {
   --low-contrast-color: #f6f8fa;
   --mid-contrast-color: rgb(99, 122, 148);
   --high-contrast-color: #111;
-  --code-background-color: #131a24;
 
   --heading-font: 'Zilla Slab',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
   --main-font: 'Open Sans',-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen-Sans','Ubuntu','Cantarell','Helvetica Neue',sans-serif;
@@ -143,6 +142,6 @@ code {
 }
 
 pre {
-  background-color: var(--code-background-color) !important;
+  background: var(--low-contrast-color) !important;
   border-left: 10px solid var(--mid-contrast-color) !important;
 }
