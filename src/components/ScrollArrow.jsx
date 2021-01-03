@@ -14,6 +14,10 @@ const Arrow = styled.div`
   display: ${({ show }) => show ? "flex" : "none"};
   color: var(--link-color);
   opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const ScrollArrow = () => {
