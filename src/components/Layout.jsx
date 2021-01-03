@@ -4,17 +4,17 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { FaMapMarkerAlt, FaRegMoon } from "react-icons/fa"
 import { ImSun } from "react-icons/im"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import Header from './header'
-import Main from './main'
-import Footer from './footer'
-import LanguageButton from "./language-button"
-import Toggler from "./toggler"
+import Header from './Header'
+import Main from './Main'
+import Footer from './Footer'
+import LanguageButton from "./LanguageButton"
+import Toggler from "./Toggler"
 
 const Layout = ({ children }) => {
   const intl = useIntl()
   const t = (id) => intl.formatMessage({ id })
 
-  const { siteTitle, location, links } =  useSiteMetadata()
+  const { title, location, social } =  useSiteMetadata()
   
   return (
     <ThemeToggler>
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 
         return (
           <>
-            <Header title={siteTitle}>
+            <Header title={title}>
               <LanguageButton label={t("Layout.Language")} />
               <Toggler
                 iconChecked={<FaRegMoon/>}
@@ -45,12 +45,12 @@ const Layout = ({ children }) => {
             </Main>
 
             <Footer
-              links={links}
+              social={social}
               message={
                 <p>
                   <FormattedMessage
                     id="Layout.Contact"
-                    values={{a: chunks => (<a href={links.email}>{chunks}</a>)}}
+                    values={{a: chunks => (<a href={social.email}>{chunks}</a>)}}
                   />
                   <br/>
                   {t("Layout.Location")} <FaMapMarkerAlt/>&nbsp;

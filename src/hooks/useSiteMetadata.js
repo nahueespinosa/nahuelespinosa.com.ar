@@ -1,18 +1,17 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const useSiteMetadata = () => {
-  const { site } = useStaticQuery(
+  const { site, file } = useStaticQuery(
     graphql`
       query SITE_METADATA_QUERY {
         site {
           siteMetadata {
-            siteTitle
-            author
-            image
+            title
             siteUrl
+            author
             location
             twitterUser
-            links {
+            social {
               email
               github
               linkedin
@@ -20,9 +19,17 @@ export const useSiteMetadata = () => {
             }
           }
         }
+        file(relativePath: { eq: "site.png" }) {
+          childImageSharp {
+            fixed(width: 1600) {
+              src
+            }
+          }
+        }
       }
     `
   )
 
+  site.siteMetadata.image = `${site.siteMetadata.siteUrl}${file.childImageSharp.fixed.src}`
   return site.siteMetadata
 }
