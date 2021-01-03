@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   const intl = useIntl()
   const t = (id) => intl.formatMessage({ id })
 
-  const { siteTitle, location, social } =  useSiteMetadata()
+  const { title, location, social } =  useSiteMetadata()
   
   return (
     <ThemeToggler>
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 
         return (
           <>
-            <Header title={siteTitle}>
+            <Header title={title}>
               <LanguageButton label={t("Layout.Language")} />
               <Toggler
                 iconChecked={<FaRegMoon/>}

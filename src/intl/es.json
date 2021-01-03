@@ -1,5 +1,6 @@
 {
   "Greetings": "¡Hola!",
+  "Description": "Nahuel Espinosa es un ingeniero en electrónica y desarrollador de software interesado en informática y temas relacionados.",
   "About": "Mi nombre es Nahuel. Soy ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica. También trabajo como profesor de sistemas informáticos.",
   "Layout":
   {
@@ -9,8 +10,6 @@
   },
   "HomePage":
   {
-    "Title": "Inicio",
-    "Description": "Nahuel Espinosa es un ingeniero en electrónica y desarrollador de software interesado en informática y temas relacionados.",
     "List":
     {
       "Title": "Tareas para el sitio",

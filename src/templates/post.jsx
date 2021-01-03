@@ -28,7 +28,7 @@ const Title = styled.h1`
 
 const PostPage = ({ data }) => {
   const intl = useIntl()
-  const { siteImage, siteTitle, siteUrl, twitterUser, author } = useSiteMetadata()
+  const { siteUrl } = useSiteMetadata()
 
   let node = data.allMdx.nodes.find(obj => {
     return obj.fields.lang === intl.locale
@@ -36,7 +36,6 @@ const PostPage = ({ data }) => {
   
   /* If there is no node for this locale, use default */
   if (node === undefined) node = data.allMdx.nodes[0]
-
   const { body, frontmatter, fields } = node
   
   const progressRef = React.createRef()
@@ -44,18 +43,10 @@ const PostPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={siteTitle}
-        titleTemplate={frontmatter.title}
+        title={frontmatter.title}
         description={frontmatter.description}
-        image={`${siteUrl}${siteImage}`}
-        pathname={`${siteUrl}/${intl.locale}${fields.slug}`}
-        siteLanguage={intl.language}
-        siteLocale={intl.locale}
-        twitterUsername={twitterUser}
-        author={author}
+        url={`${siteUrl}/${intl.locale}${fields.slug}`}
         article={true}
-        datePublished={frontmatter.date}
-        dateModified={frontmatter.date}
       />
 
       <ProgressBar target={progressRef} />

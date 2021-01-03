@@ -2,9 +2,8 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    siteTitle: 'Nahuel Espinosa',
+    title: 'Nahuel Espinosa',
     siteUrl: 'https://www.nahuelespinosa.com.ar',
-    siteImage: '/site.png',
     author: 'Nahuel Espinosa',
     location: 'Buenos Aires, Argentina',
     twitterUser: '@nahueespinosa',

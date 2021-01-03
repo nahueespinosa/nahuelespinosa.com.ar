@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
-import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Greetings from "../components/Greetings"
@@ -21,26 +20,15 @@ const HomeIndex = ({ data }) => {
   const intl = useIntl()
   const t = (id) => intl.formatMessage({ id })
 
-  const { siteTitle, siteImage, siteUrl, twitterUser } = useSiteMetadata()
-
   return (
     <Layout>
-      <SEO
-        title={siteTitle}
-        titleTemplate={t("HomePage.Title")}
-        description={t("HomePage.Description")}
-        image={`${siteUrl}${siteImage}`}
-        pathname={siteUrl}
-        siteLanguage={intl.language}
-        siteLocale={intl.locale}
-        twitterUsername={twitterUser}
-      />
+      <SEO/>
 
       <section>
         <Greetings
           title={t("Greetings")}
           text={t("About")}
-          image={<StyledImg fixed={data.file.childImageSharp.fixed}/>}
+          image={<StyledImg fixed={data.file.childImageSharp.fixed} />}
         />
       </section>
 

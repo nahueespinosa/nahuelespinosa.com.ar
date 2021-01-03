@@ -27,7 +27,7 @@ exports.onCreateNode = ({ node, actions, getNode, getNodes }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `Mdx`) {
-    const path = createFilePath({ node, getNode })
+    let path = createFilePath({ node, getNode })
 
     const { name, lang, isDefault } = _getMarkdownNodeInfo(node)
 
@@ -51,6 +51,11 @@ exports.onCreateNode = ({ node, actions, getNode, getNodes }) => {
           }
         }
       })
+    } else {
+      // remove last element of path for slug (i.e. "/index.es")
+      let tokens = path.split('/')
+      tokens.pop()
+      path = tokens.join('/')
     }
       
     createNodeField({ node, name: `slug`, value: path })
