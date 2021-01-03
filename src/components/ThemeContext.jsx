@@ -6,11 +6,11 @@ export const ThemeContext = createContext()
 export const ThemeProvider = ({ children }) => {
   const [theme, toggleTheme] = useTheme()
   
-	return (
-		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
-		</ThemeContext.Provider>
-	)
+    </ThemeContext.Provider>
+  )
 }
 
 export const ThemeConsumer = ({ children }) => {
