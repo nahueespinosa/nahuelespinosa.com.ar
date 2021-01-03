@@ -40,3 +40,18 @@ const loadTheme = (theme) => {
     document.body.classList.remove("dark")
   }
 }
+
+/**
+ * An injectable function to load style before the
+ * content is displayed (Fixes FoUC)
+ */
+export const applyTheme = `
+(function() {
+  try {
+    var theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+    }
+  } catch(e) {}
+})();
+`
