@@ -28,7 +28,7 @@ const Title = styled.h1`
 
 const PostPage = ({ data }) => {
   const intl = useIntl()
-  const { image, siteTitle, siteUrl, twitterUser, author } = useSiteMetadata()
+  const { siteImage, siteTitle, siteUrl, twitterUser, author } = useSiteMetadata()
 
   let node = data.allMdx.nodes.find(obj => {
     return obj.fields.lang === intl.locale
@@ -47,7 +47,7 @@ const PostPage = ({ data }) => {
         title={siteTitle}
         titleTemplate={frontmatter.title}
         description={frontmatter.description}
-        image={`${siteUrl}${image}`}
+        image={`${siteUrl}${siteImage}`}
         pathname={`${siteUrl}/${intl.locale}${fields.slug}`}
         siteLanguage={intl.language}
         siteLocale={intl.locale}

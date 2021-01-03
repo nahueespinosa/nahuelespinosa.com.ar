@@ -54,7 +54,7 @@ const SocialLink = styled.a`
   }
 `
 
-const Footer = ({ message, links }) => {
+const Footer = ({ message, social }) => {
   return (
     <StyledFooter>
       <Container>
@@ -62,9 +62,9 @@ const Footer = ({ message, links }) => {
           {message}
         </Info>
         <Social>
-          <SocialLink href={links.twitter} aria-label="Twitter"><FaTwitter/></SocialLink>
-          <SocialLink href={links.github} aria-label="GitHub"><FaGithub/></SocialLink>
-          <SocialLink href={links.linkedin} aria-label="LinkedIn"><FaLinkedin/></SocialLink>
+          <SocialLink href={social.twitter} aria-label="Twitter"><FaTwitter/></SocialLink>
+          <SocialLink href={social.github} aria-label="GitHub"><FaGithub/></SocialLink>
+          <SocialLink href={social.linkedin} aria-label="LinkedIn"><FaLinkedin/></SocialLink>
         </Social>
       </Container>
     </StyledFooter>

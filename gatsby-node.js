@@ -1,4 +1,4 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require('gatsby-source-filesystem')
 
 const _getMarkdownNodeInfo = node => {
   // Files are defined with "name-with-dashes.lang.mdx"

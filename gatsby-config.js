@@ -1,14 +1,14 @@
-const path = require(`path`)
+const path = require('path')
 
 module.exports = {
   siteMetadata: {
     siteTitle: 'Nahuel Espinosa',
     siteUrl: 'https://www.nahuelespinosa.com.ar',
+    siteImage: '/site.png',
     author: 'Nahuel Espinosa',
-    image: '/site.png',
     location: 'Buenos Aires, Argentina',
     twitterUser: '@nahueespinosa',
-    links: {
+    social: {
       email: 'mailto:me@nahuelespinosa.com.ar',
       github: 'https://github.com/nahueespinosa/',
       linkedin: 'https://www.linkedin.com/in/nahuel-espinosa-617a1398/',
@@ -21,13 +21,13 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Nahuel Espinosa',
-        short_name: 'Nahuel Espinosa',
+        short_name: 'Nahuel',
         description: 'Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#333333',
         display: 'browser',
-        icon: 'static/logo.png',
+        icon: 'static/favicon.png',
       },
     },
     'gatsby-plugin-offline',
@@ -40,23 +40,31 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'content',
-        path: path.join(__dirname, 'src', 'content')
+        name: 'blog',
+        path: path.join(__dirname, 'content', 'blog')
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'assets',
-        path: path.join(__dirname, 'static'),
-      }
+        path: path.join(__dirname, 'content', 'assets'),
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: path.join(__dirname, 'src', 'images'),
-      },
+        name: 'static',
+        path: path.join(__dirname, 'static'),
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-intl',
+      options: {
+        path: path.join(__dirname, 'src', 'intl'),
+        languages: ['en', 'es'],
+        defaultLanguage: 'en',
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-remark-images',
@@ -82,14 +90,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-dark-mode',
-    {
-      resolve: 'gatsby-plugin-intl',
-      options: {
-        path: path.join(__dirname, 'src', 'intl'),
-        languages: ['en', 'es'],
-        defaultLanguage: 'en',
-      }
-    },
     'gatsby-plugin-styled-components',
+    
   ],
 }

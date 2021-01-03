@@ -1,27 +1,6 @@
 {
   "Greetings": "Hi there!",
   "About": "My name is Nahuel. I'm an electronics engineer and software developer with experience in embedded systems and robotics. I also work as a highschool teacher in computer science.",
-  "List":
-  {
-    "Title": "Website To-Do List",
-    "Item1": "Start with a simple design.",
-    "Item2": "Add dark mode, obviously.",
-    "Item3": "Add multi-language support.",
-    "Item4": "Add a stories feature."
-  },
-  "Articles":
-  {
-    "Title": "Latest Articles"
-  },
-  "Techs":
-  {
-    "Title": "Technologies",
-    "Description": "These are some of the technologies I've worked with in different projects.",
-    "Item1": "Programming Languages",
-    "Item2": "Frameworks / Libraries",
-    "Item3": "Databases",
-    "Item4": "Tools"
-  },
   "Layout":
   {
     "Language": "English (USA)",
@@ -31,11 +10,23 @@
   "HomePage":
   {
     "Title": "Home",
-    "Description": "Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics."
+    "Description": "Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.",
+    "List":
+    {
+      "Title": "Website To-Do List",
+      "Item1": "Start with a simple design.",
+      "Item2": "Add dark mode, obviously.",
+      "Item3": "Add multi-language support.",
+      "Item4": "Add a stories feature."
+    }
   },
   "NotFoundPage":
   {
     "Title": "Page not found",
     "Description": "This route doesn't exist. Sorry."
+  },
+  "Articles":
+  {
+    "Title": "Latest Articles"
   }
 }

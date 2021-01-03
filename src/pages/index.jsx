@@ -8,7 +8,6 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/layout"
 import Greetings from "../components/greetings"
 import Articles from "../components/articles"
-import Techs from "../components/techs"
 
 const StyledImg = styled(Img)`
   border-radius: 50%;
@@ -23,7 +22,7 @@ const HomeIndex = ({ data }) => {
   const t = (id) => intl.formatMessage({ id })
 
   const metadata = useSiteMetadata()
-  const { siteTitle, image, siteUrl, twitterUser } = metadata
+  const { siteTitle, siteImage, siteUrl, twitterUser } = metadata
 
   return (
     <Layout data={metadata}>
@@ -31,7 +30,7 @@ const HomeIndex = ({ data }) => {
         title={siteTitle}
         titleTemplate={t("HomePage.Title")}
         description={t("HomePage.Description")}
-        image={`${siteUrl}${image}`}
+        image={`${siteUrl}${siteImage}`}
         pathname={siteUrl}
         siteLanguage={intl.language}
         siteLocale={intl.locale}
@@ -47,21 +46,17 @@ const HomeIndex = ({ data }) => {
       </section>
 
       <section>
-        <h2>{t("List.Title")}</h2>
+        <h2>{t("HomePage.List.Title")}</h2>
         <ol>
-          <ListItem>{t("List.Item1")} ✓</ListItem>
-          <ListItem>{t("List.Item2")} ✓</ListItem>
-          <ListItem>{t("List.Item3")} ✓</ListItem>
-          <ListItem>{t("List.Item4")}</ListItem>
+          <ListItem>{t("HomePage.List.Item1")} ✓</ListItem>
+          <ListItem>{t("HomePage.List.Item2")} ✓</ListItem>
+          <ListItem>{t("HomePage.List.Item3")} ✓</ListItem>
+          <ListItem>{t("HomePage.List.Item4")}</ListItem>
         </ol>
       </section>
 
       <section>
         <Articles/>
-      </section>
-
-      <section>
-        <Techs/>
       </section>
     </Layout>
   )
