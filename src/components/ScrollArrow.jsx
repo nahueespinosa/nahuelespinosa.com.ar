@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { FaArrowUp } from "react-icons/fa"
 
@@ -35,7 +35,10 @@ const ScrollArrow = () => {
     window.scrollTo({top: 0, behavior: "smooth"})
   }
 
-  window.addEventListener("scroll", checkScrollTop)
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop)
+    return () => window.removeEventListener("scroll", checkScrollTop)
+  })
 
   return (
     <Arrow onClick={scrollTop} show={showScroll}><FaArrowUp/></Arrow>
