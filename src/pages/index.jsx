@@ -5,9 +5,9 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import Layout from "../components/layout"
-import Greetings from "../components/greetings"
-import Articles from "../components/articles"
+import Layout from "../components/Layout"
+import Greetings from "../components/Greetings"
+import Articles from "../components/Articles"
 
 const StyledImg = styled(Img)`
   border-radius: 50%;

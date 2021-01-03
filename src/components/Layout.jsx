@@ -4,11 +4,11 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { FaMapMarkerAlt, FaRegMoon } from "react-icons/fa"
 import { ImSun } from "react-icons/im"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import Header from './header'
-import Main from './main'
-import Footer from './footer'
-import LanguageButton from "./language-button"
-import Toggler from "./toggler"
+import Header from './Header'
+import Main from './Main'
+import Footer from './Footer'
+import LanguageButton from "./LanguageButton"
+import Toggler from "./Toggler"
 
 const Layout = ({ children }) => {
   const intl = useIntl()

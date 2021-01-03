@@ -7,9 +7,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import { FormattedDate, useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import Layout from "../components/layout"
-import Code from "../components/code"
-import ProgressBar from "../components/progress-bar"
+import Layout from "../components/Layout"
+import Code from "../components/Code"
+import ProgressBar from "../components/ProgressBar"
 
 const Small = styled.small`
   margin-top: 1em;

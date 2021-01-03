@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 const ImgWrapper = styled.div`
   width: 50%;
