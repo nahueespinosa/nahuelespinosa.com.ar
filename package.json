@@ -30,7 +30,6 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^4.1.0",
     "react-intl": "^5.10.9",
-    "react-seo-component": "^2.0.2",
     "styled-components": "^5.2.1"
   },
   "keywords": [

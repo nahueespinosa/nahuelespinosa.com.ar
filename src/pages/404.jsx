@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import SEO from "react-seo-component"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const ImgWrapper = styled.div`
   width: 50%;
@@ -20,11 +20,10 @@ const NotFoundPage = ({ data }) => {
   const intl = useIntl()
   const t = (id) => intl.formatMessage({ id })
 
-  const metadata = useSiteMetadata()
-  const { siteTitle, siteImage, siteUrl, twitterUser } = metadata
+  const { siteTitle, siteImage, siteUrl, twitterUser } = useSiteMetadata()
   
   return (
-    <Layout data={metadata}>
+    <Layout>
       <SEO
         title={siteTitle}
         titleTemplate={t("NotFoundPage.Title")}
