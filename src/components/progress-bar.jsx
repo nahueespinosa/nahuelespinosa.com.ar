@@ -4,6 +4,7 @@ import styled from "styled-components"
 const Bar = styled.div`
   position: sticky;
   top: 0;
+  z-index: 10;
 
   height: ${({value}) => value < 1 ? '0' : '3px'};
   background-color: var(--low-contrast-color);
