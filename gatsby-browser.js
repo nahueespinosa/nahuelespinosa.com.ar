@@ -1,5 +1,5 @@
 import React from "react"
-import { ThemeProvider } from "./src/components/ThemeProvider"
+import { ThemeProvider } from "./src/components/ThemeContext"
 
 require("./src/styles/global.css")
 
