@@ -54,7 +54,7 @@ const ProgressBar = ({ target }) => {
     return () => window.removeEventListener("scroll", scrollListener)
   })
 
-  return <Bar value={readingProgress}><Progress value={readingProgress}/></Bar>
+  return <Bar value={readingProgress}><Progress value={readingProgress} /></Bar>
 }
 
 export default ProgressBar
