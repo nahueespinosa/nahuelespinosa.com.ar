@@ -10,6 +10,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Code from "../components/Code"
 import ProgressBar from "../components/ProgressBar"
+import ScrollArrow from "../components/ScrollArrow"
 
 const Small = styled.small`
   margin-top: 1em;
@@ -51,6 +52,7 @@ const PostPage = ({ data }) => {
       />
 
       <ProgressBar target={progressRef} />
+      <ScrollArrow />
       
       <section ref={progressRef}>
         <Small>
