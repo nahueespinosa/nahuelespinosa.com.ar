@@ -5,8 +5,7 @@ import { useState, useEffect } from "react"
  * @returns [theme, toggleTheme] - [current theme, function to toggle theme]
  */
 export const useTheme = () => {
-  const storedTheme = window !== undefined && window.localStorage.getItem("theme")
-  const [ theme, setTheme ] = useState(storedTheme || "light")
+  const [ theme, setTheme ] = useState(getInitialTheme())
 
   loadTheme(theme)
 
@@ -31,7 +30,7 @@ export const useTheme = () => {
 
 /**
  * A helper function to load the selected theme.
- * @param {*} theme - Theme to load
+ * @param theme - Theme to load
  */
 const loadTheme = (theme) => {
   if (theme === "dark") {
@@ -39,6 +38,29 @@ const loadTheme = (theme) => {
   } else {
     document.body.classList.remove("dark")
   }
+}
+
+/**
+ * A helper function to obtain the initial theme on load.
+ * @return Initial theme value
+ */
+const getInitialTheme = () => {
+  const storedTheme = window.localStorage.getItem("theme")
+
+  // If the user has explicitly chosen light or dark, use it
+  if (typeof storedTheme !== "undefined") {
+    return storedTheme
+  }
+
+  // Check media query
+  const mediaTheme = window.matchMedia("(prefers-color-scheme: dark)")
+
+  if (typeof mediaTheme !== "undefined") {
+    return mediaTheme.matches ? "dark" : "light"
+  }
+
+  // Default to light
+  return "light"
 }
 
 /**
