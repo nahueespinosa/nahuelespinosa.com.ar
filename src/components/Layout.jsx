@@ -1,14 +1,19 @@
-import React from 'react'
+import React from "react"
+import styled from "styled-components"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { FaMapMarkerAlt, FaRegMoon } from "react-icons/fa"
 import { ImSun } from "react-icons/im"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import { ThemeConsumer } from './ThemeContext'
-import Header from './Header'
-import Main from './Main'
-import Footer from './Footer'
+import { ThemeConsumer } from "./ThemeContext"
+import Header from "./Header"
+import Main from "./Main"
+import Footer from "./Footer"
 import LanguageButton from "./LanguageButton"
 import Toggler from "./Toggler"
+
+const Wrapper = styled.div`
+  min-height: 100vh;
+`
 
 const Layout = ({ children }) => {
   const intl = useIntl()
@@ -18,24 +23,24 @@ const Layout = ({ children }) => {
   
   return (
     <>
-      <Header title={title}>
-        <LanguageButton label={t("Layout.Language")} />
-        <ThemeConsumer>
-          {(state) => (
-            <Toggler
-              iconChecked={<FaRegMoon/>}
-              iconUnchecked={<ImSun/>}
-              onChange={() => {state && state.toggleTheme()}}
-              checked={state && state.theme === "dark"}
-            />
-          )}
-        </ThemeConsumer>
-      </Header>
-
-      <Main>
-        {children}
-      </Main>
-
+      <Wrapper>
+        <Header title={title}>
+          <LanguageButton label={t("Layout.Language")} />
+          <ThemeConsumer>
+            {(state) => (
+              <Toggler
+                iconChecked={<FaRegMoon/>}
+                iconUnchecked={<ImSun/>}
+                onChange={() => {state && state.toggleTheme()}}
+                checked={state && state.theme === "dark"}
+              />
+            )}
+          </ThemeConsumer>
+        </Header>
+        <Main>
+          {children}
+        </Main>
+      </Wrapper>
       <Footer
         social={social}
         message={

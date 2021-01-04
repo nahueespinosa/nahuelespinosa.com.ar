@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components"
-
-const StyledMain = styled.main`
-  min-height: 100vh;
-`
 
 const Container = styled.div`
   margin: 0 auto;
@@ -13,11 +9,11 @@ const Container = styled.div`
 
 const Main = ({ children }) => {
   return (
-    <StyledMain>
+    <main>
       <Container>
         {children}
       </Container>
-    </StyledMain>
+    </main>
   )
 }
 
