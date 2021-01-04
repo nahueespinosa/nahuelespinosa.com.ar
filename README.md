@@ -1,6 +1,8 @@
-# nahuelespinosa.com.ar
+# Nahuel's Website
 
-This is Nahuel's personal site built with Gatsby.
+This is Nahuel's personal website built with Gatsby.
+
+# Usage
 
 ## Prerrequisites
 
@@ -30,3 +32,9 @@ Navigate into your new site’s directory and start it up.
 cd nahuel-site/
 gatsby develop
 ```
+
+# License
+
+The source code is licensed under [MIT](LICENSE-src). Feel free to use it.
+
+All rights reserved for the [content](LICENSE-content) folder (blog posts, images, etc.).
