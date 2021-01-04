@@ -89,6 +89,5 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
-    
   ],
 }
