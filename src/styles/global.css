@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Open+Sans&family=Zilla+Slab:wght@300;400&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Zilla+Slab:wght@300;400&display=swap';
 
 body {
   --font-color: #333;
@@ -43,8 +43,7 @@ body.dark {
 
 h1,
 h2,
-h3,
-strong {
+h3 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
@@ -58,6 +57,10 @@ h1 {
 h2 {
   border-bottom: 1px dashed var(--border-color);
   padding: 0.5em 0;
+}
+
+strong {
+  color: var(--heading-color);
 }
 
 a {
