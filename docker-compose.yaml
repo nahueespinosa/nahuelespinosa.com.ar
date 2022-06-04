@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    container_name: nahue-site-app
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./src:/usr/app/src
+      - ./content:/usr/app/content
+      - ./static:/usr/app/static
+    ports:
+      - "8000:8000"

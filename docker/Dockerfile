@@ -1,0 +1,20 @@
+FROM node:16
+
+RUN apt update \
+  && apt install --no-install-recommends -y \
+    libvips-dev \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN npm install -g gatsby-cli
+
+WORKDIR /usr/app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["npm", "run", "develop"]

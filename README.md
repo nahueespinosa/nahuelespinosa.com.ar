@@ -1,36 +1,40 @@
-# Nahuel's Website
+# Nahue's Website
 
-This is Nahuel's personal website built with Gatsby.
+This is Nahue's personal website built with [Gatsby](https://www.gatsbyjs.com/).
 
 # Usage
 
-## Prerrequisites
+## Prerequisites
 
-Setup your development environment following [this tutorial](https://www.gatsbyjs.com/docs/tutorial/part-zero/).
+Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [docker-compose](https://docs.docker.com/compose/install/).
 
-## Installation
-
-Clone this repository and install its modules.
+Clone this repository:
 
 ```bash
-git clone https://github.com/nahueespinosa/nahuelespinosa.com.ar nahuel-site
-cd nahuel-site/
-npm install
+git clone https://github.com/nahueespinosa/nahuelespinosa.com.ar nahue-site
 ```
 
-Or you can use the Gatsby CLI to create a new site, specifying this repository.
+## Usage
+
+Change directory to your local repository and bring up the docker image:
 
 ```bash
-gatsby new nahuel-site https://github.com/nahueespinosa/nahuelespinosa.com.ar
+cd nahue-site
+docker-compose up --build
 ```
 
-## Running
+Open `localhost:8000` in your web browser.
 
-Navigate into your new site’s directory and start it up.
+To attach a terminal to the running container use:
 
 ```bash
-cd nahuel-site/
-gatsby develop
+docker exec -it nahue-site-app bash
+```
+
+To remove the containers use:
+
+```bash
+docker-compose down
 ```
 
 # License
