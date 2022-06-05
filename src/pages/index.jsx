@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import Greetings from "../components/Greetings"
 import Articles from "../components/Articles"
 
@@ -22,7 +22,7 @@ const HomeIndex = ({ data }) => {
 
   return (
     <Layout>
-      <SEO/>
+      <Seo/>
 
       <section>
         <Greetings

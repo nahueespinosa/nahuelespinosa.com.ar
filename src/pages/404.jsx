@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const ImgWrapper = styled.div`
   width: 50%;
@@ -21,7 +21,7 @@ const NotFoundPage = ({ data }) => {
   
   return (
     <Layout>
-      <SEO title={t("NotFoundPage.Title")} />
+      <Seo title={t("NotFoundPage.Title")} />
 
       <h1>{t("NotFoundPage.Title")}</h1>
       <p>{t("NotFoundPage.Description")}</p>

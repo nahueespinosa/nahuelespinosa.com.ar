@@ -4,7 +4,7 @@ import themeLight from 'prism-react-renderer/themes/github'
 import themeDark from 'prism-react-renderer/themes/vsDark'
 import { ThemeConsumer } from './ThemeContext'
 
-export default (props) => {
+const Code = (props) => {
   const className = props.children.props.className || ''
   const matches = className.match(/language-(?<lang>.*)/)
 
@@ -33,3 +33,5 @@ export default (props) => {
     </ThemeConsumer>
   )
 }
+
+export default Code
