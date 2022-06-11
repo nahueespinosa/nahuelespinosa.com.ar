@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
-import { FaMapMarkerAlt, FaRegMoon } from "react-icons/fa"
-import { ImSun } from "react-icons/im"
+import { FaMapMarkerAlt, FaRegMoon, FaMoon } from "react-icons/fa"
+import { RiSunFill, RiSunLine } from "react-icons/ri"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import { ThemeConsumer } from "./ThemeContext"
 import Header from "./Header"
@@ -27,12 +27,12 @@ const Layout = ({ children }) => {
         <Header title={title}>
           <LanguageButton label={t("Layout.Language")} />
           <ThemeConsumer>
-            {(state) => (
+            {(state) => state === undefined ? <></> : (
               <Toggler
-                iconChecked={<FaRegMoon/>}
-                iconUnchecked={<ImSun/>}
-                onChange={() => {state && state.toggleTheme()}}
-                checked={state && state.theme === "dark"}
+                icon={state.theme === "dark" ? <RiSunLine/> : <FaRegMoon/>}
+                iconHovered={state.theme === "dark" ? <RiSunFill/> : <FaMoon/>}
+                onChange={() => {state.toggleTheme()}}
+                checked={state.theme === "dark"}
               />
             )}
           </ThemeConsumer>

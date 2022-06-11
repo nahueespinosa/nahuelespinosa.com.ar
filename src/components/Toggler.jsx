@@ -3,11 +3,11 @@ import styled from "styled-components"
 
 const Div = styled.div`
   & > div:first-child {
-    display: ${({ state }) => state ? 'none' : 'flex' }
+    display: flex;
   }
 
   & > div:last-child {
-    display: ${({ state }) => !state ? 'none' : 'flex' }
+    display: none;
   }
 
   @media (hover: hover) {
@@ -16,13 +16,12 @@ const Div = styled.div`
         color: var(--link-color);
       }
 
-      /* TODO(nahue): Check if this is the desired behaviour */
       & > div:first-child {
-        display: ${({ state }) => !state ? 'none' : 'flex' }
+        display: none;
       }
     
       & > div:last-child {
-        display: ${({ state }) => state ? 'none' : 'flex' }
+        display: flex;
       }
     }
   }
@@ -34,7 +33,7 @@ const Icon = styled.div`
   display: flex;
 `
 
-const Toggler = ({ onChange, checked, iconChecked, iconUnchecked }) => {
+const Toggler = ({ onChange, checked, icon, iconHovered }) => {
   const [activated, setActivated] = useState(checked);
 
   return (
@@ -45,8 +44,8 @@ const Toggler = ({ onChange, checked, iconChecked, iconUnchecked }) => {
         setActivated(!activated)
       }}
     >
-      <Icon>{iconUnchecked}</Icon>
-      <Icon>{iconChecked}</Icon>
+      <Icon>{icon}</Icon>
+      <Icon>{iconHovered}</Icon>
     </Div>
   )
 }
