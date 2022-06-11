@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
  *   "dark" - dark mode
  *   anything else - light mode
  */
-const defaultTheme = "dark"
+const defaultTheme = "light"
 
 /**
  * A helper function to load the selected theme.
