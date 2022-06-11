@@ -1,38 +1,17 @@
 import { useState, useEffect } from "react"
 
 /**
- * A hook to get and update the current theme for dark mode.
- * @returns [theme, toggleTheme] - [current theme, function to toggle theme]
+ * Default theme value, supports two types of string values:
+ *   "dark" - dark mode
+ *   anything else - light mode
  */
-export const useTheme = () => {
-  const [ theme, setTheme ] = useState(getInitialTheme())
-
-  loadTheme(theme)
-
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-
-    // Set state variable
-    setTheme(() => (newTheme))
-
-    // Load theme
-    loadTheme(newTheme)
-  }
-
-  useEffect(() => {
-    if (window !== undefined) {
-      window.localStorage.setItem("theme", theme)
-    }
-  }, [theme])
-
-  return [theme, toggleTheme]
-}
+const defaultTheme = "dark"
 
 /**
  * A helper function to load the selected theme.
  * @param theme - Theme to load
  */
-const loadTheme = (theme) => {
+ const loadTheme = (theme) => {
   if (theme === "dark") {
     document.body.classList.add("dark")
   } else {
@@ -46,21 +25,40 @@ const loadTheme = (theme) => {
  */
 const getInitialTheme = () => {
   const storedTheme = window.localStorage.getItem("theme")
-
-  // If the user has explicitly chosen light or dark, use it
-  if (typeof storedTheme !== "undefined") {
+  if (typeof storedTheme === "string") {
     return storedTheme
   }
 
-  // Check media query
   const mediaTheme = window.matchMedia("(prefers-color-scheme: dark)")
-
-  if (typeof mediaTheme !== "undefined") {
-    return mediaTheme.matches ? "dark" : "light"
+  if (mediaTheme.matches) {
+    return "dark"
   }
 
-  // Default to light
-  return "light"
+  return defaultTheme
+}
+
+/**
+ * A hook to get and update the current theme for dark mode.
+ * @returns [theme, toggleTheme] - [current theme, function to toggle theme]
+ */
+export const useTheme = () => {
+  const [theme, setTheme] = useState(getInitialTheme())
+
+  loadTheme(theme)
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark"
+    setTheme(() => (newTheme))
+    loadTheme(newTheme)
+  }
+
+  useEffect(() => {
+    if (window !== undefined) {
+      window.localStorage.setItem("theme", theme)
+    }
+  }, [theme])
+
+  return [theme, toggleTheme]
 }
 
 /**
@@ -70,7 +68,8 @@ const getInitialTheme = () => {
 export const applyTheme = `
 (function() {
   try {
-    var theme = localStorage.getItem("theme");
+    var storedTheme = window.localStorage.getItem("theme")
+    var theme = (typeof storedTheme === "string") ? storedTheme : "${defaultTheme}";
     if (theme === "dark") {
       document.body.classList.add("dark");
     }
