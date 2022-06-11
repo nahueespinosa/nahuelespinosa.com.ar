@@ -1,23 +1,12 @@
 {
   "Greetings": "Hi there!",
-  "Description": "Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.",
-  "About": "My name is Nahuel. I'm an electronics engineer and software developer with experience in embedded systems and robotics. I also work as a highschool teacher in computer science.",
+  "Description": "...",
+  "About": "I'm Nahue. I'm an Electronics Engineer and Software Developer with experience in embedded systems and robotics.",
   "Layout":
   {
     "Language": "English (USA)",
     "Contact": "Here is my <a>e-mail</a> if you want to reach out.",
     "Location": "Current location"
-  },
-  "HomePage":
-  {
-    "List":
-    {
-      "Title": "Website To-Do List",
-      "Item1": "Start with a simple design.",
-      "Item2": "Add dark mode, obviously.",
-      "Item3": "Add multi-language support.",
-      "Item4": "Add a stories feature."
-    }
   },
   "NotFoundPage":
   {

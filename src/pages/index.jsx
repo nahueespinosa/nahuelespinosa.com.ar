@@ -12,10 +12,6 @@ const StyledImg = styled(GatsbyImage)`
   border-radius: 50%;
 `
 
-const ListItem = styled.li`
-  padding: 0 1em;
-`
-
 const HomeIndex = ({ data }) => {
   const intl = useIntl()
   const t = (id) => intl.formatMessage({ id })
@@ -30,16 +26,6 @@ const HomeIndex = ({ data }) => {
           text={t("About")}
           image={<StyledImg image={getImage(data.file)} />}
         />
-      </section>
-
-      <section>
-        <h2>{t("HomePage.List.Title")}</h2>
-        <ol>
-          <ListItem key="Item1">{t("HomePage.List.Item1")} ✓</ListItem>
-          <ListItem key="Item2">{t("HomePage.List.Item2")} ✓</ListItem>
-          <ListItem key="Item3">{t("HomePage.List.Item3")} ✓</ListItem>
-          <ListItem key="Item4">{t("HomePage.List.Item4")}</ListItem>
-        </ol>
       </section>
 
       <section>

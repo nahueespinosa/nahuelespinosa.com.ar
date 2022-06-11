@@ -1,23 +1,12 @@
 {
   "Greetings": "¡Hola!",
-  "Description": "Nahuel Espinosa es un ingeniero en electrónica y desarrollador de software interesado en informática y temas relacionados.",
-  "About": "Mi nombre es Nahuel. Soy ingeniero en electrónica y desarrollador de software con experiencia en sistemas embebidos y robótica. También trabajo como profesor de sistemas informáticos.",
+  "Description": "...",
+  "About": "Soy Nahue. Soy Ingeniero en Electrónica y Desarrollador de Software con experiencia en sistemas embebidos y robótica.",
   "Layout":
   {
     "Language": "Español (Argentina)",
     "Contact": "Este es mi <a>e-mail</a> si querés ponerte en contacto.",
     "Location": "Ubicación actual"
-  },
-  "HomePage":
-  {
-    "List":
-    {
-      "Title": "Tareas para el sitio",
-      "Item1": "Comenzar con un diseño simple.",
-      "Item2": "Agregar modo oscuro, obviamente.",
-      "Item3": "Agregar soporte multi-idioma.",
-      "Item4": "Agregar historias."
-    }
   },
   "NotFoundPage":
   {

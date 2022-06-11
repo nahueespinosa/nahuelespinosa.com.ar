@@ -20,8 +20,8 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Nahuel Espinosa',
-        short_name: 'Nahuel',
-        description: 'Nahuel Espinosa is a semi-senior EE and software developer interested in computer science and related topics.',
+        short_name: 'Nahue',
+        description: 'Nahuel Espinosa\'s personal site',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#333333',

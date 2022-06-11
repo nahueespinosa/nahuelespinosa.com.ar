@@ -60,7 +60,7 @@ const Articles = () => {
           if (version === undefined) version = fields.versions[0]
           
           return (
-            <li>
+            <li key={fields.slug}>
               <Small>{version.date}</Small>
               <Link to={fields.slug}>{version.title}</Link>
             </li>
