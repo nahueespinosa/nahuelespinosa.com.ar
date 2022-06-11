@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
@@ -26,22 +26,19 @@ const NotFoundPage = ({ data }) => {
       <h1>{t("NotFoundPage.Title")}</h1>
       <p>{t("NotFoundPage.Description")}</p>
       <ImgWrapper>
-        <Img fluid={data.file.childImageSharp.fluid} alt="Error 404" />
+        <GatsbyImage image={getImage(data.file)} alt="Error 404" />
       </ImgWrapper>
     </Layout>
-  )
+  );
 }
 
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "error.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  file(relativePath: {eq: "error.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 800, layout: CONSTRAINED)
     }
   }
+}
 `
 
 export default NotFoundPage

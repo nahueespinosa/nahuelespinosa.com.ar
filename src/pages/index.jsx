@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { useIntl } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import Greetings from "../components/Greetings"
 import Articles from "../components/Articles"
 
-const StyledImg = styled(Img)`
+const StyledImg = styled(GatsbyImage)`
   border-radius: 50%;
 `
 
@@ -28,7 +28,7 @@ const HomeIndex = ({ data }) => {
         <Greetings
           title={t("Greetings")}
           text={t("About")}
-          image={<StyledImg fixed={data.file.childImageSharp.fixed} />}
+          image={<StyledImg image={getImage(data.file)} />}
         />
       </section>
 
@@ -46,19 +46,16 @@ const HomeIndex = ({ data }) => {
         <Articles/>
       </section>
     </Layout>
-  )
+  );
 }
 
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "profile.png" }) {
-      childImageSharp {
-        fixed(width: 128, height: 128) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+export const query = graphql`{
+  file(relativePath: {eq: "profile.png"}) {
+    childImageSharp {
+      gatsbyImageData(width: 128, height: 128, layout: FIXED)
     }
   }
+}
 `
 
 export default HomeIndex
