@@ -7,7 +7,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { FormattedDate, useIntl } from "gatsby-plugin-intl"
 import { useSiteMetadata } from "../hooks/useSiteMetadata"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 import Code from "../components/Code"
 import ProgressBar from "../components/ProgressBar"
 import ScrollArrow from "../components/ScrollArrow"
@@ -43,7 +43,7 @@ const PostPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={frontmatter.title}
         description={frontmatter.description}
         url={`${siteUrl}/${intl.locale}${fields.slug}`}

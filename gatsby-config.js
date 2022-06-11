@@ -65,7 +65,6 @@ module.exports = {
         defaultLanguage: 'en',
       }
     },
-    'gatsby-plugin-sharp',
     'gatsby-remark-images',
     {
       resolve: 'gatsby-plugin-mdx',
@@ -86,6 +85,7 @@ module.exports = {
     'gatsby-remark-reading-time',
     'gatsby-transformer-json',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-styled-components',
