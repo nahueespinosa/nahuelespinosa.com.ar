@@ -35,10 +35,10 @@ const HomeIndex = ({ data }) => {
       <section>
         <h2>{t("HomePage.List.Title")}</h2>
         <ol>
-          <ListItem>{t("HomePage.List.Item1")} ✓</ListItem>
-          <ListItem>{t("HomePage.List.Item2")} ✓</ListItem>
-          <ListItem>{t("HomePage.List.Item3")} ✓</ListItem>
-          <ListItem>{t("HomePage.List.Item4")}</ListItem>
+          <ListItem key="Item1">{t("HomePage.List.Item1")} ✓</ListItem>
+          <ListItem key="Item2">{t("HomePage.List.Item2")} ✓</ListItem>
+          <ListItem key="Item3">{t("HomePage.List.Item3")} ✓</ListItem>
+          <ListItem key="Item4">{t("HomePage.List.Item4")}</ListItem>
         </ol>
       </section>
 
