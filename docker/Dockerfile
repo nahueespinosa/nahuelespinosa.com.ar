@@ -1,7 +1,7 @@
 FROM node:16
 
-RUN apt update \
-  && apt install --no-install-recommends -y \
+RUN apt-get update \
+  && apt-get install --no-install-recommends -y \
     libvips-dev \
   && rm -rf /var/lib/apt/lists/*
 

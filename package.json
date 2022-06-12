@@ -1,7 +1,7 @@
 {
   "name": "nahuel-site",
   "description": "Personal Website",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Nahuel Espinosa",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
@@ -39,11 +39,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
-    "format": "prettier --write '**/*.js'",
+    "lint": "eslint --fix --ext src/**/*.js src/**/*.jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preload-fonts": "gatsby-preload-fonts"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.30.0",
     "prettier": "^2.0.5"
   },
   "repository": {

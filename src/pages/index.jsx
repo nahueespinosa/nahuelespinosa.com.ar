@@ -1,20 +1,20 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import { useIntl } from "gatsby-plugin-intl"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
-import Greetings from "../components/Greetings"
-import Articles from "../components/Articles"
+import React from 'react'
+import styled from 'styled-components'
+import {graphql} from 'gatsby'
+import {getImage, GatsbyImage} from 'gatsby-plugin-image'
+import {useIntl} from 'gatsby-plugin-intl'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
+import Greetings from '../components/Greetings'
+import Articles from '../components/Articles'
 
 const StyledImg = styled(GatsbyImage)`
   border-radius: 50%;
 `
 
-const HomeIndex = ({ data }) => {
+const HomeIndex = ({data}) => {
   const intl = useIntl()
-  const t = (id) => intl.formatMessage({ id })
+  const t = (id) => intl.formatMessage({id})
 
   return (
     <Layout>
@@ -22,8 +22,8 @@ const HomeIndex = ({ data }) => {
 
       <section>
         <Greetings
-          title={t("Greetings")}
-          text={t("About")}
+          title={t('Greetings')}
+          text={t('About')}
           image={<StyledImg image={getImage(data.file)} />}
         />
       </section>
@@ -32,7 +32,7 @@ const HomeIndex = ({ data }) => {
         <Articles/>
       </section>
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`{

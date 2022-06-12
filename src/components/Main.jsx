@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -7,7 +7,7 @@ const Container = styled.div`
   padding: 0 1em;
 `
 
-const Main = ({ children }) => {
+const Main = ({children}) => {
   return (
     <main>
       <Container>

@@ -1,16 +1,16 @@
-import React from "react"
-import styled from "styled-components"
-import { FaClock } from "react-icons/fa"
-import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { MDXProvider } from "@mdx-js/react"
-import { FormattedDate, useIntl } from "gatsby-plugin-intl"
-import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
-import Code from "../components/Code"
-import ProgressBar from "../components/ProgressBar"
-import ScrollArrow from "../components/ScrollArrow"
+import React from 'react'
+import styled from 'styled-components'
+import {FaClock} from 'react-icons/fa'
+import {graphql} from 'gatsby'
+import {MDXRenderer} from 'gatsby-plugin-mdx'
+import {MDXProvider} from '@mdx-js/react'
+import {FormattedDate, useIntl} from 'gatsby-plugin-intl'
+import {useSiteMetadata} from '../hooks/useSiteMetadata'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
+import Code from '../components/Code'
+import ProgressBar from '../components/ProgressBar'
+import ScrollArrow from '../components/ScrollArrow'
 
 const Small = styled.small`
   margin-top: 1em;
@@ -27,18 +27,18 @@ const Title = styled.h1`
   margin-top: 0;
 `
 
-const PostPage = ({ data }) => {
+const PostPage = ({data}) => {
   const intl = useIntl()
-  const { siteUrl } = useSiteMetadata()
+  const {siteUrl} = useSiteMetadata()
 
-  let node = data.allMdx.nodes.find(obj => {
+  let node = data.allMdx.nodes.find((obj) => {
     return obj.fields.lang === intl.locale
   })
-  
+
   /* If there is no node for this locale, use default */
   if (node === undefined) node = data.allMdx.nodes[0]
-  const { body, frontmatter, fields } = node
-  
+  const {body, frontmatter, fields} = node
+
   const progressRef = React.createRef()
 
   return (
@@ -48,12 +48,12 @@ const PostPage = ({ data }) => {
         description={frontmatter.description}
         url={`${siteUrl}/${intl.locale}${fields.slug}`}
         article={true}
-        date={frontmatter.date.split(" ")[0]}
+        date={frontmatter.date.split(' ')[0]}
       />
 
       <ProgressBar target={progressRef} />
       <ScrollArrow />
-      
+
       <section ref={progressRef}>
         <Small>
           <FormattedDate

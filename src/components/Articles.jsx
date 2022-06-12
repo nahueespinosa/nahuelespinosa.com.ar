@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { useIntl, Link } from "gatsby-plugin-intl"
-import { graphql, useStaticQuery } from "gatsby"
+import React from 'react'
+import styled from 'styled-components'
+import {useIntl, Link} from 'gatsby-plugin-intl'
+import {graphql, useStaticQuery} from 'gatsby'
 
 export const useMdxLatest = () => {
-  const { allMdx } = useStaticQuery(
-    graphql`
+  const {allMdx} = useStaticQuery(
+      graphql`
       query MDX_LATEST_QUERY {
         allMdx(
           sort: {fields: [frontmatter___date], order: DESC},
@@ -23,7 +23,7 @@ export const useMdxLatest = () => {
           }
         }
       }
-    `
+    `,
   )
 
   return allMdx.nodes
@@ -39,7 +39,7 @@ const Small = styled.small`
 
 const Articles = () => {
   const intl = useIntl()
-  const t = (id) => intl.formatMessage({ id })
+  const t = (id) => intl.formatMessage({id})
 
   const latest = useMdxLatest()
 
@@ -49,16 +49,16 @@ const Articles = () => {
 
   return (
     <>
-      <h2>{t("Articles.Title")}</h2>
+      <h2>{t('Articles.Title')}</h2>
       <List>
-        {latest.map(({ fields }) => {
-          let version = fields.versions.find(node => {
+        {latest.map(({fields}) => {
+          let version = fields.versions.find((node) => {
             return node.lang === intl.locale
           })
 
           /* If there is no node for this locale, use default */
           if (version === undefined) version = fields.versions[0]
-          
+
           return (
             <li key={fields.slug}>
               <Small>{version.date}</Small>

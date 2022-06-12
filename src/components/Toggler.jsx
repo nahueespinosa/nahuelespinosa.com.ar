@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, {useState} from 'react'
+import styled from 'styled-components'
 
 const Div = styled.div`
   & > div:first-child {
@@ -33,8 +33,8 @@ const Icon = styled.div`
   display: flex;
 `
 
-const Toggler = ({ onChange, checked, icon, iconHovered }) => {
-  const [activated, setActivated] = useState(checked);
+const Toggler = ({onChange, checked, icon, iconHovered}) => {
+  const [activated, setActivated] = useState(checked)
 
   return (
     <Div

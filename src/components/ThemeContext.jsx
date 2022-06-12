@@ -1,19 +1,19 @@
-import React, { createContext } from "react"
-import { useTheme } from "../hooks/useTheme.js"
+import React, {createContext} from 'react'
+import {useTheme} from '../hooks/useTheme.js'
 
 export const ThemeContext = createContext()
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({children}) => {
   const [theme, toggleTheme] = useTheme()
-  
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
       {children}
     </ThemeContext.Provider>
   )
 }
 
-export const ThemeConsumer = ({ children }) => {
+export const ThemeConsumer = ({children}) => {
   return (
     <ThemeContext.Consumer>
       {children}

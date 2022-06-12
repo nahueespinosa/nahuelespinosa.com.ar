@@ -1,37 +1,37 @@
-import { useState, useEffect } from "react"
+import {useState, useEffect} from 'react'
 
 /**
  * Default theme value, supports two types of string values:
  *   "dark" - dark mode
  *   anything else - light mode
  */
-const defaultTheme = "light"
+const defaultTheme = 'light'
 
 /**
  * A helper function to load the selected theme.
- * @param theme - Theme to load
+ * @param {string} theme - Theme to load
  */
- const loadTheme = (theme) => {
-  if (theme === "dark") {
-    document.body.classList.add("dark")
+const loadTheme = (theme) => {
+  if (theme === 'dark') {
+    document.body.classList.add('dark')
   } else {
-    document.body.classList.remove("dark")
+    document.body.classList.remove('dark')
   }
 }
 
 /**
  * A helper function to obtain the initial theme on load.
- * @return Initial theme value
+ * @return {string} Initial theme value
  */
 const getInitialTheme = () => {
-  const storedTheme = window.localStorage.getItem("theme")
-  if (typeof storedTheme === "string") {
+  const storedTheme = window.localStorage.getItem('theme')
+  if (typeof storedTheme === 'string') {
     return storedTheme
   }
 
-  const mediaTheme = window.matchMedia("(prefers-color-scheme: dark)")
+  const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)')
   if (mediaTheme.matches) {
-    return "dark"
+    return 'dark'
   }
 
   return defaultTheme
@@ -39,7 +39,7 @@ const getInitialTheme = () => {
 
 /**
  * A hook to get and update the current theme for dark mode.
- * @returns [theme, toggleTheme] - [current theme, function to toggle theme]
+ * @return {[string, function]} [current theme, function to toggle theme]
  */
 export const useTheme = () => {
   const [theme, setTheme] = useState(getInitialTheme())
@@ -47,14 +47,14 @@ export const useTheme = () => {
   loadTheme(theme)
 
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark"
-    setTheme(() => (newTheme))
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(() => newTheme)
     loadTheme(newTheme)
   }
 
   useEffect(() => {
     if (window !== undefined) {
-      window.localStorage.setItem("theme", theme)
+      window.localStorage.setItem('theme', theme)
     }
   }, [theme])
 

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ const ImgWrapper = styled.div`
   }
 `
 
-const Greetings = ({ title, text, image }) => {
+const Greetings = ({title, text, image}) => {
   return (
     <Container>
       <TextWrapper>

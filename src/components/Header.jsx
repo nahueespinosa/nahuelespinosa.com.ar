@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby-plugin-intl"
+import React from 'react'
+import styled from 'styled-components'
+import {Link} from 'gatsby-plugin-intl'
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -52,7 +52,7 @@ const Options = styled.div`
   }
 `
 
-const Header = ({ title, children }) => {
+const Header = ({title, children}) => {
   return (
     <StyledHeader>
       <Container>

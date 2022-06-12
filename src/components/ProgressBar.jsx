@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import React, {useState, useEffect} from 'react'
+import styled from 'styled-components'
 
 const Bar = styled.div`
   position: sticky;
@@ -22,12 +22,12 @@ const Progress = styled.div`
   border-radius: 2px;
 `
 
-const ProgressBar = ({ target }) => {
+const ProgressBar = ({target}) => {
   const [readingProgress, setReadingProgress] = useState(0)
 
   const scrollListener = () => {
     if (target === undefined || !target.current) {
-      return;
+      return
     }
 
     const element = target.current
@@ -50,8 +50,8 @@ const ProgressBar = ({ target }) => {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollListener)
-    return () => window.removeEventListener("scroll", scrollListener)
+    window.addEventListener('scroll', scrollListener)
+    return () => window.removeEventListener('scroll', scrollListener)
   })
 
   return <Bar value={readingProgress}><Progress value={readingProgress} /></Bar>

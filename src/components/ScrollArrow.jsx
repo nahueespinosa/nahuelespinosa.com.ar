@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
-import styled from "styled-components"
-import { FaArrowUp } from "react-icons/fa"
+import React, {useState, useEffect} from 'react'
+import styled from 'styled-components'
+import {FaArrowUp} from 'react-icons/fa'
 
 const Arrow = styled.div`
   cursor: pointer;
@@ -11,7 +11,7 @@ const Arrow = styled.div`
   padding: 0.5em;
   
   z-index: 10;
-  display: ${({ show }) => show ? "flex" : "none"};
+  display: ${({show}) => show ? 'flex' : 'none'};
   color: var(--link-color);
   opacity: 0.5;
 
@@ -32,12 +32,12 @@ const ScrollArrow = () => {
   }
 
   const scrollTop = () => {
-    window.scrollTo({top: 0, behavior: "smooth"})
+    window.scrollTo({top: 0, behavior: 'smooth'})
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop)
-    return () => window.removeEventListener("scroll", checkScrollTop)
+    window.addEventListener('scroll', checkScrollTop)
+    return () => window.removeEventListener('scroll', checkScrollTop)
   })
 
   return (

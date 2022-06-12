@@ -1,15 +1,15 @@
-import React from "react"
-import styled from "styled-components"
-import { changeLocale, useIntl } from "gatsby-plugin-intl"
+import React from 'react'
+import styled from 'styled-components'
+import {changeLocale, useIntl} from 'gatsby-plugin-intl'
 
 const Button = styled.a`
   cursor: pointer;
 `
 
-const LanguageButton = ({ label }) => {
+const LanguageButton = ({label}) => {
   const intl = useIntl()
 
-  return(
+  return (
     <Button onClick={() => {
       changeLocale(intl.locale === 'en' ? 'es' : 'en')
     }}>

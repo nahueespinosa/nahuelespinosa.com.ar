@@ -1,16 +1,16 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useSiteMetadata } from "../hooks/useSiteMetadata"
-import { useIntl } from "gatsby-plugin-intl"
+import React from 'react'
+import {Helmet} from 'react-helmet'
+import {useSiteMetadata} from '../hooks/useSiteMetadata'
+import {useIntl} from 'gatsby-plugin-intl'
 
-const Seo = ({ title, description, article, url, date }) => {
+const Seo = ({title, description, article, url, date}) => {
   const data = useSiteMetadata()
 
   const intl = useIntl()
-  const t = (id) => intl.formatMessage({ id })
+  const t = (id) => intl.formatMessage({id})
 
   const metaTitle = title ? `${title} • ${data.title}` : data.title
-  const metaDescription = description ? description : t("Description")
+  const metaDescription = description ? description : t('Description')
   const metaUrl = url ? url : data.siteUrl
 
   return (
@@ -22,9 +22,9 @@ const Seo = ({ title, description, article, url, date }) => {
       <meta name="image" content={data.image} />
       <meta name='author' content={data.author} />
 
-      <meta property="og:type" content={article ? "article" : "website"} />
+      <meta property="og:type" content={article ? 'article' : 'website'} />
       {article && date && <meta property="article:published_time" content={date} />}
-      
+
       <meta property="og:url" content={metaUrl} />
       <meta property="og:title" content={metaTitle} />
       <meta property="og:description" content={metaDescription} />

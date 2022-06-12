@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import React from 'react'
+import styled from 'styled-components'
+import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa'
 
 const StyledFooter = styled.footer`
   border-top: 1px dotted var(--border-color);
@@ -54,7 +54,7 @@ const SocialLink = styled.a`
   }
 `
 
-const Footer = ({ message, social }) => {
+const Footer = ({message, social}) => {
   return (
     <StyledFooter>
       <Container>
